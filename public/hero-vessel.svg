@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1000" role="img" aria-label="Autonomous vessel on calm water">
+  <defs>
+    <linearGradient id="sky" x1="0" x2="0" y1="0" y2="1">
+      <stop offset="0%" stop-color="#cfd2d8"/>
+      <stop offset="55%" stop-color="#a5aab1"/>
+      <stop offset="100%" stop-color="#535962"/>
+    </linearGradient>
+    <linearGradient id="water" x1="0" x2="0" y1="0" y2="1">
+      <stop offset="0%" stop-color="#9ea3aa"/>
+      <stop offset="100%" stop-color="#2d333d"/>
+    </linearGradient>
+  </defs>
+  <rect width="1600" height="520" fill="url(#sky)"/>
+  <rect y="520" width="1600" height="480" fill="url(#water)"/>
+  <rect y="500" width="1600" height="8" fill="#d8dbe0" opacity="0.4"/>
+  <ellipse cx="1030" cy="620" rx="34" ry="16" fill="#2f343d"/>
+  <rect x="1022" y="472" width="6" height="140" fill="#242932"/>
+  <rect x="1054" y="506" width="4" height="108" fill="#2b3039"/>
+  <path d="M220 665 C 500 640, 760 610, 1000 620" stroke="#d4d8de" stroke-width="3" fill="none" opacity="0.45"/>
+</svg>
