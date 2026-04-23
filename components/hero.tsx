@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import Link from 'next/link';
 import { siteConfig } from '@/data/site';
 
@@ -20,6 +21,17 @@ export function Hero() {
           </Link>
         </div>
       </div>
+      <div className="relative overflow-hidden rounded-xl border border-border bg-surface shadow-panel">
+        <div className="relative aspect-[4/3]">
+          <Image
+            src="/hero-vessel.svg"
+            alt="Andrasta autonomous vessel operating in low-visibility offshore conditions"
+            fill
+            priority
+            sizes="(max-width: 1024px) 100vw, 42vw"
+            className="object-cover"
+          />
+          <div className="absolute inset-0 bg-gradient-to-t from-bg/50 via-transparent to-bg/20" />
       <div className="rounded-xl border border-border bg-surface p-6 shadow-panel">
         <div className="flex aspect-[4/3] items-center justify-center rounded-lg border border-dashed border-border bg-bg">
           <p className="max-w-xs text-center text-sm text-muted">

@@ -44,12 +44,32 @@ npm run serve
 
 This serves the built app at `http://localhost:3000` (bound to `0.0.0.0` for local/network visibility).
 
+
+## Asset policy (avoid binary patch issues)
+
+All brand/hero image binaries must live directly in the repository under `public/` and be committed to git.
+Do not rely on temporary upload paths (for example `/tmp/user_uploaded_attachments/...`) for long-term project state.
+
+Required files:
+
+- `public/andrasta-logo.svg`
+- `public/hero-vessel.svg`
+- `public/icon.svg`
+- `public/apple-touch-icon.svg`
+
+Verify assets at any time:
+
+```bash
+npm run check:assets
+```
+
 ## Quality checks
 
 ```bash
 npm run lint
 npm run build
 ```
+
 
 ## AWS Amplify Hosting notes
 
