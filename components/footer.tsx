@@ -11,12 +11,12 @@ export function Footer() {
       <div className="mx-auto grid w-full max-w-7xl gap-10 px-5 py-12 sm:px-8 lg:grid-cols-[1.1fr_0.9fr]">
         <div>
           <Image
-            src={WORDMARK_SRC}
-            alt="Andrasta Marine"
-            width={520}
-            height={120}
-            className="h-auto w-[260px] sm:w-[320px]"
-          />
+  src={WORDMARK_SRC}
+  alt="Andrasta Marine"
+  width={620}
+  height={160}
+  className="h-auto w-[260px] sm:w-[340px]"
+/>
 
           <p className="mt-5 max-w-xl text-sm leading-6 text-slate-400">
             Offshore autonomy for persistent maritime awareness. Structured for credible deployment pathways and scalable mission operations.
