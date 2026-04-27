@@ -22,8 +22,9 @@ export const metadata: Metadata = {
   },
   metadataBase: new URL(siteUrl),
   icons: {
-  icon: "/andrasta-minilogo.png",
-  apple: "/andrasta-minilogo.png",
+  icon: [{ url: "/AndrastaMinilogo.png", type: "image/png" }],
+  shortcut: [{ url: "/AndrastaMinilogo.png", type: "image/png" }],
+  apple: [{ url: "/AndrastaMinilogo.png", type: "image/png" }],
 }
 };
 
