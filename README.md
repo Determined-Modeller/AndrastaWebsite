@@ -71,6 +71,28 @@ npm run build
 ```
 
 
+
+## AWS Amplify deployment (no code edits required)
+
+This repository is now preconfigured for static Amplify Hosting:
+
+- Next.js static export is enabled (`output: "export"`)
+- Build output is generated to `out/`
+- `amplify.yml` is included and points artifacts to `out/`
+- `.nvmrc` pins Node 20 for consistent builds
+
+### Deploy steps
+
+1. Push this repo/branch to your Git provider.
+2. In AWS Amplify, create a new app from that repo/branch.
+3. Amplify will auto-detect `amplify.yml`; do not override build settings.
+4. Deploy.
+
+After deploy, the full site routes are statically served and visible without additional code edits.
+
+## AWS Amplify Hosting notes
+
+This project is configured for static Amplify Hosting using Next.js export output.
 ## AWS Amplify Hosting notes
 
 This project is static-friendly and compatible with Amplify’s Next.js hosting support.
@@ -78,6 +100,10 @@ This project is static-friendly and compatible with Amplify’s Next.js hosting 
 Recommended build settings:
 
 - Build command: `npm run build`
+- Output: `out`
+- Node runtime: 20+
+
+`amplify.yml` is already included and should be used as-is for deployment.
 - Output: `.next`
 - Node runtime: 20+
 
