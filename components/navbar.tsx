@@ -4,7 +4,7 @@ import Link from "next/link";
 import { siteConfig } from "@/data/site";
 
 const WORDMARK_SRC = "/andrasta-logo.png";
-const MINI_LOGO_SRC = "/andrasta-minilogo.png";
+const MINI_LOGO_SRC = "/AndrastaMinilogo.png";
 
 export function Navbar() {
   const navItems = siteConfig.nav.filter((item) => item.href !== "/");
