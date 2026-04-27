@@ -3,7 +3,6 @@ import Link from "next/link";
 
 import { siteConfig } from "@/data/site";
 
-const MINI_LOGO_SRC = "/andrasta-minilogo.png";
 const HERO_VESSEL_SRC = "/hero-vessel.png";
 
 const tags = [
@@ -20,18 +19,11 @@ export function Hero() {
 
       <div className="relative mx-auto grid w-full max-w-7xl gap-12 px-5 py-16 sm:px-8 lg:grid-cols-[0.95fr_1.05fr] lg:items-center lg:py-24">
         <div>
-          <div className="mb-8 inline-flex items-center gap-3 rounded-full border border-cyan-300/20 bg-cyan-300/10 px-4 py-2 text-sm font-medium text-cyan-100">
-            <Image
-              src={MINI_LOGO_SRC}
-              alt=""
-              width={40}
-              height={40}
-              className="h-8 w-8 object-contain"
-            />
+          <p className="text-xs font-semibold uppercase tracking-[0.24em] text-cyan-200">
             Andrasta Marine
-          </div>
+          </p>
 
-          <h1 className="max-w-3xl text-5xl font-semibold tracking-tight text-white sm:text-6xl lg:text-7xl">
+          <h1 className="mt-5 max-w-3xl text-5xl font-semibold tracking-tight text-white sm:text-6xl lg:text-7xl">
             {siteConfig.mission}
           </h1>
 
@@ -67,25 +59,25 @@ export function Hero() {
           </div>
         </div>
 
-        <div className="relative min-h-[420px] overflow-hidden rounded-[2rem] border border-slate-700/70 bg-slate-950/70 shadow-2xl shadow-cyan-950/30 sm:min-h-[520px]">
+        <div className="relative min-h-[380px] overflow-hidden rounded-[2rem] border border-slate-700/70 bg-slate-950/70 shadow-2xl shadow-cyan-950/30 sm:min-h-[520px]">
           <Image
             src={HERO_VESSEL_SRC}
             alt="Andrasta Marine vessel concept"
             fill
             priority
             sizes="(min-width: 1024px) 50vw, 100vw"
-            className="object-contain object-center scale-[1.22]"
+            className="object-contain object-center p-5 sm:p-8 lg:p-10"
           />
 
           <div className="absolute inset-0 bg-gradient-to-t from-[#04070d]/80 via-transparent to-transparent" />
 
-          <div className="absolute bottom-0 left-0 right-0 p-6 sm:p-8">
-            <div className="max-w-sm rounded-2xl border border-white/10 bg-slate-950/70 p-4 backdrop-blur">
+          <div className="absolute bottom-0 left-0 right-0 p-5 sm:p-8">
+            <div className="max-w-sm rounded-2xl border border-white/10 bg-slate-950/75 p-4 backdrop-blur">
               <p className="text-sm font-semibold text-white">
                 Persistent autonomous maritime systems
               </p>
               <p className="mt-1 text-xs leading-5 text-slate-300">
-                Designed around low-disturbance offshore operation, evidence continuity, and flexible deployment.
+                Low-disturbance offshore operation, evidence continuity, and flexible deployment.
               </p>
             </div>
           </div>
