@@ -17,7 +17,7 @@ export function Hero() {
     <section className="relative overflow-hidden border-b border-slate-800 bg-[radial-gradient(circle_at_top_right,#12345a_0%,#07111f_38%,#04070d_100%)]">
       <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.035)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.035)_1px,transparent_1px)] bg-[size:48px_48px] opacity-30" />
 
-      <div className="relative mx-auto grid w-full max-w-7xl gap-12 px-5 py-16 sm:px-8 lg:grid-cols-[0.95fr_1.05fr] lg:items-center lg:py-24">
+      <div className="relative mx-auto grid w-full max-w-7xl gap-10 px-5 py-16 sm:px-8 lg:grid-cols-[0.95fr_1.05fr] lg:items-center lg:py-24">
         <div>
           <p className="text-xs font-semibold uppercase tracking-[0.24em] text-cyan-200">
             Andrasta Marine
@@ -59,17 +59,15 @@ export function Hero() {
           </div>
         </div>
 
-        <div className="relative min-h-[360px] overflow-hidden rounded-[2rem] bg-slate-950/25 shadow-2xl shadow-cyan-950/30 sm:min-h-[500px] lg:min-h-[560px]">
+        <div className="relative min-h-[340px] overflow-visible sm:min-h-[460px] lg:min-h-[560px]">
           <Image
             src={HERO_VESSEL_SRC}
             alt="Andrasta Marine vessel concept"
             fill
             priority
-            sizes="(min-width: 1024px) 50vw, 100vw"
-            className="object-contain object-center p-3 sm:p-5 lg:p-7"
+            sizes="(min-width: 1024px) 52vw, 100vw"
+            className="object-contain object-center drop-shadow-[0_28px_90px_rgba(34,211,238,0.22)]"
           />
-
-          <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-[#04070d]/50 via-transparent to-transparent" />
         </div>
       </div>
     </section>
