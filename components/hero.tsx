@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 import { siteConfig } from "@/data/site";
 
 export function Hero() {
@@ -13,14 +15,27 @@ export function Hero() {
         </h1>
 
         <p className="mt-6 max-w-2xl text-base leading-7 text-muted">
-          High-integrity marine systems for advanced subsea operations.
+          {siteConfig.heroCopy}
         </p>
       </div>
 
-      <div className="rounded-2xl border border-border bg-card p-6 shadow-sm">
-        <p className="text-sm font-medium text-text">
-          Subsea fibre, autonomy, and containerised marine systems.
-        </p>
+      <div className="relative min-h-[320px] overflow-hidden rounded-3xl border border-border bg-card shadow-sm">
+        <Image
+          src="/hero-vessel.png"
+          alt="Andrasta Marine vessel concept"
+          fill
+          priority
+          sizes="(min-width: 1024px) 40vw, 100vw"
+          className="object-cover"
+        />
+
+        <div className="absolute inset-0 bg-gradient-to-t from-bg/80 via-bg/20 to-transparent" />
+
+        <div className="absolute bottom-0 p-6">
+          <p className="text-sm font-medium text-text">
+            Persistent, low-disturbance autonomous marine systems.
+          </p>
+        </div>
       </div>
     </section>
   );
