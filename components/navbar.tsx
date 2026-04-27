@@ -1,4 +1,7 @@
+import Image from "next/image";
 import Link from "next/link";
+
+import { siteConfig } from "@/data/site";
 
 export function Navbar() {
   return (
@@ -7,20 +10,23 @@ export function Navbar() {
         className="mx-auto flex w-full max-w-6xl items-center justify-between px-6 py-4 sm:px-8"
         aria-label="Primary"
       >
-        <Link href="/" className="inline-flex items-center font-semibold tracking-tight">
-          Andrasta Marine
+        <Link href="/" className="inline-flex items-center" aria-label="Andrasta Marine home">
+          <Image
+            src="/andrasta-logo.png"
+            alt="Andrasta Marine"
+            width={260}
+            height={64}
+            priority
+            className="h-8 w-auto sm:h-9"
+          />
         </Link>
 
         <div className="hidden items-center gap-6 text-sm text-muted sm:flex">
-          <Link href="#capabilities" className="hover:text-text">
-            Capabilities
-          </Link>
-          <Link href="#systems" className="hover:text-text">
-            Systems
-          </Link>
-          <Link href="#contact" className="hover:text-text">
-            Contact
-          </Link>
+          {siteConfig.nav.slice(1).map((item) => (
+            <Link key={item.href} href={item.href} className="hover:text-text">
+              {item.label}
+            </Link>
+          ))}
         </div>
       </nav>
     </header>
