@@ -12,7 +12,7 @@ export function Navbar() {
       >
         <Link href="/" className="inline-flex items-center" aria-label="Andrasta Marine home">
           <Image
-            src="/AndrastaMiniLogo.png"
+            src="/AndrastaMinilogo.png"
             alt="Andrasta Marine"
             width={260}
             height={64}
