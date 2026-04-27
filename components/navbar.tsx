@@ -8,6 +8,8 @@ export function Navbar() {
       <nav className="mx-auto flex w-full max-w-6xl items-center justify-between px-6 py-4 sm:px-8" aria-label="Primary">
         <Link href="/" className="inline-flex items-center" aria-label="Andrasta Marine home">
           <Image src="/andrasta-logo.svg" alt="Andrasta Marine" width={260} height={64} priority className="h-8 w-auto sm:h-9" />
+        <Link href="/" className="text-sm font-semibold uppercase tracking-[0.2em] text-text">
+          {siteConfig.name}
         </Link>
         <ul className="hidden flex-wrap items-center gap-5 text-sm text-muted lg:flex">
           {siteConfig.nav.map((item) => (

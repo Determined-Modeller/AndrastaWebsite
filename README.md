@@ -93,6 +93,9 @@ After deploy, the full site routes are statically served and visible without add
 ## AWS Amplify Hosting notes
 
 This project is configured for static Amplify Hosting using Next.js export output.
+## AWS Amplify Hosting notes
+
+This project is static-friendly and compatible with Amplify’s Next.js hosting support.
 
 Recommended build settings:
 
@@ -101,6 +104,10 @@ Recommended build settings:
 - Node runtime: 20+
 
 `amplify.yml` is already included and should be used as-is for deployment.
+- Output: `.next`
+- Node runtime: 20+
+
+Optional `amplify.yml` can be added later if environment-specific build customization is required.
 
 ## Placeholder policy
 
