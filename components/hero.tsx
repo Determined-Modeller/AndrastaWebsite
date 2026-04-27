@@ -59,28 +59,17 @@ export function Hero() {
           </div>
         </div>
 
-        <div className="relative min-h-[380px] overflow-hidden rounded-[2rem] border border-slate-700/70 bg-slate-950/70 shadow-2xl shadow-cyan-950/30 sm:min-h-[520px]">
+        <div className="relative min-h-[360px] overflow-hidden rounded-[2rem] bg-slate-950/25 shadow-2xl shadow-cyan-950/30 sm:min-h-[500px] lg:min-h-[560px]">
           <Image
             src={HERO_VESSEL_SRC}
             alt="Andrasta Marine vessel concept"
             fill
             priority
             sizes="(min-width: 1024px) 50vw, 100vw"
-            className="object-contain object-center p-5 sm:p-8 lg:p-10"
+            className="object-contain object-center p-3 sm:p-5 lg:p-7"
           />
 
-          <div className="absolute inset-0 bg-gradient-to-t from-[#04070d]/80 via-transparent to-transparent" />
-
-          <div className="absolute bottom-0 left-0 right-0 p-5 sm:p-8">
-            <div className="max-w-sm rounded-2xl border border-white/10 bg-slate-950/75 p-4 backdrop-blur">
-              <p className="text-sm font-semibold text-white">
-                Persistent autonomous maritime systems
-              </p>
-              <p className="mt-1 text-xs leading-5 text-slate-300">
-                Low-disturbance offshore operation, evidence continuity, and flexible deployment.
-              </p>
-            </div>
-          </div>
+          <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-[#04070d]/50 via-transparent to-transparent" />
         </div>
       </div>
     </section>
