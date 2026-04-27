@@ -22,9 +22,9 @@ export const metadata: Metadata = {
   },
   metadataBase: new URL(siteUrl),
   icons: {
-    icon: '/icon.svg',
-    apple: '/apple-touch-icon.svg'
-  }
+  icon: "/andrasta-minilogo.png",
+  apple: "/andrasta-minilogo.png",
+}
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
