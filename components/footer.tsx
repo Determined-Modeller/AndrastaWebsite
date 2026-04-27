@@ -4,6 +4,7 @@ import Link from "next/link";
 import { siteConfig } from "@/data/site";
 
 const WORDMARK_SRC = "/andrasta-logo.png";
+const MINI_LOGO_SRC = "/AndrastaMinilogo.png";
 
 export function Footer() {
   return (
