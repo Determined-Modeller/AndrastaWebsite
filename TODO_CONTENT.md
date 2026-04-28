@@ -1,18 +1,18 @@
 # TODO_CONTENT
 
-## Unresolved content placeholders (intentional)
+## Unresolved content and publication items
 
-1. **Hero render asset**
-   - Replace homepage visual placeholder with approved AUV / semi-sub render.
-2. **Production contact destination**
-   - Confirm final contact email ownership and exact address spelling before launch.
-3. **Product performance values**
-   - Populate AndraMini and Andra40 spec cards with approved technical values.
-4. **Payload family detail**
-   - Finalize AndraBeam, AndraField, and AndraRise capability copy.
-5. **Team and partners**
-   - Replace placeholder cards with real profiles, logos, and partnership notes.
-6. **Safety/certification wording review**
-   - Validate final language around civil safety framing and any Lloyd’s-style references.
-7. **Case study expansion**
-   - Add additional case studies using existing reusable layout blocks.
+1. **Final production contact email**
+   - Confirm final monitored inbox and ownership before publishing direct email on-site.
+2. **Platform performance bands**
+   - Publish approved endurance, payload envelope, and coverage envelope values for AndraMini and Andra40.
+3. **Payload maturity details**
+   - Confirm maturity scope and integration boundaries for AndraBeam, AndraField, and AndraRise.
+4. **Downloadable brief/datasheet availability**
+   - Publish links for platform briefs and mission one-pagers once approved for public release.
+5. **Confirmed partner/team details**
+   - Add public team and partner profiles only after release approval.
+6. **Final case-study status wording**
+   - Confirm legal/commercial language for mission scenarios vs. completed deployment references.
+7. **Production contact endpoint**
+   - Configure and verify `NEXT_PUBLIC_CONTACT_ENDPOINT` for live form submission workflow.
