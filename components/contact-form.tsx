@@ -1,6 +1,6 @@
 'use client';
-
 import { FormEvent, useMemo, useState } from 'react';
+import { contactDetails } from '@/data/site';
 
 type FormState = {
   name: string;
@@ -34,13 +34,15 @@ export function ContactForm() {
     const next: Partial<Record<keyof FormState, string>> = {};
     if (!values.name.trim()) next.name = 'Name is required.';
     if (!values.company.trim()) next.company = 'Company is required.';
-    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(values.email)) next.email = 'Provide a valid email address.';
-    if (!values.subject.trim()) next.subject = 'Subject is required.';
+    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(values.email)) next.email = 'Valid email required.';
     if (values.message.trim().length < 20) next.message = 'Message must be at least 20 characters.';
     return next;
   }, [values]);
 
-  const hasErrors = Object.keys(errors).length > 0;
+  const onSubmit = async (e: FormEvent) => {
+    e.preventDefault();
+    if (values.website.trim()) return;
+    if (Object.keys(errors).length) return setStatus('Please correct the highlighted fields.');
 
   const onSubmit = async (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault();

@@ -1,5 +1,8 @@
 import type { Metadata } from 'next';
 import { SectionWrapper } from '@/components/section-wrapper';
+import { missionScenarios } from '@/data/site';
+export const metadata: Metadata = { title: 'Mission scenarios | Andrasta Marine', description: 'Application cases for demonstration discussions.' };
+export default function CaseStudiesPage(){return <SectionWrapper heading="Mission scenarios" intro="Application cases for technical and commercial discussion, not completed customer case studies.">{missionScenarios.map((s)=><article key={s.slug} className="mb-4 rounded-xl border border-slate-700/70 bg-slate-950/55 p-5"><h3 className="text-white">{s.title}</h3><p className="mt-2 text-sm text-slate-300"><strong>Context:</strong> {s.context}</p><p className="mt-1 text-sm text-slate-300"><strong>Operational problem:</strong> {s.problem}</p><p className="mt-1 text-sm text-slate-300"><strong>Current limitation:</strong> {s.limitation}</p><p className="mt-1 text-sm text-slate-300"><strong>Andrasta approach:</strong> {s.approach}</p><p className="mt-1 text-sm text-slate-300"><strong>Outputs:</strong> {s.outputs.join('; ')}</p>{s.whyItMatters && <p className="mt-1 text-sm text-slate-300"><strong>Why it matters:</strong> {s.whyItMatters}</p>}{s.demonstrationPathway && <p className="mt-1 text-sm text-slate-300"><strong>Demonstration pathway:</strong> {s.demonstrationPathway}</p>}<p className="mt-1 text-sm text-amber-200"><strong>Development caveat:</strong> {s.caveat}</p></article>)}</SectionWrapper>}
 import { missionUseCases } from '@/data/site';
 
 export const metadata: Metadata = {
