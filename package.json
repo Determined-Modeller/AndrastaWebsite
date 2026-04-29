@@ -10,8 +10,7 @@
     "serve": "next start -H 0.0.0.0 -p 3000",
     "check:assets": "bash scripts/verify-assets.sh",
     "typecheck": "tsc --noEmit",
-    "preview:static": "python3 -m http.server 4173 --directory out",
-    "verify:static-ready": "bash scripts/verify-static-ready.sh"
+    "preview:static": "python3 -m http.server 4173 --directory out"
   },
   "dependencies": {
     "next": "15.3.1",
