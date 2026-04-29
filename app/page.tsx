@@ -1,63 +1,22 @@
-import Link from 'next/link';
-import { CtaBlock } from '@/components/cta-block';
-import { BaseCard } from '@/components/cards';
-import { Hero } from '@/components/hero';
+import type { Metadata } from 'next';
 import { SectionWrapper } from '@/components/section-wrapper';
-import { caseStudies, payloadFamilies, productLines, siteConfig } from '@/data/site';
+import { MissionScenarioCard, PageHero, PayloadFamilyCard, PlatformCard, ProofRibbon } from '@/components/site-sections';
+import { formFactors, missionScenarios, payloadFamilies, siteConfig, valueRibbon } from '@/data/site';
+import { CtaBlock } from '@/components/cta-block';
+
+export const metadata: Metadata = { title: 'Andrasta Marine | Persistent offshore autonomy', description: siteConfig.companyDescription };
 
 export default function HomePage() {
-  return (
-    <>
-      <Hero />
-      <SectionWrapper heading="Mission and Positioning" intro="Andrasta Marine is focused on persistent offshore operations where continuity of evidence and reduced disturbance matter.">
-        <p className="max-w-4xl text-sm leading-8 text-muted sm:text-base">{siteConfig.heroCopy}</p>
-      </SectionWrapper>
-      <SectionWrapper heading="Operational model" intro="The operating model is designed to reduce dependence on high-cost support fleets and increase time-on-task.">
-        <div className="grid gap-4 md:grid-cols-2">
-          <BaseCard
-            title="Our Solution"
-            detail="Route-following operations with waypoint return, in-situ refuelling concepts, and multimodal deployment pathways for offshore flexibility."
-          >
-            <Link href="/our-solution" className="mt-4 inline-block text-sm font-medium text-accent hover:underline">
-              Explore Our Solution →
-            </Link>
-          </BaseCard>
-          <BaseCard
-            title="Technology"
-            detail="Hydrogen-electric propulsion, low-noise loiter profile, low-pressure storage concept, and modular payload families."
-          >
-            <Link href="/technology" className="mt-4 inline-block text-sm font-medium text-accent hover:underline">
-              Review Technology →
-            </Link>
-          </BaseCard>
-        </div>
-      </SectionWrapper>
-      <SectionWrapper heading="Product lines preview">
-        <div className="grid gap-4 md:grid-cols-2">
-          {productLines.map((product) => (
-            <BaseCard key={product.name} title={product.name} subtitle={product.scale} detail={product.summary} />
-          ))}
-        </div>
-      </SectionWrapper>
-      <SectionWrapper heading="Payload and sensor families">
-        <div className="grid gap-4 md:grid-cols-3">
-          {payloadFamilies.map((payload) => (
-            <BaseCard key={payload.name} title={payload.name} detail={payload.note} />
-          ))}
-        </div>
-      </SectionWrapper>
-      <SectionWrapper heading="Case study highlight">
-        <BaseCard
-          title={caseStudies[0].title}
-          subtitle={caseStudies[0].framing}
-          detail="Initial case framing focuses on persistent evidence continuity for emissions enforcement in the North Sea."
-        >
-          <Link href="/case-studies" className="mt-4 inline-block text-sm font-medium text-accent hover:underline">
-            View Case Studies →
-          </Link>
-        </BaseCard>
-      </SectionWrapper>
-      <CtaBlock />
-    </>
-  );
+  return (<>
+    <PageHero heading={siteConfig.brandLine} subheading={siteConfig.heroExplainer} />
+    <ProofRibbon items={valueRibbon} />
+    <SectionWrapper heading="What Andrasta Marine builds"><p className="text-sm leading-8 text-slate-300">{siteConfig.companyDescription}</p></SectionWrapper>
+    <SectionWrapper heading="The operational problem"><p className="text-sm leading-8 text-slate-300">Offshore survey and inspection are often constrained by support-vessel dependence, battery mass/logistics at larger form factors, limited time-on-task, and replenishment friction.</p></SectionWrapper>
+    <SectionWrapper heading="The Andrasta approach"><p className="text-sm leading-8 text-slate-300">Andrasta Marine addresses these constraints through hydride-focused hydrogen-electric vessel design, remote refuelling and replenishment pathways, waypoint missions, and modular payload families.</p></SectionWrapper>
+    <SectionWrapper heading="Platform form factors"><div className="grid gap-4 md:grid-cols-2">{formFactors.map((p)=><PlatformCard key={p.name} platform={p} />)}</div></SectionWrapper>
+    <SectionWrapper heading="Payload and mission families"><div className="grid gap-4 md:grid-cols-2">{payloadFamilies.map((f)=><PayloadFamilyCard key={f.name} family={f} />)}</div></SectionWrapper>
+    <SectionWrapper heading="First market focus" intro="Primary: decommissioning environmental survey. Secondary: ad hoc hull inspection."><div className="grid gap-4 md:grid-cols-3">{missionScenarios.map((m)=><MissionScenarioCard key={m.slug} scenario={m} />)}</div></SectionWrapper>
+    <SectionWrapper heading="Team credibility"><p className="text-sm leading-8 text-slate-300">Andrasta Marine is being developed by an experienced professional team currently active across the marine, hydrogen, and high-integrity engineering sectors. Public disclosure is being staged deliberately while platform development, partner engagement, and IP protection mature.</p></SectionWrapper>
+    <CtaBlock />
+  </>);
 }

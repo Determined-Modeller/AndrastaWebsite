@@ -1,39 +1,5 @@
-import { BaseCard } from '@/components/cards';
+import type { Metadata } from 'next';
 import { SectionWrapper } from '@/components/section-wrapper';
-import { caseStudies } from '@/data/site';
-
-export const metadata = {
-  title: 'Case Studies',
-  description: 'Operational case studies for persistent offshore awareness outcomes.'
-};
-
-export default function CaseStudiesPage() {
-  return (
-    <SectionWrapper heading="Case Studies" intro="Reusable case study blocks support future expansion without redesign.">
-      <div className="space-y-4">
-        {caseStudies.map((study) => (
-          <BaseCard key={study.slug} title={study.title} subtitle={study.framing}>
-            <div className="mt-4 grid gap-4 md:grid-cols-2">
-              <div>
-                <h4 className="text-sm font-semibold uppercase tracking-[0.14em] text-accent">Challenge</h4>
-                <p className="mt-2 text-sm leading-7 text-muted">{study.challenge}</p>
-              </div>
-              <div>
-                <h4 className="text-sm font-semibold uppercase tracking-[0.14em] text-accent">Current operational limitation</h4>
-                <p className="mt-2 text-sm leading-7 text-muted">{study.limitation}</p>
-              </div>
-              <div>
-                <h4 className="text-sm font-semibold uppercase tracking-[0.14em] text-accent">Andrasta Marine approach</h4>
-                <p className="mt-2 text-sm leading-7 text-muted">{study.approach}</p>
-              </div>
-              <div>
-                <h4 className="text-sm font-semibold uppercase tracking-[0.14em] text-accent">Likely outcomes</h4>
-                <p className="mt-2 text-sm leading-7 text-muted">{study.outcomes}</p>
-              </div>
-            </div>
-          </BaseCard>
-        ))}
-      </div>
-    </SectionWrapper>
-  );
-}
+import { missionScenarios } from '@/data/site';
+export const metadata: Metadata = { title: 'Mission scenarios | Andrasta Marine', description: 'Application cases for demonstration discussions.' };
+export default function CaseStudiesPage(){return <SectionWrapper heading="Mission scenarios" intro="Application cases for technical and commercial discussion, not completed customer case studies.">{missionScenarios.map((s)=><article key={s.slug} className="mb-4 rounded-xl border border-slate-700/70 bg-slate-950/55 p-5"><h3 className="text-white">{s.title}</h3><p className="mt-2 text-sm text-slate-300"><strong>Context:</strong> {s.context}</p><p className="mt-1 text-sm text-slate-300"><strong>Operational problem:</strong> {s.problem}</p><p className="mt-1 text-sm text-slate-300"><strong>Current limitation:</strong> {s.limitation}</p><p className="mt-1 text-sm text-slate-300"><strong>Andrasta approach:</strong> {s.approach}</p><p className="mt-1 text-sm text-slate-300"><strong>Outputs:</strong> {s.outputs.join('; ')}</p>{s.whyItMatters && <p className="mt-1 text-sm text-slate-300"><strong>Why it matters:</strong> {s.whyItMatters}</p>}{s.demonstrationPathway && <p className="mt-1 text-sm text-slate-300"><strong>Demonstration pathway:</strong> {s.demonstrationPathway}</p>}<p className="mt-1 text-sm text-amber-200"><strong>Development caveat:</strong> {s.caveat}</p></article>)}</SectionWrapper>}

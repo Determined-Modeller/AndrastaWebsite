@@ -1,46 +1,5 @@
-import { BaseCard } from '@/components/cards';
+import type { Metadata } from 'next';
+import Link from 'next/link';
 import { SectionWrapper } from '@/components/section-wrapper';
-import { designPrinciples, solutionApproach, solutionProblems } from '@/data/site';
-
-export const metadata = {
-  title: 'Our Solution',
-  description: 'Operational framing for Andrasta Marine autonomous offshore deployment model.'
-};
-
-export default function OurSolutionPage() {
-  return (
-    <>
-      <SectionWrapper
-        heading="Our Solution"
-        intro="A model designed to move offshore inspection and awareness from high-cost episodic operations toward persistent, flexible autonomy."
-      >
-        <div className="grid gap-4 md:grid-cols-2">
-          <BaseCard title="Current constraints">
-            <ul className="mt-3 list-disc space-y-2 pl-5 text-sm leading-7 text-muted">
-              {solutionProblems.map((item) => (
-                <li key={item}>{item}</li>
-              ))}
-            </ul>
-          </BaseCard>
-          <BaseCard title="Andrasta operational approach">
-            <ul className="mt-3 list-disc space-y-2 pl-5 text-sm leading-7 text-muted">
-              {solutionApproach.map((item) => (
-                <li key={item}>{item}</li>
-              ))}
-            </ul>
-          </BaseCard>
-        </div>
-      </SectionWrapper>
-      <SectionWrapper
-        heading="Design principles"
-        intro="System architecture is framed for manufacturability, operational realism, and low-disturbance mission continuity."
-      >
-        <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
-          {designPrinciples.map((principle) => (
-            <BaseCard key={principle} title={principle} />
-          ))}
-        </div>
-      </SectionWrapper>
-    </>
-  );
-}
+export const metadata: Metadata = { title: 'Operational model | Andrasta Marine', description: 'Commercial logic for persistent offshore survey and inspection.' };
+export default function OurSolutionPage(){return <><SectionWrapper heading="The offshore survey problem"><p className="text-sm leading-8 text-slate-300">Survey and inspection are frequently constrained by support-vessel cost, limited time-on-task, and recovery/redeployment friction.</p></SectionWrapper><SectionWrapper heading="Why larger battery systems become limiting"><p className="text-sm leading-8 text-slate-300">At larger form factors, battery mass and handling complexity can become a logistics constraint that reduces practical mission utilisation.</p></SectionWrapper><SectionWrapper heading="Why support-vessel dependence is a commercial millstone"><p className="text-sm leading-8 text-slate-300">High vessel-time requirements can dominate programme cost and reduce flexibility for repeat evidence-gathering missions.</p></SectionWrapper><SectionWrapper heading="Andrasta’s hydride-replenished operating model"><p className="text-sm leading-8 text-slate-300">Andrasta Marine uses hydrogen-electric vessels, low-pressure hydride storage, and remote replenishment pathways to improve offshore endurance and handling logic.</p></SectionWrapper><SectionWrapper heading="How missions work"><ol className="list-decimal pl-5 text-sm leading-8 text-slate-300"><li>Plan mission and data requirements.</li><li>Deploy platform.</li><li>Transit to area of interest.</li><li>Patrol, linger, or survey.</li><li>Collect evidence and data products.</li><li>Recover, refuel, and redeploy.</li></ol></SectionWrapper><SectionWrapper heading="Where Andrasta fits"><p className="text-sm leading-8 text-slate-300">Primary fit: decommissioning environmental survey. Secondary fit: ad hoc hull inspection. Additional fits include persistent monitoring and selected sampling workflows.</p></SectionWrapper><SectionWrapper heading="Where final readiness is not yet claimed"><p className="text-sm leading-8 text-slate-300">Detailed performance figures, final mission envelopes, and detailed maturity claims remain publication pending.</p><div className="mt-6 flex gap-3"><Link href="/product-lines" className="rounded-full bg-cyan-300 px-6 py-3 text-sm font-semibold text-slate-950">Explore platform form factors</Link><Link href="/contact" className="rounded-full border border-slate-500/70 px-6 py-3 text-sm font-semibold text-slate-100">Discuss a demonstration mission</Link></div></SectionWrapper></>}

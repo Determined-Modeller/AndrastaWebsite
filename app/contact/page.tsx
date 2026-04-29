@@ -1,39 +1,6 @@
-import { ContactForm } from '@/components/contact-form';
+import type { Metadata } from 'next';
 import { SectionWrapper } from '@/components/section-wrapper';
 import { contactDetails } from '@/data/site';
-
-export const metadata = {
-  title: 'Contact',
-  description: 'Contact Andrasta Marine for partnership, operational, and technical enquiries.'
-};
-
-export default function ContactPage() {
-  return (
-    <SectionWrapper heading="Contact" intro="Send an enquiry for partner, customer, or technical collaboration discussions.">
-      <div className="grid gap-6 lg:grid-cols-[0.9fr_1.1fr]">
-        <aside className="rounded-xl border border-border bg-surface p-6 shadow-panel">
-          <h3 className="text-lg font-medium text-text">Company details</h3>
-          <dl className="mt-4 space-y-3 text-sm">
-            <div>
-              <dt className="text-muted">Company</dt>
-              <dd className="text-text">{contactDetails.company}</dd>
-            </div>
-            <div>
-              <dt className="text-muted">Domain</dt>
-              <dd className="text-text">{contactDetails.domain}</dd>
-            </div>
-            <div>
-              <dt className="text-muted">Location</dt>
-              <dd className="text-text">{contactDetails.location}</dd>
-            </div>
-            <div>
-              <dt className="text-muted">Email</dt>
-              <dd className="text-text">{contactDetails.email}</dd>
-            </div>
-          </dl>
-        </aside>
-        <ContactForm />
-      </div>
-    </SectionWrapper>
-  );
-}
+import { ContactForm } from '@/components/contact-form';
+export const metadata: Metadata = { title: 'Contact | Andrasta Marine', description: 'Discuss a demonstration mission with Andrasta Marine.' };
+export default function ContactPage(){return <SectionWrapper heading="Discuss a demonstration mission" intro="Primary focus: decommissioning environmental survey. Secondary focus: ad hoc hull inspection."><div className="grid gap-6 lg:grid-cols-[0.9fr_1.1fr]"><aside className="rounded-xl border border-slate-700/70 bg-slate-950/55 p-6"><p className="text-sm text-slate-300">Direct contact email:</p><a href={`mailto:${contactDetails.email}`} className="mt-1 inline-block text-cyan-200 underline">{contactDetails.email}</a><p className="mt-4 text-sm text-slate-300">Enquiry categories:</p><ul className="mt-2 list-disc pl-5 text-sm text-slate-300">{contactDetails.categories.map((c)=><li key={c}>{c}</li>)}</ul></aside><ContactForm /></div></SectionWrapper>}

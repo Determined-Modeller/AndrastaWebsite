@@ -1,97 +1,46 @@
 'use client';
-
 import { FormEvent, useMemo, useState } from 'react';
+import { contactDetails } from '@/data/site';
 
-type FormState = {
-  name: string;
-  company: string;
-  email: string;
-  subject: string;
-  message: string;
-};
-
-const initialState: FormState = {
-  name: '',
-  company: '',
-  email: '',
-  subject: '',
-  message: ''
-};
+type FormState = { name: string; company: string; email: string; category: string; message: string; website: string };
+const initialState: FormState = { name: '', company: '', email: '', category: contactDetails.categories[0], message: '', website: '' };
+const CONTACT_ENDPOINT = process.env.NEXT_PUBLIC_CONTACT_ENDPOINT;
 
 export function ContactForm() {
-  const [values, setValues] = useState<FormState>(initialState);
-  const [submitted, setSubmitted] = useState(false);
-  const [attempted, setAttempted] = useState(false);
-
+  const [values, setValues] = useState(initialState);
+  const [status, setStatus] = useState('');
+  const [loading, setLoading] = useState(false);
   const errors = useMemo(() => {
     const next: Partial<Record<keyof FormState, string>> = {};
     if (!values.name.trim()) next.name = 'Name is required.';
     if (!values.company.trim()) next.company = 'Company is required.';
-    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(values.email)) next.email = 'Provide a valid email address.';
-    if (!values.subject.trim()) next.subject = 'Subject is required.';
+    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(values.email)) next.email = 'Valid email required.';
     if (values.message.trim().length < 20) next.message = 'Message must be at least 20 characters.';
     return next;
   }, [values]);
 
-  const hasErrors = Object.keys(errors).length > 0;
+  const onSubmit = async (e: FormEvent) => {
+    e.preventDefault();
+    if (values.website.trim()) return;
+    if (Object.keys(errors).length) return setStatus('Please correct the highlighted fields.');
 
-  const onSubmit = (event: FormEvent<HTMLFormElement>) => {
-    event.preventDefault();
-    setAttempted(true);
-    if (hasErrors) {
-      setSubmitted(false);
-      return;
+    if (!CONTACT_ENDPOINT) {
+      const subject = encodeURIComponent(`[${values.category}] Demonstration mission enquiry`);
+      const body = encodeURIComponent(`Name: ${values.name}\nCompany: ${values.company}\nEmail: ${values.email}\nCategory: ${values.category}\n\n${values.message}`);
+      window.location.href = `mailto:${contactDetails.email}?subject=${subject}&body=${body}`;
+      return setStatus('No submission endpoint is configured. Your mail client will be used to send this enquiry.');
     }
-    setSubmitted(true);
-    setValues(initialState);
+
+    setLoading(true);
+    try {
+      const res = await fetch(CONTACT_ENDPOINT, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(values) });
+      if (!res.ok) throw new Error();
+      setStatus('Enquiry sent successfully.');
+      setValues(initialState);
+    } catch {
+      setStatus('Submission failed. Please email andrastamarine@gmail.com directly.');
+    } finally { setLoading(false); }
   };
 
-  return (
-    <form noValidate onSubmit={onSubmit} className="space-y-4 rounded-xl border border-border bg-surface p-6 shadow-panel">
-      {submitted && (
-        <p className="rounded-md border border-emerald-500/40 bg-emerald-500/10 px-3 py-2 text-sm text-emerald-200">
-          Enquiry captured (mock submission). TODO: connect to confirmed backend workflow.
-        </p>
-      )}
-      {attempted && hasErrors && (
-        <p className="rounded-md border border-amber-500/40 bg-amber-500/10 px-3 py-2 text-sm text-amber-200">
-          Please correct the highlighted fields before submitting.
-        </p>
-      )}
-      {(
-        [
-          ['name', 'Name'],
-          ['company', 'Company'],
-          ['email', 'Email'],
-          ['subject', 'Subject']
-        ] as const
-      ).map(([field, label]) => (
-        <label key={field} className="block text-sm text-text">
-          {label}
-          <input
-            value={values[field]}
-            onChange={(event) => setValues((curr) => ({ ...curr, [field]: event.target.value }))}
-            type={field === 'email' ? 'email' : 'text'}
-            className="mt-1 w-full rounded-md border border-border bg-bg px-3 py-2 text-sm text-text outline-none ring-accent/40 transition focus:ring"
-            aria-invalid={Boolean(attempted && errors[field])}
-          />
-          {attempted && errors[field] && <span className="mt-1 block text-xs text-amber-200">{errors[field]}</span>}
-        </label>
-      ))}
-      <label className="block text-sm text-text">
-        Message
-        <textarea
-          value={values.message}
-          onChange={(event) => setValues((curr) => ({ ...curr, message: event.target.value }))}
-          rows={6}
-          className="mt-1 w-full rounded-md border border-border bg-bg px-3 py-2 text-sm text-text outline-none ring-accent/40 transition focus:ring"
-          aria-invalid={Boolean(attempted && errors.message)}
-        />
-        {attempted && errors.message && <span className="mt-1 block text-xs text-amber-200">{errors.message}</span>}
-      </label>
-      <button type="submit" className="rounded-md bg-accent px-5 py-2.5 text-sm font-medium text-bg transition hover:bg-accent/90">
-        Submit Enquiry
-      </button>
-    </form>
-  );
+  return <form onSubmit={onSubmit} className="space-y-4 rounded-xl border border-slate-700/70 bg-slate-950/55 p-6">{status && <p className="text-sm text-amber-200">{status}</p>}<input className="hidden" value={values.website} onChange={(e)=>setValues({...values,website:e.target.value})} /><label className="block text-sm">Name<input className="mt-1 w-full rounded-md border border-slate-700 bg-[#04070d] px-3 py-2" value={values.name} onChange={(e)=>setValues({...values,name:e.target.value})} />{errors.name && <span className="text-xs text-amber-200">{errors.name}</span>}</label><label className="block text-sm">Company<input className="mt-1 w-full rounded-md border border-slate-700 bg-[#04070d] px-3 py-2" value={values.company} onChange={(e)=>setValues({...values,company:e.target.value})} />{errors.company && <span className="text-xs text-amber-200">{errors.company}</span>}</label><label className="block text-sm">Email<input className="mt-1 w-full rounded-md border border-slate-700 bg-[#04070d] px-3 py-2" value={values.email} onChange={(e)=>setValues({...values,email:e.target.value})} />{errors.email && <span className="text-xs text-amber-200">{errors.email}</span>}</label><label className="block text-sm">Enquiry category<select className="mt-1 w-full rounded-md border border-slate-700 bg-[#04070d] px-3 py-2" value={values.category} onChange={(e)=>setValues({...values,category:e.target.value})}>{contactDetails.categories.map((c)=><option key={c}>{c}</option>)}</select></label><label className="block text-sm">Message<textarea rows={5} className="mt-1 w-full rounded-md border border-slate-700 bg-[#04070d] px-3 py-2" value={values.message} onChange={(e)=>setValues({...values,message:e.target.value})} />{errors.message && <span className="text-xs text-amber-200">{errors.message}</span>}</label><button disabled={loading} className="rounded-full bg-cyan-300 px-5 py-2.5 text-sm font-semibold text-slate-950">{loading ? 'Submitting…' : 'Discuss a demonstration mission'}</button></form>;
 }
