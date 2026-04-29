@@ -12,6 +12,7 @@
     "typecheck": "tsc --noEmit",
     "preview:static": "python3 -m http.server 4173 --directory out",
     "verify:static-ready": "bash scripts/verify-static-ready.sh"
+    "preview:static": "python3 -m http.server 4173 --directory out"
   },
   "dependencies": {
     "next": "15.3.1",
