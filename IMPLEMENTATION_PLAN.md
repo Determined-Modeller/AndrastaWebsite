@@ -1,21 +1,26 @@
 # IMPLEMENTATION_PLAN
 
 ## Objective
-Deliver a production-ready v1 frontend for Andrasta Marine based on `docs/frontend-prd.md`, using Next.js App Router, TypeScript, and Tailwind CSS with a serious, industrial maritime visual direction.
+Evolve the existing Andrasta Marine site from an early brochure state into a credible programme/platform company frontend while preserving the dark industrial visual direction, route structure, and static AWS Amplify compatibility.
 
 ## Plan
-1. **Initialize foundation**
-   - Set up Next.js App Router project structure with TypeScript and Tailwind.
-   - Configure metadata, static-friendly defaults, and Amplify-compatible scripts.
-2. **Create shared architecture**
-   - Build reusable layout components (Navbar, Footer, Section wrapper, CTA, cards).
-   - Centralize structured site content in data/config modules for maintainability.
-3. **Implement required routes**
-   - Build `/`, `/our-solution`, `/technology`, `/product-lines`, `/about`, `/case-studies`, and `/contact`.
-   - Ensure required copy, placeholders, and hierarchy from the PRD are represented.
-4. **Contact UX and placeholders**
-   - Implement validated frontend contact form with clear success/error states.
-   - Preserve TODO markers for unresolved content (contact email, imagery, specs, partner details).
-5. **Quality checks and docs**
-   - Run lint and build; resolve any issues.
-   - Update `README.md` and `TODO_CONTENT.md` with local run/deploy guidance and unresolved content items.
+1. **Restructure content source of truth**
+   - Expand `data/site.ts` with typed interfaces for platforms, mission use cases, technology themes, payload families, trust signals, FAQs, and resources.
+   - Replace flat placeholders with publishable, non-fabricated content and explicit pending-status wording.
+2. **Add reusable presentation components**
+   - Introduce maintainable components (`PageHero`, `ProofRibbon`, `PlatformCard`, `MissionCard`, `SpecStatusTable`, `Faq`, `TrustSignals`) to improve hierarchy without redesigning theme.
+3. **Upgrade all required routes**
+   - Rebuild `/`, `/our-solution`, `/technology`, `/product-lines`, `/case-studies`, `/about`, and `/contact` content flow and CTAs using the updated data model.
+   - Keep copy conservative and separate confirmed/pending information.
+4. **Improve navigation/footer and metadata**
+   - Add active route styling, consistent CTA language, mature header/footer layout, route-level metadata, canonical settings, robots/sitemap, and safe organisation JSON-LD.
+5. **Preserve static deployment compatibility**
+   - Keep `output: "export"` and unoptimized images.
+   - Ensure Amplify artifacts point to `out/`.
+   - Add `typecheck` and static preview scripts.
+6. **Contact flow realism and TODO alignment**
+   - Replace mock success behaviour with endpoint-driven handling via `NEXT_PUBLIC_CONTACT_ENDPOINT` plus explicit fallback.
+   - Add honeypot, loading/error states, and update unresolved items in `TODO_CONTENT.md`.
+7. **Validate and deliver**
+   - Run lint, typecheck, and build.
+   - Commit changes and create PR message.

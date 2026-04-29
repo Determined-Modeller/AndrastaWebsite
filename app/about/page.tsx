@@ -1,34 +1,5 @@
-import { BaseCard } from '@/components/cards';
+import type { Metadata } from 'next';
 import { SectionWrapper } from '@/components/section-wrapper';
-import { partnerPlaceholders, teamPlaceholders } from '@/data/site';
-
-export const metadata = {
-  title: 'About Us',
-  description: 'Andrasta Marine company profile, team placeholders, and partner placeholders.'
-};
-
-export default function AboutPage() {
-  return (
-    <>
-      <SectionWrapper heading="About Andrasta Marine" intro="Company information is intentionally concise for v1 while preserving clear structure for future expansion.">
-        <p className="max-w-3xl text-sm leading-7 text-muted">
-          Andrasta Marine is developing autonomous offshore systems for persistent maritime awareness, inspection, and evidence continuity in operationally demanding environments.
-        </p>
-      </SectionWrapper>
-      <SectionWrapper heading="Team" intro="Placeholder cards are production-ready containers for future name, role, image, and profile details.">
-        <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-          {teamPlaceholders.map((member) => (
-            <BaseCard key={member.title} title={member.title} subtitle={member.subtitle} detail={member.detail} />
-          ))}
-        </div>
-      </SectionWrapper>
-      <SectionWrapper heading="Partners" intro="Partner card structure is ready for logos, role descriptions, and collaboration context.">
-        <div className="grid gap-4 md:grid-cols-3">
-          {partnerPlaceholders.map((partner) => (
-            <BaseCard key={partner.title} title={partner.title} subtitle={partner.subtitle} detail={partner.detail} />
-          ))}
-        </div>
-      </SectionWrapper>
-    </>
-  );
-}
+import { siteConfig } from '@/data/site';
+export const metadata: Metadata = { title: 'About | Andrasta Marine', description: 'Company purpose and disclosure discipline.' };
+export default function AboutPage(){return <><SectionWrapper heading="Company purpose"><p className="text-sm leading-8 text-slate-300">{siteConfig.companyDescription}</p></SectionWrapper><SectionWrapper heading="Vessel OEM model"><p className="text-sm leading-8 text-slate-300">Andrasta Marine integrates COTS and bespoke marine, hydrogen, sensing, and autonomy systems into complete offshore products.</p></SectionWrapper><SectionWrapper heading="Engineering philosophy"><p className="text-sm leading-8 text-slate-300">The programme is built around controlled disclosure, practical offshore logistics, and a validation pathway that releases technical detail progressively.</p></SectionWrapper><SectionWrapper heading="Why hydrogen-hydride replenishment"><p className="text-sm leading-8 text-slate-300">Hydride-focused vessel design, low-pressure storage, and remote replenishment are central to improving endurance, handling, and deployment flexibility.</p></SectionWrapper><SectionWrapper heading="Team credibility"><p className="text-sm leading-8 text-slate-300">Andrasta Marine is being developed by an experienced professional team currently active across the marine, hydrogen, and high-integrity engineering sectors. Public disclosure is being staged deliberately while platform development, partner engagement, and IP protection mature.</p></SectionWrapper><SectionWrapper heading="Partner engagement"><p className="text-sm leading-8 text-slate-300">Current engagement focuses on demonstration missions, payload integration, and technical collaboration aligned to offshore decommissioning and inspection needs.</p></SectionWrapper></>}

@@ -1,143 +1,195 @@
+export type PublicStatus =
+  | 'seeking-demonstration-partners'
+  | 'under-development'
+  | 'publication-pending'
+  | 'concept-validation'
+  | 'available-for-discussion';
+
+export type PlatformFormFactor = {
+  name: 'AndraMini' | 'Andra40';
+  role: string;
+  summary: string;
+  publicStatus: PublicStatus;
+  statusCopy: string;
+  missionFit: string[];
+  replenishmentConcept: string;
+  payloadCompatibility: string[];
+  caveats: string[];
+};
+
+export type PayloadFamily = {
+  name: 'AndraBeam' | 'AndraField' | 'AndraRise' | 'AndraKeep';
+  category: string;
+  summary: string;
+  applications: string[];
+  maturityCopy: string;
+};
+
+export type MissionScenario = {
+  title: string;
+  slug: string;
+  priority: 'primary' | 'secondary' | 'future';
+  context: string;
+  problem: string;
+  limitation: string;
+  approach: string;
+  outputs: string[];
+  whyItMatters?: string;
+  demonstrationPathway?: string;
+  caveat: string;
+};
+
+export type FaqItem = { question: string; answer: string };
+
 export const siteConfig = {
   name: 'Andrasta Marine',
   domain: 'andrastamarine.com',
-  mission: 'Redefine delivery of challenging offshore operations',
-  heroCopy:
-    'A low-noise, hydrogen-powered autonomous vessel system providing persistent maritime awareness, enabling continuous evidence collection and reducing reliance on high-cost assets.',
+  siteUrl: 'https://andrastamarine.com',
+  brandLine: 'Redefining what is possible offshore.',
+  heroExplainer:
+    'Andrasta Marine develops hydrogen-powered autonomous marine vessels for persistent offshore survey, inspection, and environmental evidence-gathering without continuous dependence on support vessels.',
+  companyDescription:
+    'Andrasta Marine is a vessel OEM integrating commercial-off-the-shelf and bespoke marine, hydrogen, sensing, and autonomy systems into complete offshore products.',
+  primaryCta: 'Discuss a demonstration mission',
+  secondaryCta: 'Explore platform form factors',
   nav: [
     { href: '/', label: 'Home' },
     { href: '/our-solution', label: 'Our Solution' },
     { href: '/technology', label: 'Technology' },
     { href: '/product-lines', label: 'Product Lines' },
-    { href: '/about', label: 'About Us' },
+    { href: '/about', label: 'About' },
     { href: '/case-studies', label: 'Case Studies' },
     { href: '/contact', label: 'Contact' }
   ]
 };
 
-export const solutionProblems = [
-  'Conventional support fleets and boat-deployed operations are operational-expenditure heavy.',
-  'Many operations remain dependent on mother systems for deployment and sustainment.',
-  'Subsurface systems are often tethered or battery-based, requiring frequent deck recovery for charging.',
-  'This reduces time on task, limits utilisation, and increases operational disturbance and emissions intensity.'
+export const valueRibbon = [
+  'Vessel OEM',
+  'Hydrogen-electric architecture',
+  'Hydride replenishment',
+  'Remote refuelling IP, patent pending',
+  'Modular payload families',
+  'Decommissioning survey first'
 ];
 
-export const solutionApproach = [
-  'Route-following missions with waypoint return, home-port logic, and configurable autonomy.',
-  'Fuel dropped along the operational path and in situ via low-cost marinized fuelling robots.',
-  'Deployment flexibility: helicopter, transport aircraft, and conventional marine methods.',
-  'Operational emphasis on time-on-task, utilisation, flexibility, and reduced emissions intensity.'
-];
-
-export const designPrinciples = [
-  'Designed for automated and remote operation from day 1.',
-  'Design-for-manufacture architecture for credible scale-out.',
-  'Low-cost potential despite hydrogen and light air/marine deployment architecture.',
-  'Rugged hydrogen fuel-cell plus battery powertrain approach.',
-  'Operation above or below water within the initial design envelope.',
-  'Persistent, low-disturbance measurement and maritime awareness.'
-];
-
-export const technologyThemes = [
-  {
-    title: 'Underwater refuelling robot concept',
-    detail:
-      'In-situ refuelling intended to reduce deck recovery dependence and extend mission persistence.'
-  },
-  {
-    title: 'Airdroppable deployment package',
-    detail:
-      'System and fuelling robot designed for helicopter or transport aircraft deployment workflows.'
-  },
-  {
-    title: 'Low-noise, high-loiter profile',
-    detail:
-      'Quiet propulsion and endurance-first mission profiles for persistent evidence collection.'
-  },
-  {
-    title: 'Hydrogen-electric direct-drive propulsion',
-    detail:
-      'Fuel-cell electric architecture with direct-drive motor and contrarotating prop concept for efficient range extension.'
-  },
-  {
-    title: 'Onboard oxygen and hydrogen hydride storage',
-    detail: 'Simple pressure-driven operation concept intended for practical field use.'
-  },
-  {
-    title: 'Low-pressure hydrogen operation',
-    detail:
-      'Low-pressure architecture positioned as a deployment and safety advantage across civil operations.'
-  },
-  {
-    title: 'Civil safety package',
-    detail: 'Includes buoyancy pack system and safety-oriented features for civil deployment credibility.'
-  }
-];
-
-export const payloadFamilies = [
-  { name: 'AndraBeam', note: 'Payload family overview in development.' },
-  { name: 'AndraField', note: 'Sensor integration variant details to be published.' },
-  { name: 'AndraRise', note: 'Mission package and partner payload detail pending confirmation.' }
-];
-
-export const productLines = [
+export const formFactors: PlatformFormFactor[] = [
   {
     name: 'AndraMini',
-    scale: '~1 m³ system',
+    role: 'Smaller form factor for near-term offshore demonstration and practical survey workflows.',
     summary:
-      'Effector form factor designed to integrate with existing marine supply chain equipment.',
-    highlights: ['Persistent, low-noise sensing', 'Limited repositioning'],
-    specs: [
-      { label: 'Endurance', value: 'Performance data to be published' },
-      { label: 'Range', value: 'Performance data to be published' },
-      { label: 'Payload Capacity', value: 'Performance data to be published' }
-    ]
+      'AndraMini is intended to support early demonstration programmes, payload integration, and repeatable offshore data-capture missions.',
+    publicStatus: 'seeking-demonstration-partners',
+    statusCopy: 'Seeking test and demonstration partners, with a target pathway toward commercial operation within 18 months.',
+    missionFit: ['Decommissioning environmental survey', 'Ad hoc hull inspection', 'Persistent environmental monitoring'],
+    replenishmentConcept: 'Hydride-focused remote refuelling and replenishment pathway under progressive validation.',
+    payloadCompatibility: ['AndraBeam', 'AndraField', 'AndraRise', 'AndraKeep (concept pathway)'],
+    caveats: ['Detailed endurance, range, and depth figures are publication pending.', 'Validation pathway in progress; details released progressively.']
   },
   {
     name: 'Andra40',
-    scale: '~16.9 m³ / 40 ft ISO-container-scale system',
+    role: 'Larger form factor under development for longer-duration offshore missions with modular payload options.',
     summary:
-      'Designed around lowest overall cost potential and flexible operational performance with larger coverage area.',
-    highlights: ['Larger coverage area', 'Flexible deployment architecture'],
-    specs: [
-      { label: 'Endurance', value: 'Performance data to be published' },
-      { label: 'Coverage Envelope', value: 'Performance data to be published' },
-      { label: 'Payload Options', value: 'Performance data to be published' }
-    ]
+      'Andra40 extends the same hydrogen-hydride and replenishment logic into a larger vessel architecture for persistent operations.',
+    publicStatus: 'under-development',
+    statusCopy: 'Under development as a larger autonomous offshore form factor.',
+    missionFit: ['Persistent environmental monitoring', 'Offshore asset inspection', 'Future adjacent monitoring missions'],
+    replenishmentConcept: 'Designed around hydrogen-electric endurance and remote replenishment logistics.',
+    payloadCompatibility: ['AndraBeam', 'AndraField', 'AndraRise', 'AndraKeep (concept pathway)'],
+    caveats: ['Final configuration and mission envelope are publication pending.', 'Commercial pathway details are released progressively.']
   }
 ];
 
-export const teamPlaceholders = Array.from({ length: 6 }, (_, i) => ({
-  title: `Team Profile ${i + 1}`,
-  subtitle: 'Name and role to be announced',
-  detail: 'Profile summary pending final review.'
-}));
-
-export const partnerPlaceholders = Array.from({ length: 3 }, (_, i) => ({
-  title: `Partner ${i + 1}`,
-  subtitle: 'Partner details to be announced',
-  detail: 'Integration role and relationship summary pending confirmation.'
-}));
-
-export const caseStudies = [
+export const payloadFamilies: PayloadFamily[] = [
   {
-    slug: 'north-sea-emissions-enforcement',
-    title: 'North Sea emissions enforcement',
-    framing: 'Turning intermittent detection into continuous evidence',
-    challenge:
-      'Enforcement teams face intermittent observation windows and high-cost deployment cycles that limit evidentiary continuity.',
-    limitation:
-      'Crewed support fleets and episodic surveys introduce gaps in evidence capture and increase operational overhead.',
-    approach:
-      'Persistent low-noise autonomous monitoring with in-situ refuelling pathways designed to maintain operational continuity.',
-    outcomes:
-      'Stronger evidence continuity, improved mission utilisation, and reduced dependence on high-cost assets.'
+    name: 'AndraBeam',
+    category: 'High-resolution acoustic sensing and inspection payload family',
+    summary:
+      'AndraBeam supports detailed subsea survey, inspection, and evidence-grade environmental observation. The vessel design intent includes minimal moving parts, low bubble generation, polymer hull construction, and low electrical signature to support data quality.',
+    applications: ['Decommissioning survey', 'Hull inspection', 'Higher-energy acoustic method development pathways'],
+    maturityCopy: 'Capability details are released progressively during validation.'
+  },
+  {
+    name: 'AndraField',
+    category: 'Environmental and field-sensing payload family',
+    summary:
+      'AndraField combines environmental and field-job-band sensing inputs into fused mission data products for offshore monitoring and decommissioning assurance workflows.',
+    applications: ['Environmental baselines', 'Post-works assurance', 'Decision-support data products'],
+    maturityCopy: 'Validation pathway in progress; integration details publication pending.'
+  },
+  {
+    name: 'AndraRise',
+    category: 'Semi-submersible observation configuration',
+    summary:
+      'AndraRise is intended for camera-based observation above the waterline while retaining a low-profile marine operating mode.',
+    applications: ['Ad hoc visual checks', 'Surface-interface observation', 'Mixed camera/sensing workflows'],
+    maturityCopy: 'Under development as a mission configuration pathway.'
+  },
+  {
+    name: 'AndraKeep',
+    category: 'Low-disturbance station-keeping concept',
+    summary:
+      'AndraKeep is a bio-inspired gripping or holding interface concept intended to reduce continuous propulsion demand during persistent monitoring missions.',
+    applications: ['Persistent monitoring', 'Low-disturbance station holding', 'Energy-managed linger operations'],
+    maturityCopy: 'Concept validation in progress.'
   }
+];
+
+export const missionScenarios: MissionScenario[] = [
+  {
+    title: 'Decommissioning environmental survey',
+    slug: 'decommissioning-environmental-survey',
+    priority: 'primary',
+    context: 'Environmental survey during and after offshore decommissioning works is the first commercial focus.',
+    problem: 'Operators need repeatable, evidence-grade environmental data over meaningful time windows.',
+    limitation: 'Support-vessel dependence and short campaign windows can limit continuity and increase cost.',
+    approach: 'Hydrogen-electric vessel missions with waypoint plans, linger/patrol modes, and remote replenishment logic.',
+    outputs: ['Repeatable transect datasets', 'Timestamped environmental evidence logs', 'Baseline and post-works comparison packages'],
+    whyItMatters: 'Longer time-on-task and lower deployment friction can improve decommissioning decision confidence.',
+    demonstrationPathway: 'Demonstration partners are sought through service companies and major asset-owner programmes.',
+    caveat: 'Detailed mission performance figures remain publication pending.'
+  },
+  {
+    title: 'Ad hoc hull inspection',
+    slug: 'ad-hoc-hull-inspection',
+    priority: 'secondary',
+    context: 'Secondary commercial focus for targeted inspection tasks without mobilising a full survey spread.',
+    problem: 'Unplanned hull checks often require disproportionate mobilisation effort.',
+    limitation: 'Conventional inspection mobilisations can be expensive and slow for time-sensitive checks.',
+    approach: 'Deploy low-disturbance missions using acoustic and camera-oriented payload configurations.',
+    outputs: ['Targeted acoustic/camera evidence packs', 'Mission-linked inspection observations'],
+    caveat: 'Not presented as certified NDT equivalence; capability details released progressively.'
+  },
+  {
+    title: 'Persistent environmental monitoring and sampling workflows',
+    slug: 'persistent-environmental-monitoring',
+    priority: 'future',
+    context: 'Long-duration monitoring and sampling-style workflows for offshore environmental assurance.',
+    problem: 'Long campaigns need continuity that is difficult with episodic vessel deployment patterns.',
+    limitation: 'Battery logistics and repeated recovery cycles can limit practical monitoring persistence.',
+    approach: 'Repeatable autonomous transects and linger missions with selected biological/environmental sampling concepts.',
+    outputs: ['Continuous environmental trend records', 'Mission-linked sampling or proxy data streams'],
+    caveat: 'Selected sampling variants are development pathways and not presented as finalised deployed capability.'
+  }
+];
+
+export const faqs: FaqItem[] = [
+  { question: 'What is Andrasta Marine?', answer: siteConfig.companyDescription },
+  { question: 'What is the first commercial focus?', answer: 'Decommissioning environmental survey is the first commercial focus, with ad hoc hull inspection as a secondary focus.' },
+  { question: 'What is public about the refuelling approach?', answer: 'Andrasta Marine is developing remote refuelling and replenishment based on hydride fuel logistics, including patent pending IP for a droppable refuelling robot.' },
+  { question: 'Are final performance figures public?', answer: 'No. Endurance, range, depth, and detailed autonomy figures are publication pending and released progressively.' }
 ];
 
 export const contactDetails = {
-  company: 'Andrasta Marine',
-  domain: 'andrastamarine.com',
-  location: 'Primary operating location to be confirmed',
-  email: 'TODO: confirm final production contact email (intended as info@...)'
+  email: 'andrastamarine@gmail.com',
+  endpointEnvVar: 'NEXT_PUBLIC_CONTACT_ENDPOINT',
+  categories: [
+    'Decommissioning environmental survey',
+    'Hull inspection',
+    'Demonstration partnership',
+    'Payload integration',
+    'Technical partnership',
+    'Strategic partnership / investment',
+    'Supplier engagement',
+    'General enquiry'
+  ]
 };
