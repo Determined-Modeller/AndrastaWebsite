@@ -6,10 +6,10 @@ import { siteConfig } from "@/data/site";
 const HERO_VESSEL_SRC = "/hero-vessel.png";
 
 const tags = [
+  "Vessel OEM",
   "Hydrogen-electric",
-  "Low-noise loiter",
-  "Persistent evidence",
-  "Container-scale systems",
+  "Hydride replenishment",
+  "Decommissioning survey first",
 ];
 
 export function Hero() {
@@ -33,17 +33,17 @@ export function Hero() {
 
           <div className="mt-9 flex flex-wrap gap-4">
             <Link
-              href="/our-solution"
+              href="/contact"
               className="rounded-full bg-cyan-300 px-6 py-3 text-sm font-semibold text-slate-950 shadow-lg shadow-cyan-950/30 transition hover:bg-cyan-200"
             >
-              Explore Our Solution
+              Discuss a Demonstration Mission
             </Link>
 
             <Link
-              href="/technology"
+              href="/product-lines"
               className="rounded-full border border-slate-500/70 px-6 py-3 text-sm font-semibold text-slate-100 transition hover:border-cyan-300/70 hover:text-white"
             >
-              Review Technology
+              Explore Vessel Form Factors
             </Link>
           </div>
 
@@ -62,7 +62,7 @@ export function Hero() {
         <div className="relative min-h-[340px] overflow-visible sm:min-h-[460px] lg:min-h-[560px]">
           <Image
             src={HERO_VESSEL_SRC}
-            alt="Andrasta Marine vessel concept"
+            alt="Andrasta Marine vessel concept for autonomous offshore survey and inspection"
             fill
             priority
             sizes="(min-width: 1024px) 52vw, 100vw"
