@@ -7,6 +7,8 @@ Production-ready v1 frontend for **Andrasta Marine** built from `docs/frontend-p
 - Tailwind CSS
 - Static-friendly architecture suitable for AWS Amplify Hosting
 
+> Recovery note: `main` was restored to the known-good website baseline after the later Codex content pass caused build instability. This note is documentation-only and does not change the application or deployment configuration.
+
 ## Routes
 
 - `/`
