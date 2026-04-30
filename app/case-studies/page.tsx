@@ -3,23 +3,26 @@ import { SectionWrapper } from '@/components/section-wrapper';
 import { caseStudies } from '@/data/site';
 
 export const metadata = {
-  title: 'Case Studies',
-  description: 'Operational case studies for persistent offshore awareness outcomes.'
+  title: 'Mission Scenarios',
+  description: 'Mission scenarios and application cases for Andrasta Marine offshore survey and inspection workflows.'
 };
 
 export default function CaseStudiesPage() {
   return (
-    <SectionWrapper heading="Case Studies" intro="Reusable case study blocks support future expansion without redesign.">
+    <SectionWrapper
+      heading="Mission Scenarios"
+      intro="These are application frames for partner discussion and demonstration planning. They are not presented as completed customer case studies."
+    >
       <div className="space-y-4">
         {caseStudies.map((study) => (
           <BaseCard key={study.slug} title={study.title} subtitle={study.framing}>
             <div className="mt-4 grid gap-4 md:grid-cols-2">
               <div>
-                <h4 className="text-sm font-semibold uppercase tracking-[0.14em] text-accent">Challenge</h4>
+                <h4 className="text-sm font-semibold uppercase tracking-[0.14em] text-accent">Operational context</h4>
                 <p className="mt-2 text-sm leading-7 text-muted">{study.challenge}</p>
               </div>
               <div>
-                <h4 className="text-sm font-semibold uppercase tracking-[0.14em] text-accent">Current operational limitation</h4>
+                <h4 className="text-sm font-semibold uppercase tracking-[0.14em] text-accent">Current limitation</h4>
                 <p className="mt-2 text-sm leading-7 text-muted">{study.limitation}</p>
               </div>
               <div>
@@ -27,7 +30,7 @@ export default function CaseStudiesPage() {
                 <p className="mt-2 text-sm leading-7 text-muted">{study.approach}</p>
               </div>
               <div>
-                <h4 className="text-sm font-semibold uppercase tracking-[0.14em] text-accent">Likely outcomes</h4>
+                <h4 className="text-sm font-semibold uppercase tracking-[0.14em] text-accent">Potential outputs</h4>
                 <p className="mt-2 text-sm leading-7 text-muted">{study.outcomes}</p>
               </div>
             </div>
