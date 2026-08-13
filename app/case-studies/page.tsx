@@ -1,42 +1,65 @@
+import Link from 'next/link';
+
 import { BaseCard } from '@/components/cards';
 import { SectionWrapper } from '@/components/section-wrapper';
-import { caseStudies } from '@/data/site';
+import { missionScenarios } from '@/data/site';
 
 export const metadata = {
-  title: 'Mission Scenarios',
-  description: 'Mission scenarios and application cases for Andrasta Marine offshore survey and inspection workflows.'
+  title: 'Mission Applications',
+  description:
+    'Illustrative civil, security, defence, and partner-integration applications for Andrasta Marine autonomous subsea systems.'
 };
 
 export default function CaseStudiesPage() {
   return (
-    <SectionWrapper
-      heading="Mission Scenarios"
-      intro="These are application frames for partner discussion and demonstration planning. They are not presented as completed customer case studies."
-    >
-      <div className="space-y-4">
-        {caseStudies.map((study) => (
-          <BaseCard key={study.slug} title={study.title} subtitle={study.framing}>
-            <div className="mt-4 grid gap-4 md:grid-cols-2">
-              <div>
-                <h4 className="text-sm font-semibold uppercase tracking-[0.14em] text-accent">Operational context</h4>
-                <p className="mt-2 text-sm leading-7 text-muted">{study.challenge}</p>
+    <>
+      <SectionWrapper
+        eyebrow="Mission applications"
+        heading="Persistent systems should be judged against a real operating need."
+        intro="These application frames guide partner discussions and demonstration planning. They are not presented as completed customer case studies, contracted deployments, or claims of fielded capability."
+      >
+        <div className="space-y-5">
+          {missionScenarios.map((scenario) => (
+            <BaseCard
+              key={scenario.slug}
+              eyebrow={scenario.market}
+              title={scenario.title}
+              subtitle={scenario.framing}
+              className="overflow-hidden"
+            >
+              <div className="mt-6 grid gap-5 border-t border-slate-700/70 pt-6 md:grid-cols-3">
+                <div>
+                  <h3 className="text-xs font-semibold uppercase tracking-[0.18em] text-cyan-200">Mission need</h3>
+                  <p className="mt-3 text-sm leading-7 text-slate-300">{scenario.challenge}</p>
+                </div>
+                <div>
+                  <h3 className="text-xs font-semibold uppercase tracking-[0.18em] text-cyan-200">Andrasta approach</h3>
+                  <p className="mt-3 text-sm leading-7 text-slate-300">{scenario.approach}</p>
+                </div>
+                <div>
+                  <h3 className="text-xs font-semibold uppercase tracking-[0.18em] text-cyan-200">Potential value</h3>
+                  <p className="mt-3 text-sm leading-7 text-slate-300">{scenario.value}</p>
+                </div>
               </div>
-              <div>
-                <h4 className="text-sm font-semibold uppercase tracking-[0.14em] text-accent">Current limitation</h4>
-                <p className="mt-2 text-sm leading-7 text-muted">{study.limitation}</p>
-              </div>
-              <div>
-                <h4 className="text-sm font-semibold uppercase tracking-[0.14em] text-accent">Andrasta Marine approach</h4>
-                <p className="mt-2 text-sm leading-7 text-muted">{study.approach}</p>
-              </div>
-              <div>
-                <h4 className="text-sm font-semibold uppercase tracking-[0.14em] text-accent">Potential outputs</h4>
-                <p className="mt-2 text-sm leading-7 text-muted">{study.outcomes}</p>
-              </div>
-            </div>
-          </BaseCard>
-        ))}
+            </BaseCard>
+          ))}
+        </div>
+      </SectionWrapper>
+
+      <div className="border-y border-slate-800/80 bg-slate-950/35">
+        <SectionWrapper
+          eyebrow="Demonstration gate"
+          heading="A useful demonstration has a customer question and an acceptance decision."
+          intro="Before committing to a trial, the parties should agree the mission boundary, configuration, responsibilities, safety and security controls, evidence to be captured, and what a successful result would allow them to decide next."
+        >
+          <Link
+            href="/contact"
+            className="inline-flex rounded-full bg-cyan-200 px-6 py-3 text-sm font-semibold text-slate-950 transition hover:bg-cyan-100"
+          >
+            Frame a demonstration
+          </Link>
+        </SectionWrapper>
       </div>
-    </SectionWrapper>
+    </>
   );
 }

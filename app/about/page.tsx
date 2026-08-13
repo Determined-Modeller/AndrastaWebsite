@@ -1,64 +1,70 @@
+import Link from 'next/link';
+
 import { BaseCard } from '@/components/cards';
 import { SectionWrapper } from '@/components/section-wrapper';
-import { partnerPlaceholders, teamPlaceholders } from '@/data/site';
+import { companyPrinciples } from '@/data/site';
 
 export const metadata = {
-  title: 'About Us',
-  description: 'Andrasta Marine company profile, engineering philosophy, and partner engagement focus.'
+  title: 'Company',
+  description: 'Andrasta Marine company model, engineering approach, and current development priorities.'
 };
 
 export default function AboutPage() {
   return (
     <>
       <SectionWrapper
-        heading="About Andrasta Marine"
-        intro="Andrasta Marine is a vessel OEM developing hydrogen-powered autonomous marine products for persistent offshore survey, inspection, and environmental evidence-gathering."
+        eyebrow="Company"
+        heading="A UK subsea systems company built around engineering evidence."
+        intro="Andrasta Marine is developing persistent autonomous subsea systems and the energy, payload, replenishment, logistics, and assurance architecture required to operate them credibly."
       >
         <div className="grid gap-4 md:grid-cols-2">
           <BaseCard
-            title="Company purpose"
-            detail="The company exists to redefine what is possible offshore by reducing support-vessel dependence and improving the continuity of useful survey and inspection data."
+            title="What we build"
+            detail="Development platforms, physical system architecture, mission-support concepts, controlled interfaces, and engineering evidence for civil, security, and defence applications."
           />
           <BaseCard
-            title="OEM model"
-            detail="Andrasta Marine integrates commercial-off-the-shelf and bespoke marine, hydrogen, sensing, autonomy, and payload systems into complete offshore products."
+            title="How we work"
+            detail="A focused system-authority model: retain control of the platform architecture and integrate specialist capability through explicit partner, supplier, IP, and assurance boundaries."
           />
         </div>
       </SectionWrapper>
+
+      <div className="border-y border-slate-800/80 bg-slate-950/35">
+        <SectionWrapper
+          eyebrow="Operating principles"
+          heading="Credibility is designed into the programme."
+        >
+          <div className="grid gap-4 md:grid-cols-3">
+            {companyPrinciples.map((principle) => (
+              <BaseCard key={principle.title} title={principle.title} detail={principle.detail} />
+            ))}
+          </div>
+        </SectionWrapper>
+      </div>
 
       <SectionWrapper
-        heading="Engineering philosophy"
-        intro="The architecture is deliberately focused on practical offshore handling, controlled public claims, and useful demonstration pathways."
+        eyebrow="Current priorities"
+        heading="Prototype evidence, full-scale integration, and supplier readiness."
+        intro="The near-term programme is concentrated on retiring physical integration risk, validating the first evidence set, developing the AndraSound integration path, and implementing the controls required for larger customer and prime-contractor engagement."
       >
         <div className="grid gap-4 md:grid-cols-3">
-          <BaseCard
-            title="Hydride-focused design"
-            detail="Hydrogen is not treated as a late-stage energy module. Vessel scale, powertrain, handling, and replenishment are developed around hydride-based storage logic."
-          />
-          <BaseCard
-            title="Operational realism"
-            detail="The priority is useful time-on-task, recovery planning, quiet operation, and repeatable survey data rather than unsupported headline performance figures."
-          />
-          <BaseCard
-            title="Controlled disclosure"
-            detail="Performance figures, maturity claims, and detailed operating envelopes are released only when validated and appropriate for public disclosure."
-          />
+          <BaseCard title="Build + test" detail="Generate evidence on energetics, manoeuvring, acoustic behaviour, payload integration, maintainability, and the assumptions that govern scale-up." />
+          <BaseCard title="Integrate + demonstrate" detail="Develop controlled partner routes for autonomy, sensing, command-and-control, facilities, marine operations, and customer-backed trials." />
+          <BaseCard title="Assure + procure" detail="Build the quality, cyber, responsible-business, supply-chain, and disclosure controls expected by serious customers." />
         </div>
-      </SectionWrapper>
-
-      <SectionWrapper heading="Team" intro="The public team profile is intentionally staged while platform development, partner engagement, and IP protection mature.">
-        <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-          {teamPlaceholders.map((member) => (
-            <BaseCard key={member.title} title={member.title} subtitle={member.subtitle} detail={member.detail} />
-          ))}
-        </div>
-      </SectionWrapper>
-
-      <SectionWrapper heading="Partners" intro="Current partner conversations are focused on practical demonstration, payload integration, and credible route-to-market development.">
-        <div className="grid gap-4 md:grid-cols-3">
-          {partnerPlaceholders.map((partner) => (
-            <BaseCard key={partner.title} title={partner.title} subtitle={partner.subtitle} detail={partner.detail} />
-          ))}
+        <div className="mt-8 flex flex-wrap gap-4">
+          <Link
+            href="/responsibility"
+            className="inline-flex rounded-full bg-cyan-200 px-6 py-3 text-sm font-semibold text-slate-950 transition hover:bg-cyan-100"
+          >
+            Review responsibility + readiness
+          </Link>
+          <Link
+            href="/contact"
+            className="inline-flex rounded-full border border-slate-600 px-6 py-3 text-sm font-semibold text-slate-100 transition hover:border-cyan-200 hover:text-white"
+          >
+            Contact Andrasta Marine
+          </Link>
         </div>
       </SectionWrapper>
     </>

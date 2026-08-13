@@ -1,32 +1,30 @@
-# Andrasta Marine Frontend (v1)
+# Andrasta Marine website
 
-Production-ready v1 frontend for **Andrasta Marine** built from `docs/frontend-prd.md` using:
+Production website for [andrastamarine.com](https://andrastamarine.com), built with Next.js App Router, TypeScript, and Tailwind CSS. The site is statically exported and deployed from `main` through the existing AWS Amplify workflow.
 
-- Next.js (App Router)
-- TypeScript
-- Tailwind CSS
-- Static-friendly architecture suitable for AWS Amplify Hosting
+## Public routes
 
-> Recovery note: `main` was restored to the known-good website baseline after the later Codex content pass caused build instability. This note is documentation-only and does not change the application or deployment configuration.
+- `/` - dual-use positioning and programme overview
+- `/operating-system` - vehicle, energy, payload, replenishment, and logistics thesis
+- `/technology` - public-safe technology architecture
+- `/product-lines` - platform development roadmap and datasheet placeholders
+- `/case-studies` - illustrative mission applications
+- `/responsibility` - responsible innovation, business conduct, and supplier readiness
+- `/about` - company model and current priorities
+- `/contact` - direct company contact route
+- `/our-solution` - retained approach route for existing links
 
-## Routes
+## Content controls
 
-- `/`
-- `/our-solution`
-- `/technology`
-- `/product-lines`
-- `/about`
-- `/case-studies`
-- `/contact`
+- Public claims must be supportable and development status must remain explicit.
+- Do not publish private performance figures, customer context, protected partner routes, patent-sensitive detail, or restricted technical information.
+- ISO 9001 and DEF STAN 05-138 language describes targets, not current certification or blanket approval.
+- Product datasheet controls are backed by nullable URLs in `data/site.ts`; leave them disabled until approved PDFs exist.
+- The board/team page is intentionally deferred.
 
-## Project structure
+## Interactive explainer readiness
 
-- `app/` - route files, layout, metadata, and page content composition
-- `components/` - reusable UI components
-- `data/site.ts` - centralized structured content and placeholders
-- `docs/frontend-prd.md` - source-of-truth requirements
-- `IMPLEMENTATION_PLAN.md` - implementation plan followed for v1
-- `TODO_CONTENT.md` - unresolved content items to finalize
+`components/system-explainer.tsx` provides a static operating-cycle fallback and an optional iframe path. When an approved interactive explainer exists, pass its URL through the `embedUrl` prop in `app/operating-system/page.tsx`. No hosting or server change is required.
 
 ## Local development
 
@@ -37,80 +35,25 @@ npm run dev
 
 Open `http://localhost:3000`.
 
-## Serve locally (production mode)
-
-```bash
-npm run build
-npm run serve
-```
-
-This serves the built app at `http://localhost:3000` (bound to `0.0.0.0` for local/network visibility).
-
-
-## Asset policy (avoid binary patch issues)
-
-All brand/hero image binaries must live directly in the repository under `public/` and be committed to git.
-Do not rely on temporary upload paths (for example `/tmp/user_uploaded_attachments/...`) for long-term project state.
-
-Required files:
-
-- `public/andrasta-logo.svg`
-- `public/hero-vessel.svg`
-- `public/icon.svg`
-- `public/apple-touch-icon.svg`
-
-Verify assets at any time:
-
-```bash
-npm run check:assets
-```
-
 ## Quality checks
 
 ```bash
+npm run check:assets
 npm run lint
 npm run build
 ```
 
+The production build exports to `out/` for AWS Amplify.
 
+## Required public assets
 
-## AWS Amplify deployment (no code edits required)
+- `public/andrasta-logo.png`
+- `public/AndrastaMinilogo.png`
+- `public/hero-dual-use.webp`
+- `public/mission-dual-use.webp`
 
-This repository is now preconfigured for static Amplify Hosting:
+The two operational images are illustrative and are labelled accordingly on the public site. Replace them with approved real programme photography when available.
 
-- Next.js static export is enabled (`output: "export"`)
-- Build output is generated to `out/`
-- `amplify.yml` is included and points artifacts to `out/`
-- `.nvmrc` pins Node 20 for consistent builds
+## Deployment
 
-### Deploy steps
-
-1. Push this repo/branch to your Git provider.
-2. In AWS Amplify, create a new app from that repo/branch.
-3. Amplify will auto-detect `amplify.yml`; do not override build settings.
-4. Deploy.
-
-After deploy, the full site routes are statically served and visible without additional code edits.
-
-## AWS Amplify Hosting notes
-
-This project is configured for static Amplify Hosting using Next.js export output.
-## AWS Amplify Hosting notes
-
-This project is static-friendly and compatible with Amplify’s Next.js hosting support.
-
-Recommended build settings:
-
-- Build command: `npm run build`
-- Output: `out`
-- Node runtime: 20+
-
-`amplify.yml` is already included and should be used as-is for deployment.
-- Output: `.next`
-- Node runtime: 20+
-
-Optional `amplify.yml` can be added later if environment-specific build customization is required.
-
-## Placeholder policy
-
-Where business-critical values are not confirmed, the site intentionally uses explicit placeholders (not fabricated claims). See `TODO_CONTENT.md`.
+`amplify.yml` is the source of truth for the existing AWS Amplify build. Keep the current static export and Git-connected deployment path; do not introduce a second hosting stack.

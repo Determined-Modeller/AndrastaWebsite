@@ -1,5 +1,7 @@
 # Andrasta Marine Frontend PRD
 
+> **Direction update - 13 August 2026:** The dual-use positioning, platform roadmap, supplier-readiness language, responsibility content, direct-email contact route, and Operating System explainer architecture in `IMPLEMENTATION_PLAN.md` supersede conflicting v0.1 requirements below. In particular, the public roadmap now uses Manta, AndraSound, AndraHold, and AndraCharge; the board/team page is deferred; and decommissioning is one civil application rather than the sole lead market.
+
 **Document version:** v0.1  
 **Project:** Andrasta Marine website frontend  
 **Brand/domain:** Andrasta Marine / `andrastamarine.com`  

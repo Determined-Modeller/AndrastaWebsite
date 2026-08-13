@@ -2,10 +2,10 @@
 set -euo pipefail
 
 required=(
-  "public/andrasta-logo.svg"
-  "public/hero-vessel.svg"
-  "public/icon.svg"
-  "public/apple-touch-icon.svg"
+  "public/andrasta-logo.png"
+  "public/AndrastaMinilogo.png"
+  "public/hero-dual-use.webp"
+  "public/mission-dual-use.webp"
 )
 
 missing=0

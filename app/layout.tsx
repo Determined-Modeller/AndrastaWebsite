@@ -11,21 +11,32 @@ export const metadata: Metadata = {
     template: '%s | Andrasta Marine'
   },
   description:
-    'Andrasta Marine develops low-noise, hydrogen-powered autonomous vessel systems for offshore inspection, persistent maritime awareness, and continuous evidence collection.',
+    'Andrasta Marine develops persistent autonomous subsea systems for civil, security, and defence missions - integrating vehicle, energy, payload, and logistics.',
+  alternates: {
+    canonical: siteUrl
+  },
   openGraph: {
     title: 'Andrasta Marine',
     description:
-      'Low-noise, hydrogen-powered autonomous vessel systems for offshore inspection and persistent maritime awareness.',
+      'Persistent autonomous subsea systems for civil, security, and defence missions.',
     url: siteUrl,
     siteName: 'Andrasta Marine',
-    type: 'website'
+    type: 'website',
+    images: [
+      {
+        url: '/hero-dual-use.webp',
+        width: 1672,
+        height: 941,
+        alt: 'Andrasta Marine autonomous subsea system'
+      }
+    ]
   },
   metadataBase: new URL(siteUrl),
   icons: {
-  icon: [{ url: "/AndrastaMinilogo.png", type: "image/png" }],
-  shortcut: [{ url: "/AndrastaMinilogo.png", type: "image/png" }],
-  apple: [{ url: "/AndrastaMinilogo.png", type: "image/png" }],
-}
+    icon: [{ url: '/AndrastaMinilogo.png', type: 'image/png' }],
+    shortcut: [{ url: '/AndrastaMinilogo.png', type: 'image/png' }],
+    apple: [{ url: '/AndrastaMinilogo.png', type: 'image/png' }]
+  }
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {

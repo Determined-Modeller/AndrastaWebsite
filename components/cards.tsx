@@ -1,15 +1,21 @@
-import { ReactNode } from "react";
+import Link from 'next/link';
+import { ReactNode } from 'react';
 
 type BaseCardProps = {
   title: string;
+  eyebrow?: string;
   subtitle?: string;
   detail?: string;
+  className?: string;
   children?: ReactNode;
 };
 
-export function BaseCard({ title, subtitle, detail, children }: BaseCardProps) {
+export function BaseCard({ title, eyebrow, subtitle, detail, className = '', children }: BaseCardProps) {
   return (
-    <article className="group rounded-2xl border border-slate-700/70 bg-slate-950/55 p-6 shadow-panel transition duration-200 hover:-translate-y-0.5 hover:border-cyan-300/35 hover:bg-slate-900/70">
+    <article className={`group rounded-2xl border border-slate-700/70 bg-slate-950/55 p-6 shadow-panel transition duration-200 hover:-translate-y-0.5 hover:border-cyan-300/35 hover:bg-slate-900/70 ${className}`}>
+      {eyebrow && (
+        <p className="mb-4 text-xs font-semibold uppercase tracking-[0.2em] text-cyan-200/85">{eyebrow}</p>
+      )}
       <h3 className="text-lg font-semibold tracking-tight text-white">{title}</h3>
 
       {subtitle && (
@@ -22,6 +28,39 @@ export function BaseCard({ title, subtitle, detail, children }: BaseCardProps) {
 
       {children}
     </article>
+  );
+}
+
+export function StatusPill({ children }: { children: ReactNode }) {
+  return (
+    <span className="inline-flex rounded-full border border-cyan-300/25 bg-cyan-300/[0.08] px-3 py-1 text-xs font-semibold uppercase tracking-[0.12em] text-cyan-100">
+      {children}
+    </span>
+  );
+}
+
+export function DatasheetLink({ href, product }: { href: string | null; product: string }) {
+  if (!href) {
+    return (
+      <span
+        aria-label={`${product} datasheet in preparation`}
+        data-datasheet-placeholder={product}
+        className="inline-flex cursor-not-allowed items-center gap-2 rounded-full border border-slate-600/70 px-4 py-2 text-sm font-medium text-slate-400"
+      >
+        Datasheet in preparation
+        <span aria-hidden="true">↗</span>
+      </span>
+    );
+  }
+
+  return (
+    <Link
+      href={href}
+      className="inline-flex items-center gap-2 rounded-full border border-cyan-300/40 px-4 py-2 text-sm font-medium text-cyan-100 transition hover:border-cyan-200 hover:text-white"
+    >
+      Download datasheet
+      <span aria-hidden="true">↗</span>
+    </Link>
   );
 }
 

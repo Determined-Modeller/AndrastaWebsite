@@ -1,79 +1,68 @@
+import Link from 'next/link';
+
 import { BaseCard } from '@/components/cards';
 import { SectionWrapper } from '@/components/section-wrapper';
-import { payloadFamilies, technologyThemes } from '@/data/site';
+import { technologyThemes } from '@/data/site';
 
 export const metadata = {
   title: 'Technology',
-  description: 'Hydrogen-electric, hydride-focused technology architecture behind Andrasta Marine offshore autonomous operations.'
+  description:
+    'Public overview of Andrasta Marine hydrogen-electric endurance, low-signature platform, modular integration, and engineering assurance architecture.'
 };
 
 export default function TechnologyPage() {
   return (
     <>
       <SectionWrapper
-        heading="Technology architecture"
-        intro="Andrasta Marine combines vessel design, hydrogen-electric power, hydride storage, mission autonomy, remote replenishment, and modular payloads into a complete offshore product architecture."
+        eyebrow="Technology"
+        heading="An integrated architecture for persistent subsea operations."
+        intro="The development focus is the relationship between energy, vehicle form, thermal management, payload duty cycle, autonomy interfaces, replenishment, and assurance. Public information is intentionally limited to the architecture and validation approach."
       >
-        <div className="grid gap-4 md:grid-cols-2">
-          {technologyThemes.map((theme) => (
-            <BaseCard key={theme.title} title={theme.title} detail={theme.detail} />
+        <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
+          {technologyThemes.map((theme, index) => (
+            <BaseCard
+              key={theme.title}
+              eyebrow={String(index + 1).padStart(2, '0')}
+              title={theme.title}
+              detail={theme.detail}
+            />
           ))}
         </div>
       </SectionWrapper>
 
-      <SectionWrapper
-        heading="Hydride-focused by design"
-        intro="The differentiator is not simply adding hydrogen to an AUV. The vessel, powertrain, handling approach, and replenishment chain are designed around hydride-based hydrogen storage from the start."
-      >
-        <div className="grid gap-4 md:grid-cols-3">
-          <BaseCard
-            title="Low-pressure storage philosophy"
-            detail="The public design intent is to use low-pressure hydride storage to improve practical handling, shock tolerance, and operational flexibility without publishing unvalidated performance numbers."
-          />
-          <BaseCard
-            title="Ruggedised hydrogen-electric powertrain"
-            detail="Hydrogen-electric propulsion is framed around endurance, quiet operation, and useful offshore utilisation rather than unsupported range or depth claims."
-          />
-          <BaseCard
-            title="Remote replenishment pathway"
-            detail="Andrasta Marine owns IP for a droppable refuelling robot, with patent pending protection. The concept has demonstrated principle-level functionality and requires further validation before operational deployment."
-          />
-        </div>
-      </SectionWrapper>
+      <div className="border-y border-slate-800/80 bg-slate-950/35">
+        <SectionWrapper
+          eyebrow="Integration model"
+          heading="Specialist partners. Explicit interfaces. One evidence baseline."
+          intro="Andrasta Marine's role is to control the physical subsea system architecture and integrate specialist capability where it is stronger than building everything in-house."
+        >
+          <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-4">
+            <BaseCard title="Autonomy + navigation" detail="Defined interfaces for partner algorithms, navigation, remote oversight, and command-and-control within an agreed operating boundary." />
+            <BaseCard title="Sensors + payloads" detail="Mission payload integration with explicit power, data, geometry, thermal, acoustic, and evidence requirements." />
+            <BaseCard title="Marine engineering" detail="Vehicle architecture, packaging, propulsion, materials, handling, and environmental design treated as one physical system." />
+            <BaseCard title="Test + assurance" detail="Controlled requirements, hazards, configurations, procedures, results, anomalies, and acceptance evidence." />
+          </div>
+        </SectionWrapper>
+      </div>
 
       <SectionWrapper
-        heading="Autonomy and mission logic"
-        intro="Autonomy is presented conservatively: repeatable mission execution, remote monitoring, patrol and linger behaviours, and recovery planning. No autonomy figures are published."
+        eyebrow="Publication boundary"
+        heading="Credibility comes from stating what is known, what is being tested, and what remains controlled."
+        intro="Exact endurance, range, depth, hydrogen inventory, acoustic signature, detailed storage construction, and customer-specific configurations are not published here. They will be released through validated datasheets or controlled technical engagement when appropriate."
       >
-        <div className="grid gap-4 md:grid-cols-2">
-          <BaseCard
-            title="Waypoint-based survey"
-            detail="Mission plans can be structured around repeatable survey routes, patrol patterns, station-keeping windows, and return or recovery logic for practical offshore workflows."
-          />
-          <BaseCard
-            title="Commercially deployed autonomy features"
-            detail="The operating concept can integrate commercially deployed vessel autonomy software and features where appropriate, without claiming unsupported AI or fully autonomous decision-making capability."
-          />
-        </div>
-      </SectionWrapper>
-
-      <SectionWrapper
-        heading="Quiet sensing platform"
-        intro="The vessel architecture is intended to support better data quality by reducing avoidable self-noise and operational disturbance."
-      >
-        <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-4">
-          <BaseCard title="Minimal moving parts" detail="A quiet operating profile supports environmental survey and acoustic inspection workflows." />
-          <BaseCard title="Low bubble generation" detail="Reduced disturbance is useful where observation quality matters over repeated mission windows." />
-          <BaseCard title="Polymer hull design intent" detail="A low electrical and acoustic signature is part of the wider sensing-quality proposition." />
-          <BaseCard title="Higher-quality observations" detail="The objective is decision-useful information over longer operating windows, not isolated campaign snapshots." />
-        </div>
-      </SectionWrapper>
-
-      <SectionWrapper heading="Payload and mission families" intro="Payload families define practical mission packages while detailed performance and maturity data remain publication pending.">
-        <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-4">
-          {payloadFamilies.map((payload) => (
-            <BaseCard key={payload.name} title={payload.name} detail={payload.note} />
-          ))}
+        <div className="flex flex-wrap gap-4">
+          <Link
+            href="/product-lines"
+            className="inline-flex rounded-full bg-cyan-200 px-6 py-3 text-sm font-semibold text-slate-950 transition hover:bg-cyan-100"
+          >
+            View platform roadmap
+          </Link>
+          <Link
+            href="/contact"
+            className="inline-flex rounded-full border border-slate-600 px-6 py-3 text-sm font-semibold text-slate-100 transition hover:border-cyan-200 hover:text-white"
+          >
+            Discuss technical integration
+          </Link>
         </div>
       </SectionWrapper>
     </>

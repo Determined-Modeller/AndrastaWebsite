@@ -1,87 +1,102 @@
 import Link from 'next/link';
+
+import { BaseCard, StatusPill } from '@/components/cards';
 import { CtaBlock } from '@/components/cta-block';
-import { BaseCard } from '@/components/cards';
 import { Hero } from '@/components/hero';
 import { SectionWrapper } from '@/components/section-wrapper';
-import { caseStudies, payloadFamilies, productLines, siteConfig } from '@/data/site';
+import { missionMarkets, platforms, supplierReadiness, systemLayers } from '@/data/site';
 
 export default function HomePage() {
   return (
     <>
       <Hero />
+
       <SectionWrapper
-        heading="Vessel OEM for persistent offshore survey"
-        intro="Andrasta Marine integrates commercial-off-the-shelf and bespoke marine, hydrogen, sensing, autonomy, and payload systems into complete offshore products."
+        eyebrow="The system thesis"
+        heading="Persistence is a logistics problem before it is a vehicle specification."
+        intro="Useful autonomy depends on the whole operating loop. Andrasta Marine is developing the platform, energy architecture, payload interfaces, and mission-support model together so each part can be tested and improved against a real mission."
       >
-        <p className="max-w-4xl text-sm leading-8 text-muted sm:text-base">{siteConfig.heroCopy}</p>
-      </SectionWrapper>
-      <SectionWrapper
-        heading="The operating problem"
-        intro="Useful offshore information is often limited by endurance, handling, recovery, replenishment, and support-vessel cost rather than by sensor capability alone."
-      >
-        <div className="grid gap-4 md:grid-cols-3">
-          <BaseCard
-            title="Support-vessel dependence"
-            detail="Conventional survey and inspection campaigns can become tied to vessel availability, mobilisation windows, and the cost of keeping assets on station."
-          />
-          <BaseCard
-            title="Battery and handling limits"
-            detail="Battery systems are effective in shorter-duration roles, but larger form factors and repeated offshore redeployment create mass, charging, and wet/dry handling constraints."
-          />
-          <BaseCard
-            title="Decision-quality data"
-            detail="Decommissioning and inspection decisions benefit from repeated observations over useful time windows, not only isolated campaign snapshots."
-          />
-        </div>
-      </SectionWrapper>
-      <SectionWrapper
-        heading="The Andrasta approach"
-        intro="Hydride-focused hydrogen-electric vessels, remote replenishment, waypoint mission logic, and modular payload families are combined to improve time-on-task and asset utilisation."
-      >
-        <div className="grid gap-4 md:grid-cols-2">
-          <BaseCard
-            title="Our Solution"
-            detail="Waypoint missions, patrol patterns, linger modes, and recovery planning are structured around practical offshore survey and inspection workflows."
-          >
-            <Link href="/our-solution" className="mt-4 inline-block text-sm font-medium text-accent hover:underline">
-              Explore Our Solution →
-            </Link>
-          </BaseCard>
-          <BaseCard
-            title="Technology"
-            detail="The architecture is built around hydride-based hydrogen storage, low-pressure storage philosophy, quiet sensing, and patent pending remote refuelling IP."
-          >
-            <Link href="/technology" className="mt-4 inline-block text-sm font-medium text-accent hover:underline">
-              Review Technology →
-            </Link>
-          </BaseCard>
-        </div>
-      </SectionWrapper>
-      <SectionWrapper heading="Vessel form factors" intro="AndraMini and Andra40 define vessel scale. Mission capability is then configured through payload and operating variants.">
-        <div className="grid gap-4 md:grid-cols-2">
-          {productLines.map((product) => (
-            <BaseCard key={product.name} title={product.name} subtitle={product.scale} detail={product.summary} />
-          ))}
-        </div>
-      </SectionWrapper>
-      <SectionWrapper heading="Payload and mission families" intro="The payload families are framed as practical mission packages, not unsupported final product claims.">
         <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-4">
-          {payloadFamilies.map((payload) => (
-            <BaseCard key={payload.name} title={payload.name} detail={payload.note} />
+          {systemLayers.map((layer) => (
+            <BaseCard key={layer.index} eyebrow={layer.index} title={layer.title} detail={layer.detail} />
           ))}
         </div>
-      </SectionWrapper>
-      <SectionWrapper heading="Lead commercial focus" intro="The first target application is low-regret environmental survey during and after offshore decommissioning works.">
-        <BaseCard
-          title={caseStudies[0].title}
-          subtitle={caseStudies[0].framing}
-          detail="Persistent autonomous survey can support baseline data, repeat transects, environmental observations, and post-works assurance without continuous dependence on support vessels."
+        <Link
+          href="/operating-system"
+          className="mt-8 inline-flex items-center gap-2 text-sm font-semibold text-cyan-100 transition hover:text-white"
         >
-          <Link href="/case-studies" className="mt-4 inline-block text-sm font-medium text-accent hover:underline">
-            View Mission Scenarios →
-          </Link>
-        </BaseCard>
+          See how the operating system fits together <span aria-hidden="true">→</span>
+        </Link>
       </SectionWrapper>
+
+      <div className="border-y border-slate-800/80 bg-slate-950/35">
+        <SectionWrapper
+          eyebrow="Dual-use by design"
+          heading="One core architecture. Different mission and assurance routes."
+          intro="The short-term market strategy spans civil offshore work, security and defence integration, and research applications. Each route has its own operating boundaries, evidence needs, and procurement expectations."
+        >
+          <div className="grid gap-4 lg:grid-cols-3">
+            {missionMarkets.map((market) => (
+              <BaseCard key={market.title} eyebrow={market.label} title={market.title} detail={market.detail} />
+            ))}
+          </div>
+          <Link
+            href="/case-studies"
+            className="mt-8 inline-flex items-center gap-2 text-sm font-semibold text-cyan-100 transition hover:text-white"
+          >
+            Explore mission applications <span aria-hidden="true">→</span>
+          </Link>
+        </SectionWrapper>
+      </div>
+
+      <SectionWrapper
+        eyebrow="Near-term development"
+        heading="Evidence at compact scale. Integration at mission scale."
+        intro="The public roadmap separates what is being used to learn from what is being developed for persistent operations. Detailed performance remains controlled until it is validated and appropriate to release."
+      >
+        <div className="grid gap-4 lg:grid-cols-2">
+          {platforms.slice(0, 2).map((platform) => (
+            <BaseCard
+              key={platform.slug}
+              eyebrow={platform.category}
+              title={platform.name}
+              subtitle={platform.role}
+              detail={platform.summary}
+            >
+              <div className="mt-5">
+                <StatusPill>{platform.status}</StatusPill>
+              </div>
+            </BaseCard>
+          ))}
+        </div>
+        <Link
+          href="/product-lines"
+          className="mt-8 inline-flex items-center gap-2 text-sm font-semibold text-cyan-100 transition hover:text-white"
+        >
+          View the platform roadmap <span aria-hidden="true">→</span>
+        </Link>
+      </SectionWrapper>
+
+      <div className="border-y border-slate-800/80 bg-[linear-gradient(90deg,rgba(8,47,73,0.22),rgba(15,23,42,0.18))]">
+        <SectionWrapper
+          eyebrow="Supplier readiness"
+          heading="Building the controls expected by serious customers."
+          intro="The roadmap is deliberately explicit about current status. These are implementation targets, not claims of certification or approval already achieved."
+        >
+          <div className="grid gap-4 lg:grid-cols-3">
+            {supplierReadiness.map((item) => (
+              <BaseCard key={item.standard} title={item.standard} subtitle={item.status} detail={item.detail} />
+            ))}
+          </div>
+          <Link
+            href="/responsibility"
+            className="mt-8 inline-flex items-center gap-2 text-sm font-semibold text-cyan-100 transition hover:text-white"
+          >
+            Review responsibility and readiness <span aria-hidden="true">→</span>
+          </Link>
+        </SectionWrapper>
+      </div>
+
       <CtaBlock />
     </>
   );

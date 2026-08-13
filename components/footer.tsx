@@ -19,7 +19,7 @@ export function Footer() {
           />
 
           <p className="mt-5 max-w-xl text-sm leading-6 text-slate-400">
-            Offshore autonomy for persistent maritime awareness. Structured for credible deployment pathways and scalable mission operations.
+            Persistent autonomous subsea systems for civil, security, and defence missions. Vehicle, energy, payload, and logistics developed as one operating architecture.
           </p>
 
           <a
@@ -36,6 +36,12 @@ export function Footer() {
               {item.label}
             </Link>
           ))}
+        </div>
+      </div>
+      <div className="border-t border-slate-800/80">
+        <div className="mx-auto flex w-full max-w-7xl flex-col gap-2 px-5 py-5 text-xs text-slate-500 sm:flex-row sm:items-center sm:justify-between sm:px-8">
+          <p>© {new Date().getFullYear()} Andrasta Marine. All rights reserved.</p>
+          <p>Development-stage systems · Capabilities and availability subject to validation</p>
         </div>
       </div>
     </footer>
