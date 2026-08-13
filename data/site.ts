@@ -35,7 +35,7 @@ export const technologyThemes = [
   {
     title: 'Conformal energy architecture',
     detail:
-      'Hydrogen and oxidant storage, fuel cells, battery buffering, and phase-change thermal management are integrated around the vehicle form and mission duty cycle.'
+      'Hydrogen-electric endurance carries persistent demand while a temperature-managed battery buffer is reserved for peak propulsion, sensing, and payload loads.'
   },
   {
     title: 'Low-signature propulsion',
@@ -45,7 +45,7 @@ export const technologyThemes = [
   {
     title: 'Robotic replenishment',
     detail:
-      'AndraCharge connects underwater energy transfer, vehicle servicing, and mission turnaround without routine deck recovery.'
+      'AndraCharge connects portable fuel and service nodes, compatible vehicles, and mission turnaround without dependence on a single fixed recovery point.'
   },
   {
     title: 'Modular payload bays',
@@ -119,11 +119,11 @@ export const platforms = [
     category: 'Robotic mission-support system',
     status: 'Replenishment programme',
     summary:
-      'A portable robotic replenishment system connecting staged subsea energy transfer, servicing, and rapid vehicle re-tasking.',
-    role: 'Subsea replenishment + mission turnaround',
+      'A portable robotic replenishment system connecting distributed fuelling, servicing, and rapid vehicle re-tasking.',
+    role: 'Distributed sustainment + mission turnaround',
     highlights: [
-      'Portable subsea service robot',
-      'Controlled multi-service interface',
+      'Portable mission-support system',
+      'Compatible service interfaces',
       'Reusable mission-cycle support'
     ],
     imageUrl: '/andracharge-wireframe.webp',

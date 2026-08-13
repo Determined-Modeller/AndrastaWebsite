@@ -1,5 +1,6 @@
 import Link from 'next/link';
 
+import { EnergyRoleDiagram } from '@/components/energy-role-diagram';
 import { SectionWrapper } from '@/components/section-wrapper';
 import { technologyThemes } from '@/data/site';
 
@@ -25,23 +26,33 @@ export default function TechnologyPage() {
         eyebrow="Technology"
         headingAs="h1"
         heading="The technology is the integration."
-        intro="Andrasta combines conformal energy storage, hydrogen-electric power, thermal management, low-signature propulsion, modular payloads, autonomy interfaces, and robotic replenishment around the complete mission cycle."
+        intro="Andrasta combines conformal energy storage, hybrid power, thermal management, low-signature propulsion, modular payloads, autonomy interfaces, and robotic replenishment around the complete mission cycle."
       >
-        <div className="grid overflow-hidden rounded-3xl border border-slate-700/70 bg-slate-950/50 md:grid-cols-2 lg:grid-cols-3">
-          {technologyThemes.map((theme, index) => (
-            <article
-              key={theme.title}
-              className={`p-6 sm:p-8 ${technologyBorders[index]}`}
-            >
-              <p className="text-xs font-semibold tracking-[0.2em] text-cyan-200/75">{String(index + 1).padStart(2, '0')}</p>
-              <h2 className="mt-5 text-lg font-semibold text-white">{theme.title}</h2>
-              <p className="mt-3 text-sm leading-7 text-slate-300">{theme.detail}</p>
-            </article>
-          ))}
-        </div>
+        <EnergyRoleDiagram />
       </SectionWrapper>
 
       <div className="border-y border-slate-800/80 bg-slate-950/35">
+        <SectionWrapper
+          eyebrow="Integrated building blocks"
+          heading="One controlled architecture, not a collection of subsystems."
+          intro="Physical, energy, payload and command interfaces are developed together so capability can scale without multiplying integration risk."
+        >
+          <div className="grid overflow-hidden rounded-3xl border border-slate-700/70 bg-slate-950/50 md:grid-cols-2 lg:grid-cols-3">
+            {technologyThemes.map((theme, index) => (
+              <article
+                key={theme.title}
+                className={`p-6 sm:p-8 ${technologyBorders[index]}`}
+              >
+                <p className="text-xs font-semibold tracking-[0.2em] text-cyan-200/75">{String(index + 1).padStart(2, '0')}</p>
+                <h3 className="mt-5 text-lg font-semibold text-white">{theme.title}</h3>
+                <p className="mt-3 text-sm leading-7 text-slate-300">{theme.detail}</p>
+              </article>
+            ))}
+          </div>
+        </SectionWrapper>
+      </div>
+
+      <div className="border-b border-slate-800/80 bg-slate-950/15">
         <SectionWrapper
           eyebrow="Manufacturing strategy"
           heading="Build for iteration. Design for repeatable manufacture."

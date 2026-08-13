@@ -4,6 +4,7 @@ import Link from 'next/link';
 import { BaseCard, StatusPill } from '@/components/cards';
 import { CtaBlock } from '@/components/cta-block';
 import { Hero } from '@/components/hero';
+import { LogisticsComparator } from '@/components/logistics-comparator';
 import { SectionWrapper } from '@/components/section-wrapper';
 import { missionMarkets, platforms, supplierReadiness } from '@/data/site';
 
@@ -13,27 +14,16 @@ export default function HomePage() {
       <Hero />
 
       <SectionWrapper
-        eyebrow="The system thesis"
-        heading="Persistence is a logistics problem before it is a vehicle specification."
-        intro="Useful autonomy depends on the complete operating loop. Andrasta combines replenishable energy, mission-configurable platforms, cohort operation, and flexible deployment logistics to extend capability between interventions."
+        eyebrow="Mission operating model"
+        heading="Compare the mission, not just the vehicle."
+        intro="Select Civil or Dual-use, then explore the nodes to see where persistence, sustainment and flexible deployment change the operating case."
       >
-        <div className="grid overflow-hidden rounded-3xl border border-slate-700/70 bg-slate-950/50 sm:grid-cols-3">
-          {[
-            ['Persistent operations', 'Longer useful mission windows'],
-            ['Replenishable energy', 'Subsea servicing and turnaround'],
-            ['Multimodal logistics', 'Road, port, vessel, and air concepts']
-          ].map(([title, detail], index) => (
-            <div key={title} className={`p-6 sm:p-7 ${index > 0 ? 'border-t border-slate-700/70 sm:border-l sm:border-t-0' : ''}`}>
-              <p className="text-lg font-semibold text-white">{title}</p>
-              <p className="mt-2 text-sm text-slate-400">{detail}</p>
-            </div>
-          ))}
-        </div>
+        <LogisticsComparator />
         <Link
           href="/operating-system"
           className="mt-8 inline-flex items-center gap-2 text-sm font-semibold text-cyan-100 transition hover:text-white"
         >
-          See how the operating system fits together <span aria-hidden="true">→</span>
+          Explore the operating system and scale path <span aria-hidden="true">→</span>
         </Link>
       </SectionWrapper>
 

@@ -109,7 +109,7 @@ function MapPanel({ model, modelKey, scenarioKey }: { model: LogisticsModel; mod
           <p className={`text-[10px] font-semibold uppercase tracking-[0.22em] ${isAndrasta ? 'text-cyan-200' : 'text-slate-500'}`}>
             {isAndrasta ? 'Replenishable model' : 'Comparator'}
           </p>
-          <h3 className="mt-2 text-lg font-semibold text-white">{model.label}</h3>
+          <h4 className="mt-2 text-lg font-semibold text-white">{model.label}</h4>
           <p className="mt-1 max-w-md text-xs leading-5 text-slate-400">{model.strapline}</p>
         </div>
         <span className={`mt-1 h-2.5 w-2.5 shrink-0 rounded-full ${isAndrasta ? 'bg-cyan-300 shadow-[0_0_18px_rgba(103,232,249,0.8)]' : 'bg-slate-500'}`} aria-hidden="true" />
@@ -195,7 +195,7 @@ export function LogisticsComparator() {
         <div className="flex flex-col gap-6 lg:flex-row lg:items-end lg:justify-between">
           <div className="max-w-2xl">
             <p className="text-[10px] font-semibold uppercase tracking-[0.24em] text-cyan-200">Interactive mission comparator</p>
-            <h2 className="mt-3 text-2xl font-semibold tracking-tight text-white sm:text-3xl">{scenario.title}</h2>
+            <h3 className="mt-3 text-2xl font-semibold tracking-tight text-white sm:text-3xl">{scenario.title}</h3>
             <p className="mt-3 text-sm leading-6 text-slate-300 sm:text-base">{scenario.intro}</p>
           </div>
 

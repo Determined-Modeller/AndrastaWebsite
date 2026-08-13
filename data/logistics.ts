@@ -38,20 +38,20 @@ export const logisticsScenarios: Record<LogisticsScenarioKey, LogisticsScenario>
     label: 'Civil operations',
     title: 'Offshore infrastructure + environmental assurance',
     intro:
-      'Compare a periodic vessel-led campaign with a replenishable autonomous cohort operating across an offshore asset corridor.',
+      'Compare a periodic vessel-led campaign with waypoint-led systems designed to remain useful across real operational decision windows.',
     models: {
       conventional: {
         label: 'Conventional campaign',
         strapline: 'Vehicle, crew and support vessel move as one package.',
         primaryNodeId: 'civil-conventional-vessel',
-        routes: ['M 14 73 C 22 62 28 52 36 46 S 57 39 72 36 S 64 66 49 76 C 35 83 22 80 14 73'],
+        routes: ['M 16 73 C 23 62 29 52 36 46 S 57 39 72 36 S 64 66 49 76 C 35 83 23 80 16 73'],
         nodes: [
           {
             id: 'civil-conventional-port',
             label: 'Mobilisation port',
             kicker: 'Start point',
             detail: 'Specialist vessel, crew, launch equipment and vehicle are mobilised together before the campaign can begin.',
-            x: 14,
+            x: 16,
             y: 73,
             icon: 'base'
           },
@@ -86,10 +86,10 @@ export const logisticsScenarios: Record<LogisticsScenarioKey, LogisticsScenario>
       },
       andrasta: {
         label: 'Andrasta operating system',
-        strapline: 'Vehicle, energy and logistics are designed as a repeatable loop.',
-        primaryNodeId: 'civil-andrasta-charge',
+        strapline: 'Waypoint tasking, long service intervals and portable fuelling are designed as one repeatable loop.',
+        primaryNodeId: 'civil-andrasta-corridor',
         routes: [
-          'M 13 73 C 18 60 23 50 29 44 C 38 36 48 31 57 31 C 66 31 73 35 79 42',
+          'M 16 73 C 20 60 24 50 29 44 C 38 36 48 31 57 31 C 66 31 73 35 79 42',
           'M 29 44 C 37 54 45 65 55 70 C 47 77 38 81 29 79',
           'M 55 70 C 66 63 74 53 79 42'
         ],
@@ -99,7 +99,7 @@ export const logisticsScenarios: Record<LogisticsScenarioKey, LogisticsScenario>
             label: 'Shore logistics',
             kicker: 'Prepare + configure',
             detail: 'Mission payloads, energy modules and vehicle configurations are prepared through a controlled shore or port workflow.',
-            x: 13,
+            x: 16,
             y: 73,
             icon: 'base'
           },
@@ -114,36 +114,36 @@ export const logisticsScenarios: Record<LogisticsScenarioKey, LogisticsScenario>
           },
           {
             id: 'civil-andrasta-cohort',
-            label: 'Vehicle cohort',
-            kicker: 'Distributed operations',
-            detail: 'Mission-configured vehicles divide sensing, inspection and station-keeping work across the operating area.',
+            label: 'Waypoint tasking',
+            kicker: 'Adaptive mission state',
+            detail: 'Vehicles can follow repeatable waypoints, loiter, hibernate or remain continuously in service as the evidence need changes.',
             x: 57,
             y: 31,
             icon: 'vehicle'
           },
           {
             id: 'civil-andrasta-corridor',
-            label: 'Asset corridor',
-            kicker: 'Persistent evidence',
-            detail: 'Repeatable routes support infrastructure observation, environmental evidence and faster follow-up of change or anomalies.',
+            label: 'Decision window',
+            kicker: 'Actionable continuity',
+            detail: 'Designed to stay on task across real multi-day and multi-week decision windows - long enough to turn observation into actionable information.',
             x: 79,
             y: 42,
             icon: 'asset'
           },
           {
             id: 'civil-andrasta-charge',
-            label: 'Subsea replenishment',
-            kicker: 'Mission extension',
-            detail: 'AndraCharge is intended to replenish and service compatible vehicles in water, reducing routine deck-recovery interruptions.',
+            label: 'Portable fuelling nodes',
+            kicker: 'Distributed endurance',
+            detail: 'Portable fuelling nodes can be staged through available logistics routes, supporting repeated mission cycles without dependence on a permanent facility.',
             x: 55,
             y: 70,
             icon: 'charge'
           },
           {
             id: 'civil-andrasta-recover',
-            label: 'Recovery of opportunity',
-            kicker: 'Flexible turnaround',
-            detail: 'Recovery can be aligned with available vessels, ports and maintenance need rather than defining every operating cycle.',
+            label: 'Planned service window',
+            kicker: 'Lifecycle design',
+            detail: 'Inspection and maintenance are intended around long service intervals, rather than every fuelling cycle, with recovery aligned to condition and mission need.',
             x: 29,
             y: 79,
             icon: 'recovery'
@@ -153,19 +153,19 @@ export const logisticsScenarios: Record<LogisticsScenarioKey, LogisticsScenario>
     },
     comparison: [
       {
-        label: 'Operating pattern',
-        conventional: 'Periodic vessel campaign',
-        andrasta: 'Persistent cohort operation'
+        label: 'Decision window',
+        conventional: 'Periodic campaign snapshot',
+        andrasta: 'Multi-day / multi-week continuity'
       },
       {
-        label: 'Turnaround',
-        conventional: 'Routine deck recovery',
-        andrasta: 'In-water replenishment pathway'
+        label: 'Mission state',
+        conventional: 'Recover to re-task',
+        andrasta: 'Waypoint, loiter or hibernate'
       },
       {
-        label: 'Support model',
-        conventional: 'Specialist asset-led',
-        andrasta: 'Flexible, multimodal logistics'
+        label: 'Lifecycle',
+        conventional: 'Energy cycle sets recovery',
+        andrasta: 'Service interval sets recovery'
       }
     ]
   },
@@ -179,14 +179,14 @@ export const logisticsScenarios: Record<LogisticsScenarioKey, LogisticsScenario>
         label: 'Conventional deployment',
         strapline: 'Coverage follows the availability and operating pattern of a high-value support asset.',
         primaryNodeId: 'dual-conventional-support',
-        routes: ['M 14 73 C 23 60 29 49 38 43 S 58 34 73 31 S 65 65 49 76 C 35 82 22 80 14 73'],
+        routes: ['M 16 73 C 24 60 30 49 38 43 S 58 34 73 31 S 65 65 49 76 C 35 82 23 80 16 73'],
         nodes: [
           {
             id: 'dual-conventional-base',
             label: 'Fixed base',
             kicker: 'Mobilisation',
             detail: 'The mission begins from a defined base with a coupled vehicle, crew and support-asset deployment plan.',
-            x: 14,
+            x: 16,
             y: 73,
             icon: 'base'
           },
@@ -221,10 +221,10 @@ export const logisticsScenarios: Record<LogisticsScenarioKey, LogisticsScenario>
       },
       andrasta: {
         label: 'Andrasta operating system',
-        strapline: 'Distributed insertion, cohort operation and replenishment support a less predictable footprint.',
-        primaryNodeId: 'dual-andrasta-watch',
+        strapline: 'Distributed insertion, cohort operation and sustainment support a less predictable footprint.',
+        primaryNodeId: 'dual-andrasta-sustainment',
         routes: [
-          'M 14 73 C 20 58 27 48 36 42 C 46 34 57 29 68 31 C 75 32 80 27 84 19',
+          'M 16 73 C 21 58 28 48 36 42 C 46 34 57 29 68 31 C 75 32 80 27 84 19',
           'M 36 42 C 45 51 52 63 59 71 C 49 78 39 81 29 79',
           'M 59 71 C 68 62 72 47 68 31'
         ],
@@ -234,15 +234,15 @@ export const logisticsScenarios: Record<LogisticsScenarioKey, LogisticsScenario>
             label: 'Distributed insertion',
             kicker: 'Multiple routes',
             detail: 'Port, road, vessel and air-delivery concepts allow the mission package to be positioned around operational constraints.',
-            x: 14,
+            x: 16,
             y: 73,
             icon: 'base'
           },
           {
             id: 'dual-andrasta-cohort',
             label: 'Vehicle cohort',
-            kicker: 'Distributed presence',
-            detail: 'Multiple mission-configured vehicles can divide sensing, communications and payload roles across the operating area.',
+            kicker: 'Hybrid performance',
+            detail: 'Hydrogen-electric endurance supports persistence while a managed battery buffer is reserved for peak propulsion, sensor and payload demand.',
             x: 36,
             y: 42,
             icon: 'vehicle'
@@ -266,19 +266,19 @@ export const logisticsScenarios: Record<LogisticsScenarioKey, LogisticsScenario>
             icon: 'command'
           },
           {
-            id: 'dual-andrasta-charge',
-            label: 'Forward replenishment',
+            id: 'dual-andrasta-sustainment',
+            label: 'Distributed sustainment',
             kicker: 'Mission extension',
-            detail: 'A staged AndraCharge node is intended to extend the useful operating window and support mission turnaround in water.',
+            detail: 'Portable fuel and service nodes can be distributed across available routes and host platforms, reducing dependence on a single recovery point.',
             x: 59,
             y: 71,
             icon: 'charge'
           },
           {
-            id: 'dual-andrasta-recovery',
-            label: 'Recovery of opportunity',
-            kicker: 'Flexible footprint',
-            detail: 'Vehicles can be recovered through available routes when the mission, configuration or maintenance state requires it.',
+            id: 'dual-andrasta-v2v',
+            label: 'Vehicle-to-vehicle support',
+            kicker: 'Cooperative sustainment',
+            detail: 'Common service interfaces are intended to support vehicle-to-vehicle sustainment, cooperative recovery and re-tasking where the mission benefits.',
             x: 29,
             y: 79,
             icon: 'recovery'
@@ -293,14 +293,14 @@ export const logisticsScenarios: Record<LogisticsScenarioKey, LogisticsScenario>
         andrasta: 'Persistent, distributed cohort'
       },
       {
-        label: 'Mission geometry',
-        conventional: 'Single support axis',
-        andrasta: 'Dispersed insertion + recovery'
+        label: 'Energy role',
+        conventional: 'Battery sized for mission duration',
+        andrasta: 'Hydrogen endurance + battery peaks'
       },
       {
-        label: 'Adaptation',
-        conventional: 'Recovery-led reconfiguration',
-        andrasta: 'Remote re-tasking + forward support'
+        label: 'Sustainment',
+        conventional: 'Central recovery point',
+        andrasta: 'Distributed nodes + vehicle support'
       }
     ]
   }

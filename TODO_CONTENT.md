@@ -18,6 +18,7 @@ These items are intentionally unresolved. Do not replace them with invented copy
    - The native civil/dual-use comparator, animated logistics paths, node explanations, and conventional baseline are now implemented.
    - Future approved media can add controlled product silhouettes, mission photography, voice-over/video, or richer node overlays without replacing the present static-hosting architecture.
    - Add numerical comparator evidence only when the assumptions and public evidence basis are approved.
+   - Keep AndraCharge deployment medium and detailed service-interface implementation out of public diagrams until export-control classification and controlled-release review are complete.
 6. **Board and team page**
    - Deliberately deferred from this release. Add only when biographies, roles, photography, permissions, and disclosure wording are approved.
 7. **Real programme imagery**

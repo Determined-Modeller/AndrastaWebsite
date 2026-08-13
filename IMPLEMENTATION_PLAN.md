@@ -58,6 +58,14 @@ The release must look credible to offshore operators, primes, supermajors, procu
 - Keep the comparison qualitative until controlled programme evidence supports public numerical claims.
 - Remove repeated system-architecture cards from the Operating System page; retain the design-for-manufacture scale path and use the comparator as the primary explanation.
 
+## Storytelling refinement - 13 August 2026
+
+- Feature the full mission comparator immediately below the homepage hero and remove the earlier generic system-thesis card row.
+- Expand the civil route around waypoint tasking, hibernation or continuous service, actionable multi-day and multi-week decision windows, portable fuelling nodes, and long intended service intervals between inspection and maintenance windows.
+- Expand the dual-use route around distributed sustainment, vehicle-to-vehicle support, and a hybrid energy split in which hydrogen-electric power carries persistence while a managed battery buffer supplies peak loads.
+- Add a dedicated energy-role diagram to the Technology page so battery performance and shared thermal management are explained without overloading the logistics comparator.
+- Describe AndraCharge publicly as a portable distributed-sustainment system. Do not publish deployment medium, interface geometry, transfer conditions, control logic, or other enabling implementation detail without a specific release review.
+
 ## Implementation sequence
 
 1. Update central site data and public claim boundaries.
