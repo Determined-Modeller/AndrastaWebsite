@@ -2,12 +2,14 @@ import Link from 'next/link';
 
 import { MissionStorySelector } from '@/components/mission-story-selector';
 import { SectionWrapper } from '@/components/section-wrapper';
+import { createPageMetadata } from '@/lib/page-metadata';
 
-export const metadata = {
+export const metadata = createPageMetadata({
   title: 'Missions',
   description:
-    'Civil and dual-use value stories for Andrasta Marine persistent autonomous subsea systems.'
-};
+    'Civil and dual-use value stories for Andrasta Marine persistent autonomous subsea systems.',
+  path: '/case-studies/'
+});
 
 export default function CaseStudiesPage() {
   return (

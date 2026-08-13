@@ -3,11 +3,13 @@ import Link from 'next/link';
 import { BaseCard } from '@/components/cards';
 import { SectionWrapper } from '@/components/section-wrapper';
 import { missionMarkets } from '@/data/site';
+import { createPageMetadata } from '@/lib/page-metadata';
 
-export const metadata = {
+export const metadata = createPageMetadata({
   title: 'Our Approach',
-  description: 'The mission-led development approach behind Andrasta Marine autonomous subsea systems.'
-};
+  description: 'The mission-led development approach behind Andrasta Marine autonomous subsea systems.',
+  path: '/our-solution/'
+});
 
 export default function OurSolutionPage() {
   return (

@@ -1,11 +1,13 @@
 import { BaseCard } from '@/components/cards';
 import { SectionWrapper } from '@/components/section-wrapper';
 import { contactDetails } from '@/data/site';
+import { createPageMetadata } from '@/lib/page-metadata';
 
-export const metadata = {
+export const metadata = createPageMetadata({
   title: 'Contact',
-  description: 'Contact Andrasta Marine for customer, prime, partner, supplier, and technical enquiries.'
-};
+  description: 'Contact Andrasta Marine for customer, prime, partner, supplier, and technical enquiries.',
+  path: '/contact/'
+});
 
 export default function ContactPage() {
   return (
@@ -14,7 +16,7 @@ export default function ContactPage() {
         eyebrow="Contact"
         headingAs="h1"
         heading="Start with the mission, interface, or evidence you need."
-        intro="For customer, prime-contractor, payload, test, supplier, investment, or compliance discussions, contact Andrasta Marine directly."
+        intro="Current priorities include Manta demonstration and testing, AndraSound development partnerships, payload integration, independent validation, and appropriate future distribution routes."
       >
         <div className="grid gap-6 lg:grid-cols-[1.1fr_0.9fr]">
           <div className="rounded-3xl border border-cyan-300/20 bg-[radial-gradient(circle_at_top_left,rgba(34,211,238,0.14),rgba(4,7,13,0.96)_52%)] p-7 shadow-2xl shadow-cyan-950/20 sm:p-9">

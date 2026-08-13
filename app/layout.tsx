@@ -5,6 +5,32 @@ import { Footer } from '@/components/footer';
 
 const siteUrl = 'https://andrastamarine.com';
 
+const organisationSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Organization',
+  name: 'Andrasta Marine',
+  legalName: 'Andrasta Marine Ltd',
+  url: siteUrl,
+  logo: `${siteUrl}/andrasta-logo.png`,
+  email: 'info@andrastamarine.com',
+  identifier: {
+    '@type': 'PropertyValue',
+    propertyID: 'UK Companies House',
+    value: 'SC887793'
+  },
+  address: {
+    '@type': 'PostalAddress',
+    addressLocality: 'Edinburgh',
+    addressRegion: 'Scotland',
+    addressCountry: 'GB'
+  },
+  founder: {
+    '@type': 'Person',
+    name: 'Rhodri Hawkins',
+    jobTitle: 'Founder and Technical Lead'
+  }
+};
+
 export const metadata: Metadata = {
   title: {
     default: 'Andrasta Marine',
@@ -13,13 +39,13 @@ export const metadata: Metadata = {
   description:
     'Andrasta Marine develops persistent autonomous subsea systems for civil, security, and defence missions - integrating vehicle, energy, payload, and logistics.',
   alternates: {
-    canonical: siteUrl
+    canonical: '/'
   },
   openGraph: {
     title: 'Andrasta Marine',
     description:
       'Persistent autonomous subsea systems for civil, security, and defence missions.',
-    url: siteUrl,
+    url: '/',
     siteName: 'Andrasta Marine',
     type: 'website',
     images: [
@@ -42,6 +68,12 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en">
+      <head>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(organisationSchema).replace(/</g, '\\u003c') }}
+        />
+      </head>
       <body className="min-h-screen bg-bg text-text antialiased">
         <Navbar />
         <main>{children}</main>

@@ -79,6 +79,14 @@ The former Operating System navigation item is retired. Its useful content is di
 - Lead the civil story with the UK offshore-decommissioning evidence problem: removal remains the regulatory starting point; persistent, repeatable ecological evidence helps operators evaluate high-cost, high-consequence decisions where alternatives may legally be considered.
 - Lead the dual-use story with affordable configurable capability: large flooded payload volume, hydride endurance, a configurable battery power domain, quiet efficient propulsion over a usable seakeeping window, and selective reduction of auxiliary acoustic/thermal machinery.
 
+## Scale-up and discovery refinement - 13 August 2026
+
+- Keep the public website as a restrained credibility and qualification surface rather than a public investor deck.
+- Make the commercial scale logic explicit once on the Company page: rapid physical learning, common interfaces and evidence, customer configuration in payload and mission layers, and centralised repeat production only when committed fleet demand justifies dedicated capacity.
+- Narrow the Contact page to the company's current engagement priorities rather than presenting every possible commercial route with equal prominence.
+- Add page-specific canonical metadata, a concise XML sitemap, crawler guidance, and public-safe organisation structured data using only already-disclosed company and founder information.
+- Do not add public market-sizing graphics, competitor matrices, unconfirmed partner or board signals, speculative pipeline language, or additional evidence imagery before controlled release is appropriate.
+
 ## Implementation sequence
 
 1. Update central site data and public claim boundaries.

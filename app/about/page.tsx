@@ -3,11 +3,13 @@ import Link from 'next/link';
 import { BaseCard } from '@/components/cards';
 import { SectionWrapper } from '@/components/section-wrapper';
 import { companyPrinciples } from '@/data/site';
+import { createPageMetadata } from '@/lib/page-metadata';
 
-export const metadata = {
+export const metadata = createPageMetadata({
   title: 'Company',
-  description: 'Andrasta Marine company model, engineering approach, and current development priorities.'
-};
+  description: 'Andrasta Marine company model, engineering approach, and current development priorities.',
+  path: '/about/'
+});
 
 export default function AboutPage() {
   return (
@@ -31,10 +33,46 @@ export default function AboutPage() {
           />
           <BaseCard
             titleAs="h2"
-            title="How we scale"
-            detail="Capital-disciplined development from an Edinburgh engineering centre, with production centralised against validated fleet demand to capture repeat-manufacture economies of scale."
+            title="Capital discipline"
+            detail="Remain asset-light through early development, adding dedicated production capacity only when customer commitments justify repeat manufacture."
           />
         </div>
+
+        <section className="mt-8 overflow-hidden rounded-3xl border border-cyan-300/20 bg-[linear-gradient(125deg,rgba(8,47,73,0.2),rgba(4,7,13,0.92)_62%)]">
+          <div className="grid gap-8 p-7 sm:p-9 lg:grid-cols-[0.78fr_1.22fr] lg:gap-12 lg:p-10">
+            <div>
+              <p className="text-xs font-semibold uppercase tracking-[0.22em] text-cyan-200">Scale-up model</p>
+              <h2 className="mt-4 max-w-md text-2xl font-semibold tracking-tight text-white sm:text-3xl">
+                From programme learning to repeat manufacture.
+              </h2>
+            </div>
+            <div className="space-y-5 text-sm leading-7 text-slate-300">
+              <p>
+                Scale is designed into the architecture rather than deferred to production. Manta closes physical, integration, and manufacturing risk quickly; AndraSound establishes the repeatable mission platform; and common energy, power, payload, autonomy, handling, and service interfaces carry validated modules and evidence between programmes.
+              </p>
+              <p>
+                Andrasta remains asset-light through development, integrating specialist capability where partners are stronger. Production will be centralised when committed fleet demand supports repeat tooling, qualified suppliers, and dedicated capacity. Customer-specific capability is concentrated in configurable payload, software, and mission-system layers, limiting the need to redesign the underlying vehicle for each application.
+              </p>
+            </div>
+          </div>
+          <div className="grid border-t border-slate-700/70 sm:grid-cols-2 lg:grid-cols-4">
+            {[
+              ['01', 'Close physical risk', 'Rapid build-test learning'],
+              ['02', 'Carry evidence forward', 'Common modules + interfaces'],
+              ['03', 'Configure capability', 'Payload + mission layers'],
+              ['04', 'Repeat manufacture', 'Capacity against fleet demand']
+            ].map(([index, title, detail], itemIndex) => (
+              <div
+                key={title}
+                className={`p-6 ${itemIndex === 1 ? 'border-t border-slate-700/70 sm:border-l sm:border-t-0' : ''} ${itemIndex === 2 ? 'border-t border-slate-700/70 lg:border-l lg:border-t-0' : ''} ${itemIndex === 3 ? 'border-t border-slate-700/70 sm:border-l lg:border-t-0' : ''}`}
+              >
+                <p className="text-[10px] font-semibold tracking-[0.18em] text-cyan-200/70">{index}</p>
+                <p className="mt-3 text-sm font-semibold text-white">{title}</p>
+                <p className="mt-2 text-xs leading-5 text-slate-500">{detail}</p>
+              </div>
+            ))}
+          </div>
+        </section>
 
         <div className="mt-12 grid gap-9 border-y border-slate-700/70 py-10 lg:grid-cols-[0.34fr_1fr] lg:gap-14">
           <div>

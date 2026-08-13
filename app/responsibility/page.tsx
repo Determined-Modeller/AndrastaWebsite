@@ -3,12 +3,14 @@ import Link from 'next/link';
 import { StatusPill } from '@/components/cards';
 import { SectionWrapper } from '@/components/section-wrapper';
 import { responsibilityPillars, supplierReadiness } from '@/data/site';
+import { createPageMetadata } from '@/lib/page-metadata';
 
-export const metadata = {
+export const metadata = createPageMetadata({
   title: 'Responsibility + Supplier Readiness',
   description:
-    'Andrasta Marine responsible innovation, business conduct, supply-chain, and supplier-readiness programme.'
-};
+    'Andrasta Marine responsible innovation, business conduct, supply-chain, and supplier-readiness programme.',
+  path: '/responsibility/'
+});
 
 export default function ResponsibilityPage() {
   return (

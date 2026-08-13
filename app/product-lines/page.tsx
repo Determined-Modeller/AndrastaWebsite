@@ -4,11 +4,13 @@ import { DatasheetLink, StatusPill } from '@/components/cards';
 import { PlatformArchitectureMap } from '@/components/platform-architecture-map';
 import { SectionWrapper } from '@/components/section-wrapper';
 import { platforms } from '@/data/site';
+import { createPageMetadata } from '@/lib/page-metadata';
 
-export const metadata = {
+export const metadata = createPageMetadata({
   title: 'Platforms',
-  description: 'Andrasta Marine autonomous subsea platforms and robotic mission-support systems.'
-};
+  description: 'Andrasta Marine autonomous subsea platforms and robotic mission-support systems.',
+  path: '/product-lines/'
+});
 
 export default function ProductLinesPage() {
   return (

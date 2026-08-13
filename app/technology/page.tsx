@@ -4,6 +4,7 @@ import { ArchitectureSelectionDiagram } from '@/components/architecture-selectio
 import { EnergyRoleDiagram } from '@/components/energy-role-diagram';
 import { SectionWrapper } from '@/components/section-wrapper';
 import { technologyThemes } from '@/data/site';
+import { createPageMetadata } from '@/lib/page-metadata';
 
 const technologyBorders = [
   '',
@@ -14,11 +15,12 @@ const technologyBorders = [
   'border-t border-slate-700/70 md:border-l lg:border-l'
 ];
 
-export const metadata = {
+export const metadata = createPageMetadata({
   title: 'Technology',
   description:
-    'Andrasta Marine hybrid multiphysics architecture for hydrogen-electric endurance, low-signature propulsion, modular payloads, replenishment, and scalable manufacture.'
-};
+    'Andrasta Marine hybrid multiphysics architecture for hydrogen-electric endurance, low-signature propulsion, modular payloads, replenishment, and scalable manufacture.',
+  path: '/technology/'
+});
 
 export default function TechnologyPage() {
   return (

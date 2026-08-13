@@ -2,12 +2,14 @@ import Image from 'next/image';
 import Link from 'next/link';
 
 import { SectionWrapper } from '@/components/section-wrapper';
+import { createPageMetadata } from '@/lib/page-metadata';
 
-export const metadata = {
+export const metadata = createPageMetadata({
   title: 'Operating System',
   description:
-    'How Andrasta Marine combines autonomous subsea vehicles, energy, payloads, replenishment, and logistics into one operating architecture.'
-};
+    'How Andrasta Marine combines autonomous subsea vehicles, energy, payloads, replenishment, and logistics into one operating architecture.',
+  path: '/operating-system/'
+});
 
 export default function OperatingSystemPage() {
   return (
