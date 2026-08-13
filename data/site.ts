@@ -218,5 +218,5 @@ export const contactDetails = {
   company: 'Andrasta Marine',
   domain: 'andrastamarine.com',
   location: 'Public operating location to be confirmed',
-  email: 'andrastamarine@gmail.com'
+  email: 'info@andrastamarine.com'
 };

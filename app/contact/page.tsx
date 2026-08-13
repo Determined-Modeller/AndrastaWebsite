@@ -28,7 +28,14 @@ export default function ContactPage() {
             </div>
             <div>
               <dt className="text-muted">Email</dt>
-              <dd className="text-text">{contactDetails.email}</dd>
+              <dd>
+                <a
+                  href={`mailto:${contactDetails.email}`}
+                  className="text-cyan-100 transition hover:text-white"
+                >
+                  {contactDetails.email}
+                </a>
+              </dd>
             </div>
           </dl>
         </aside>

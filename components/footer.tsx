@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 
-import { siteConfig } from "@/data/site";
+import { contactDetails, siteConfig } from "@/data/site";
 
 const WORDMARK_SRC = "/andrasta-logo.png";
 
@@ -21,6 +21,13 @@ export function Footer() {
           <p className="mt-5 max-w-xl text-sm leading-6 text-slate-400">
             Offshore autonomy for persistent maritime awareness. Structured for credible deployment pathways and scalable mission operations.
           </p>
+
+          <a
+            href={`mailto:${contactDetails.email}`}
+            className="mt-4 inline-block text-sm text-cyan-100 transition hover:text-white"
+          >
+            {contactDetails.email}
+          </a>
         </div>
 
         <div className="grid grid-cols-2 gap-x-8 gap-y-3 text-sm text-slate-300 sm:grid-cols-3 lg:justify-self-end">
