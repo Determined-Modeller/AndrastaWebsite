@@ -14,6 +14,7 @@ export default function HomePage() {
       <Hero />
 
       <SectionWrapper
+        id="mission-operating-model"
         eyebrow="Mission operating model"
         heading="A longer-running vehicle is not yet a persistent system."
         intro="Useful persistence appears when tasking, energy, servicing and recovery are designed around the same real-world decision window."
@@ -26,10 +27,10 @@ export default function HomePage() {
         </div>
         <LogisticsComparator />
         <Link
-          href="/operating-system"
+          href="/case-studies"
           className="mt-8 inline-flex items-center gap-2 text-sm font-semibold text-cyan-100 transition hover:text-white"
         >
-          Explore the operating system and scale path <span aria-hidden="true">→</span>
+          See the mission value stories <span aria-hidden="true">→</span>
         </Link>
       </SectionWrapper>
 

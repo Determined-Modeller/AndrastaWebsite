@@ -3,7 +3,7 @@ import Link from 'next/link';
 
 import { siteConfig } from '@/data/site';
 
-const tags = ['Civil + defence', 'Hydrogen-electric', 'Modular payloads', 'Mission-system integration'];
+const tags = ['Civil + dual-use', 'Hydrogen-electric', 'Modular payloads', 'Mission-system integration'];
 
 export function Hero() {
   return (
@@ -36,10 +36,10 @@ export function Hero() {
 
           <div className="mt-9 flex flex-wrap gap-4">
             <Link
-              href="/operating-system"
+              href="/#mission-operating-model"
               className="rounded-full bg-cyan-200 px-6 py-3 text-sm font-semibold text-slate-950 shadow-lg shadow-cyan-950/30 transition hover:bg-cyan-100"
             >
-              Explore the operating system
+              Compare the operating model
             </Link>
 
             <Link

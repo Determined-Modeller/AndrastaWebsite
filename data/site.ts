@@ -6,7 +6,6 @@ export const siteConfig = {
     'Replenishable hydrogen-electric autonomous systems for civil, security, and defence missions - integrating vehicle, energy, payload, manufacture, and logistics into one architecture.',
   nav: [
     { href: '/', label: 'Home' },
-    { href: '/operating-system', label: 'Operating System' },
     { href: '/technology', label: 'Technology' },
     { href: '/product-lines', label: 'Platforms' },
     { href: '/case-studies', label: 'Missions' },
@@ -100,15 +99,15 @@ export const platforms = [
   {
     slug: 'andrahold',
     name: 'AndraHold',
-    category: 'Extended payload platform',
+    category: 'Large flooded-payload platform',
     status: 'Platform architecture',
     summary:
-      'A larger endurance and payload architecture for distributed sensing, subsea logistics, and long-duration field presence.',
+      'A larger endurance architecture built around a substantial flooded mission bay for distributed sensing, subsea logistics, and special-purpose payloads.',
     role: 'Extended payload + persistent presence',
     highlights: [
-      'Expanded modular payload volume',
-      'Long-duration energy architecture',
-      'Subsea logistics and node support'
+      'Large flooded payload bay',
+      'Configurable mission power domain',
+      'Extended endurance architecture'
     ],
     imageUrl: '/andrahold-wireframe.webp',
     datasheetUrl: null as string | null
@@ -128,37 +127,6 @@ export const platforms = [
     ],
     imageUrl: '/andracharge-wireframe.webp',
     datasheetUrl: null as string | null
-  }
-];
-
-export const missionScenarios = [
-  {
-    slug: 'offshore-infrastructure-assurance',
-    imageUrl: null as string | null,
-    imageAlt: 'Andrasta autonomous subsea system observing offshore infrastructure',
-    market: 'Civil offshore',
-    title: 'Offshore infrastructure + environmental assurance',
-    framing: 'Repeatable observation around subsea assets, works and energy infrastructure',
-    challenge:
-      'Cables, pipelines, foundations and adjacent environments need repeatable evidence between major vessel campaigns.',
-    approach:
-      'Mission-configured sensing, repeatable routes and persistent vehicle presence support inspection, change detection and environmental observation.',
-    value:
-      'Better evidence continuity and faster anomaly follow-up with less dependence on continuous support-vessel presence.'
-  },
-  {
-    slug: 'maritime-awareness',
-    imageUrl: null as string | null,
-    imageAlt: 'Andrasta autonomous subsea system operating around critical maritime infrastructure',
-    market: 'Dual-use',
-    title: 'Maritime awareness + seabed security',
-    framing: 'Persistent sensing around critical maritime areas and infrastructure',
-    challenge:
-      'Wide areas, long timelines, and constrained support assets make persistent underwater awareness difficult.',
-    approach:
-      'Combine mission sensing, autonomy, partner command interfaces and replenishable platform logistics in one operating architecture.',
-    value:
-      'Longer observation windows and flexible cohort deployment around critical areas.'
   }
 ];
 

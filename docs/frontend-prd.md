@@ -1,6 +1,6 @@
 # Andrasta Marine Frontend PRD
 
-> **Direction update - 13 August 2026:** The dual-use positioning, platform roadmap, supplier-readiness language, responsibility content, direct-email contact route, and Operating System explainer architecture in `IMPLEMENTATION_PLAN.md` supersede conflicting v0.1 requirements below. In particular, the public roadmap now uses Manta, AndraSound, AndraHold, and AndraCharge; the board/team page is deferred; Civil and Dual-use are the two public mission routes; and environmental work is treated as a civil application rather than a separate market category.
+> **Direction update - 13 August 2026:** The dual-use positioning, platform roadmap, supplier-readiness language, responsibility content, direct-email contact route, and narrative architecture in `IMPLEMENTATION_PLAN.md` supersede conflicting v0.1 requirements below. In particular, the public roadmap now uses Manta, AndraSound, AndraHold, and AndraCharge; the Operating System navigation item is retired in favour of content placed across Home, Technology, Platforms, and Missions; the board/team page is deferred; Civil and Dual-use are the two public mission routes; and environmental work is treated as a civil application rather than a separate market category.
 
 **Document version:** v0.1  
 **Project:** Andrasta Marine website frontend  

@@ -1,7 +1,6 @@
 import Image from 'next/image';
 import Link from 'next/link';
 
-import { ScalePath } from '@/components/scale-path';
 import { SectionWrapper } from '@/components/section-wrapper';
 
 export const metadata = {
@@ -37,26 +36,32 @@ export default function OperatingSystemPage() {
 
       <div className="border-y border-slate-800/80 bg-slate-950/20">
         <SectionWrapper
-          eyebrow="Design for manufacture + scale"
-          heading="Scale the platform without redesigning the operating system."
-          intro="Common interfaces carry energy, payload, autonomy, handling and service learning forward. Additive manufacture is applied where it improves iteration, part count, weight or repair; conventional marine fabrication remains where it is the stronger answer."
+          eyebrow="Explore the system"
+          heading="Follow the system from mission need to platform delivery."
+          intro="Compare the mission logistics, examine the multiphysics integration, or trace how learning and common interfaces move through the platform family."
         >
-          <ScalePath />
+          <div className="flex flex-wrap gap-3">
+            <Link
+              href="/#mission-operating-model"
+              className="inline-flex rounded-full bg-cyan-200 px-6 py-3 text-sm font-semibold text-slate-950 transition hover:bg-cyan-100"
+            >
+              Compare the operating model
+            </Link>
+            <Link
+              href="/technology"
+              className="inline-flex rounded-full border border-cyan-300/40 px-6 py-3 text-sm font-semibold text-cyan-100 transition hover:border-cyan-200 hover:text-white"
+            >
+              Examine the technology
+            </Link>
+            <Link
+              href="/product-lines"
+              className="inline-flex rounded-full border border-cyan-300/40 px-6 py-3 text-sm font-semibold text-cyan-100 transition hover:border-cyan-200 hover:text-white"
+            >
+              View the programme architecture
+            </Link>
+          </div>
         </SectionWrapper>
       </div>
-
-      <SectionWrapper
-        eyebrow="System engagement"
-        heading="Bring the mission constraint."
-        intro="We can test where endurance, replenishment, deployment flexibility or cohort performance changes the operating case."
-      >
-        <Link
-          href="/contact"
-          className="inline-flex rounded-full bg-cyan-200 px-6 py-3 text-sm font-semibold text-slate-950 transition hover:bg-cyan-100"
-        >
-          Discuss an operating concept
-        </Link>
-      </SectionWrapper>
     </>
   );
 }

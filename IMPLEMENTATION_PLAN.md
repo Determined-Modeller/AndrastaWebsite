@@ -18,13 +18,14 @@ The release must look credible to offshore operators, primes, supermajors, procu
 ## Information architecture
 
 1. **Home** - immediate dual-use positioning, system thesis, mission markets, platform roadmap, and supplier-readiness signal.
-2. **Operating System** - vehicle + energy + payload + replenishment + logistics, with a code-level integration point for a future interactive explainer or iframe.
-3. **Technology** - public-safe architecture, low-signature design, modular integration, and evidence-led development.
-4. **Platforms** - Manta, AndraSound, AndraHold, and AndraCharge development roadmap with disabled datasheet placeholders.
-5. **Missions** - illustrative civil, security, and defence application frames, not claimed customer deployments.
-6. **Responsibility** - responsible dual-use governance, safety, export/sanctions, anti-bribery and financial-crime controls, modern-slavery/supply-chain principles, and environmental responsibility.
-7. **Company** - focused company model, operating principles, and partner/supplier engagement without team-photo placeholders.
-8. **Contact** - direct `info@andrastamarine.com` path and clear enquiry categories; no non-functional form submission.
+2. **Technology** - public-safe architecture, low-signature design, modular integration, and evidence-led development.
+3. **Platforms** - the interlocking Manta, AndraSound, AndraHold, and AndraCharge programme architecture with disabled datasheet placeholders.
+4. **Missions** - image-led civil and dual-use value stories, clearly framed as mission cases rather than completed customer deployments.
+5. **Responsibility** - responsible dual-use governance, safety, export/sanctions, anti-bribery and financial-crime controls, modern-slavery/supply-chain principles, and environmental responsibility.
+6. **Company** - focused company model, operating principles, and partner/supplier engagement without team-photo placeholders.
+7. **Contact** - direct `info@andrastamarine.com` path and clear enquiry categories; no non-functional form submission.
+
+The former Operating System navigation item is retired. Its useful content is distributed deliberately: the homepage owns the mission comparator, Technology owns integration, Platforms owns programme architecture, and Missions owns value stories. The legacy route remains as a lightweight wayfinding page for old links.
 
 ## Supplier-readiness wording
 
@@ -43,7 +44,7 @@ The release must look credible to offshore operators, primes, supermajors, procu
 
 - Reduce defensive qualification and repeated maturity language across public pages.
 - Keep standards targets accurate but state them once, without prominent non-certification disclaimers.
-- Make Operating System the home of the multimodal logistics thesis and future interactive/video experience.
+- Make the homepage mission comparator the single home of the multimodal logistics thesis.
 - Add design-for-manufacture, selective additive manufacturing, modular scale-up, and lifecycle serviceability to the core technology story.
 - Replace generic platform cards with image-led product panels using public-safe CAD-style wireframes.
 - Present mission applications through mission need, system response, and operating advantage; add dedicated mission imagery in a later visual pass.
@@ -56,7 +57,7 @@ The release must look credible to offshore operators, primes, supermajors, procu
 - Provide clickable, keyboard-focusable mission nodes with concise contextual detail for deployment, support assets, cohort operation, subsea replenishment, command interfaces, and recovery.
 - Animate operating routes using lightweight CSS, respect reduced-motion preferences, and keep all content usable on touch devices and small screens.
 - Keep the comparison qualitative until controlled programme evidence supports public numerical claims.
-- Remove repeated system-architecture cards from the Operating System page; retain the design-for-manufacture scale path and use the comparator as the primary explanation.
+- Remove repeated system-architecture cards and the linear scale path; use the comparator as the primary operational explanation and move programme logic into Platforms.
 
 ## Storytelling refinement - 13 August 2026
 
@@ -69,6 +70,14 @@ The release must look credible to offshore operators, primes, supermajors, procu
 - Present the Andrasta thesis as a hybrid multiphysics optimisation across endurance, thermal balance, signature, survivability, lifecycle/recovery, serviceability, safety/compliance, and unit cost, with adversarial design and affordable distributed deployment considered from concept stage.
 - Keep the interactive mission comparator in one prominent location on the homepage, preceded by a short explanation of why persistence must be compared at operating-system rather than vehicle level. Do not repeat the full comparator on the Operating System page.
 - Name conformal low-pressure hydride storage where it clarifies the hybrid architecture, and explain that separating endurance energy from battery peak power creates electrical headroom for demanding mission appliances without publishing the enabling electrical configuration.
+
+## Mission and programme narrative refinement - 13 August 2026
+
+- Retire the Operating System item from primary navigation. Keep its legacy route only as a concise signpost to the homepage comparator, Technology integration case, and Platforms programme architecture.
+- Replace the linear Manta–AndraSound–AndraHold timeline with an interlocking programme map: Manta closes physical-development risk; a common interface spine carries learning; AndraSound proves the lead mission architecture; AndraHold expands flooded payload volume and mission power; AndraCharge provides the cross-platform sustainment layer.
+- Replace the repetitive Missions card/table layout with an accessible Civil/Dual-use story selector, strong imagery, a decision at stake, the practical barrier, the system response, and explicit decision value.
+- Lead the civil story with the UK offshore-decommissioning evidence problem: removal remains the regulatory starting point; persistent, repeatable ecological evidence helps operators evaluate high-cost, high-consequence decisions where alternatives may legally be considered.
+- Lead the dual-use story with affordable configurable capability: large flooded payload volume, hydride endurance, a configurable battery power domain, quiet efficient propulsion over a usable seakeeping window, and selective reduction of auxiliary acoustic/thermal machinery.
 
 ## Implementation sequence
 

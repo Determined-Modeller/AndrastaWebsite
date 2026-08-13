@@ -2,6 +2,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 
 import { DatasheetLink, StatusPill } from '@/components/cards';
+import { PlatformArchitectureMap } from '@/components/platform-architecture-map';
 import { SectionWrapper } from '@/components/section-wrapper';
 import { platforms } from '@/data/site';
 
@@ -17,9 +18,11 @@ export default function ProductLinesPage() {
         eyebrow="Platform family"
         headingAs="h1"
         heading="One architecture, scaled around the mission."
-        intro="Manta accelerates physical learning. AndraSound carries the lead persistent mission architecture. AndraHold expands payload and endurance. AndraCharge closes the replenishment loop."
+        intro="Each programme has a distinct job. Together they reduce development risk, carry common interfaces into mission-scale vehicles and close the distributed sustainment loop."
       >
-        <div className="space-y-7">
+        <PlatformArchitectureMap />
+
+        <div className="mt-12 space-y-7">
           {platforms.map((platform, index) => (
             <article
               id={platform.slug}

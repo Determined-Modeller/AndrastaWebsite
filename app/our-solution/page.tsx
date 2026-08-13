@@ -39,12 +39,12 @@ export default function OurSolutionPage() {
         </SectionWrapper>
       </div>
 
-      <SectionWrapper heading="See the complete operating architecture.">
+      <SectionWrapper heading="See how the architecture is integrated.">
         <Link
-          href="/operating-system"
+          href="/technology"
           className="inline-flex rounded-full bg-cyan-200 px-6 py-3 text-sm font-semibold text-slate-950 transition hover:bg-cyan-100"
         >
-          Explore the operating system
+          Explore the technology
         </Link>
       </SectionWrapper>
     </>

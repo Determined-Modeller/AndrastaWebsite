@@ -5,10 +5,9 @@ Production website for [andrastamarine.com](https://andrastamarine.com), built w
 ## Public routes
 
 - `/` - dual-use positioning and programme overview
-- `/operating-system` - vehicle, energy, payload, replenishment, and logistics thesis
 - `/technology` - public-safe technology architecture
-- `/product-lines` - platform development roadmap and datasheet placeholders
-- `/case-studies` - illustrative mission applications
+- `/product-lines` - interlocking programme architecture, platform roadmap, and datasheet placeholders
+- `/case-studies` - image-led civil and dual-use mission value stories
 - `/responsibility` - responsible innovation, business conduct, and supplier readiness
 - `/about` - company model and current priorities
 - `/contact` - direct company contact route
@@ -22,9 +21,9 @@ Production website for [andrastamarine.com](https://andrastamarine.com), built w
 - Product datasheet controls are backed by nullable URLs in `data/site.ts`; leave them disabled until approved PDFs exist.
 - The board/team page is intentionally deferred.
 
-## Interactive explainer readiness
+## Narrative architecture
 
-`components/system-explainer.tsx` provides a static multimodal-logistics map and an optional iframe path. When an approved interactive explainer exists, pass its URL through the `embedUrl` prop in `app/operating-system/page.tsx`. No hosting or server change is required.
+The interactive mission comparator is featured once on the homepage. Technology owns the integration argument, Platforms owns the interlocking programme map, and Missions owns the image-led value stories. `/operating-system` is retained only as a lightweight wayfinding route for old links.
 
 ## Local development
 
