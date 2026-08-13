@@ -41,9 +41,9 @@ export default function HomePage() {
         <SectionWrapper
           eyebrow="Dual-use by design"
           heading="One core architecture. Different mission and assurance routes."
-          intro="The short-term market strategy spans civil offshore work, security and defence integration, and research applications. Each route has its own operating boundaries, evidence needs, and procurement expectations."
+          intro="The short-term market strategy is focused on civil and dual-use programmes. Each route has its own operating boundaries, evidence needs, and procurement expectations."
         >
-          <div className="grid gap-4 lg:grid-cols-3">
+          <div className="grid gap-4 lg:grid-cols-2">
             {missionMarkets.map((market) => (
               <BaseCard key={market.title} eyebrow={market.label} title={market.title} detail={market.detail} />
             ))}

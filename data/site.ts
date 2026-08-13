@@ -16,61 +16,6 @@ export const siteConfig = {
   ]
 };
 
-export const systemLayers = [
-  {
-    index: '01',
-    title: 'Vehicle',
-    detail:
-      'Low-signature autonomous subsea platforms spanning rapid demonstration, persistent missions, and extended payload operations.'
-  },
-  {
-    index: '02',
-    title: 'Energy',
-    detail:
-      'Hydrogen-electric and battery-hybrid architectures integrated around mission duty cycle, thermal balance, and handling.'
-  },
-  {
-    index: '03',
-    title: 'Payload + autonomy',
-    detail:
-      'Modular mission payloads with defined autonomy, navigation, communications, and command-and-control interfaces.'
-  },
-  {
-    index: '04',
-    title: 'Replenishment + logistics',
-    detail:
-      'Transport, deployment, recovery, resupply, servicing, and re-tasking designed into the operating model.'
-  }
-];
-
-export const operatingCycle = [
-  {
-    step: '01',
-    title: 'Prepare + fuel',
-    detail: 'Configure the vehicle, payload, energy package, and mission order from shore or port.'
-  },
-  {
-    step: '02',
-    title: 'Insert',
-    detail: 'Use road, port, vessel, or air-delivery concepts to reach the operating area.'
-  },
-  {
-    step: '03',
-    title: 'Operate as a cohort',
-    detail: 'Coordinate sensing, survey, inspection, station-keeping, and payload activity.'
-  },
-  {
-    step: '04',
-    title: 'Replenish + recover',
-    detail: 'Use subsea replenishment and recovery of opportunity to extend the useful operating window.'
-  },
-  {
-    step: '05',
-    title: 'Re-task',
-    detail: 'Refresh payloads, software, mission orders, and service needs for the next cycle.'
-  }
-];
-
 export const missionMarkets = [
   {
     label: 'Civil',
@@ -79,16 +24,10 @@ export const missionMarkets = [
       'Persistent environmental survey, subsea asset observation, inspection support, cable and pipeline monitoring, and decommissioning assurance.'
   },
   {
-    label: 'Security + defence',
+    label: 'Dual-use',
     title: 'Maritime awareness + seabed security',
     detail:
       'Long-duration sensing, infrastructure awareness, controlled trials, and integration pathways for operators and prime contractors.'
-  },
-  {
-    label: 'Research',
-    title: 'Ocean science + evidence',
-    detail:
-      'Repeatable environmental observation and configurable payload integration where longer operating windows improve data continuity.'
   }
 ];
 
@@ -198,56 +137,28 @@ export const missionScenarios = [
     imageUrl: null as string | null,
     imageAlt: 'Andrasta autonomous subsea system observing offshore infrastructure',
     market: 'Civil offshore',
-    title: 'Offshore infrastructure assurance',
-    framing: 'Repeatable observation around subsea assets and energy infrastructure',
+    title: 'Offshore infrastructure + environmental assurance',
+    framing: 'Repeatable observation around subsea assets, works and energy infrastructure',
     challenge:
-      'Cables, pipelines, foundations, and adjacent seabed need repeatable observation between major vessel campaigns.',
+      'Cables, pipelines, foundations and adjacent environments need repeatable evidence between major vessel campaigns.',
     approach:
-      'Mission-configured sensing, repeatable routes, and persistent vehicle presence support inspection and change detection.',
+      'Mission-configured sensing, repeatable routes and persistent vehicle presence support inspection, change detection and environmental observation.',
     value:
-      'Faster anomaly follow-up and better continuity between campaigns.'
-  },
-  {
-    slug: 'environmental-survey',
-    imageUrl: null as string | null,
-    imageAlt: 'Andrasta autonomous subsea system conducting an environmental survey',
-    market: 'Civil + research',
-    title: 'Persistent environmental survey',
-    framing: 'Longer-window observations for decommissioning, monitoring, and science',
-    challenge:
-      'Short campaign snapshots can miss temporal variation when decisions require repeated environmental evidence.',
-    approach:
-      'Configurable sensors and repeatable mission logic sustain baseline, works-phase, and post-works observation.',
-    value:
-      'More consistent datasets with less dependence on continuous support-vessel presence.'
+      'Better evidence continuity and faster anomaly follow-up with less dependence on continuous support-vessel presence.'
   },
   {
     slug: 'maritime-awareness',
     imageUrl: null as string | null,
     imageAlt: 'Andrasta autonomous subsea system operating around critical maritime infrastructure',
-    market: 'Security + defence',
+    market: 'Dual-use',
     title: 'Maritime awareness + seabed security',
     framing: 'Persistent sensing around critical maritime areas and infrastructure',
     challenge:
       'Wide areas, long timelines, and constrained support assets make persistent underwater awareness difficult.',
     approach:
-      'Combine mission sensing, autonomy, command interfaces, and replenishable platform logistics in one operating architecture.',
+      'Combine mission sensing, autonomy, partner command interfaces and replenishable platform logistics in one operating architecture.',
     value:
       'Longer observation windows and flexible cohort deployment around critical areas.'
-  },
-  {
-    slug: 'technology-demonstration',
-    imageUrl: null as string | null,
-    imageAlt: 'Andrasta development platform integrating a partner payload',
-    market: 'Primes + partners',
-    title: 'Payload + autonomy demonstration',
-    framing: 'A controlled subsea route for integration evidence',
-    challenge:
-      'Sensors, autonomy components, and mission software need credible marine integration before customer adoption.',
-    approach:
-      'Use defined interfaces and a configurable development platform to integrate and demonstrate partner subsystems.',
-    value:
-      'A reusable integration baseline and clearer route into customer programmes.'
   }
 ];
 

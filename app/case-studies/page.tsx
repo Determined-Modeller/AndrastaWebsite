@@ -7,7 +7,7 @@ import { missionScenarios } from '@/data/site';
 export const metadata = {
   title: 'Mission Applications',
   description:
-    'Civil, security, defence, research, and partner-integration applications for Andrasta Marine autonomous subsea systems.'
+    'Civil and dual-use applications for Andrasta Marine autonomous subsea systems.'
 };
 
 export default function CaseStudiesPage() {
@@ -16,8 +16,8 @@ export default function CaseStudiesPage() {
       <SectionWrapper
         eyebrow="Mission applications"
         headingAs="h1"
-        heading="Show the operating advantage against a real mission."
-        intro="These cases illustrate where integrated endurance, payload, cohort operation, replenishment, and flexible logistics can change the utility and economics of subsea autonomy."
+        heading="Two mission routes. One replenishable operating architecture."
+        intro="Civil and dual-use cases show where persistent cohorts, in-water replenishment and flexible logistics change the operating model."
       >
         <div className="grid gap-5 lg:grid-cols-2">
           {missionScenarios.map((scenario) => (
@@ -68,16 +68,24 @@ export default function CaseStudiesPage() {
 
       <div className="border-y border-slate-800/80 bg-slate-950/35">
         <SectionWrapper
-          eyebrow="Mission design"
-          heading="Bring the operating constraint, not a pre-selected vehicle."
-          intro="A useful discussion starts with the area, duration, payload, intervention burden, data need, and logistics available. The system configuration follows from that mission case."
+          eyebrow="Compare the operating model"
+          heading="See the logistics behind each mission."
+          intro="The interactive comparator shows how deployment, cohort operation, replenishment and recovery differ from a conventional campaign."
         >
-          <Link
-            href="/contact"
-            className="inline-flex rounded-full bg-cyan-200 px-6 py-3 text-sm font-semibold text-slate-950 transition hover:bg-cyan-100"
-          >
-            Frame an operating concept
-          </Link>
+          <div className="flex flex-wrap gap-3">
+            <Link
+              href="/operating-system"
+              className="inline-flex rounded-full bg-cyan-200 px-6 py-3 text-sm font-semibold text-slate-950 transition hover:bg-cyan-100"
+            >
+              Open the mission comparator
+            </Link>
+            <Link
+              href="/contact"
+              className="inline-flex rounded-full border border-cyan-300/40 px-6 py-3 text-sm font-semibold text-cyan-100 transition hover:border-cyan-200 hover:text-white"
+            >
+              Frame an operating concept
+            </Link>
+          </div>
         </SectionWrapper>
       </div>
     </>

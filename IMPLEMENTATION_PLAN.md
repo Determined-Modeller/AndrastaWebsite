@@ -48,12 +48,22 @@ The release must look credible to offshore operators, primes, supermajors, procu
 - Replace generic platform cards with image-led product panels using public-safe CAD-style wireframes.
 - Present mission applications through mission need, system response, and operating advantage; add dedicated mission imagery in a later visual pass.
 
+## Interactive logistics comparator - 13 August 2026
+
+- Replace the static five-step logistics strip with a native React/SVG mission comparator; do not introduce Flash, video hosting, an iframe, or a new runtime dependency.
+- Limit public mission routes to **Civil** and **Dual-use**. Environmental survey remains a civil application rather than a separate market category.
+- Show the conventional and Andrasta operating models side by side so the value proposition is visible without relying on long explanatory copy.
+- Provide clickable, keyboard-focusable mission nodes with concise contextual detail for deployment, support assets, cohort operation, subsea replenishment, command interfaces, and recovery.
+- Animate operating routes using lightweight CSS, respect reduced-motion preferences, and keep all content usable on touch devices and small screens.
+- Keep the comparison qualitative until controlled programme evidence supports public numerical claims.
+- Remove repeated system-architecture cards from the Operating System page; retain the design-for-manufacture scale path and use the comparator as the primary explanation.
+
 ## Implementation sequence
 
 1. Update central site data and public claim boundaries.
 2. Add the Operating System and Responsibility routes.
 3. Rework Home, Technology, Platforms, Missions, Company, and Contact around the new narrative.
-4. Add a reusable future-explainer component that can later accept an iframe/source without server changes.
+4. Add a native interactive logistics comparator that can be extended with future approved media without server changes.
 5. Add accessible datasheet placeholders backed by nullable URLs so documents can be enabled without redesign.
 6. Update navigation, footer, metadata, and content TODOs.
 7. Add and inspect the new public-safe imagery.

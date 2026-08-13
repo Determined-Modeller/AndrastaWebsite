@@ -14,14 +14,15 @@ These items are intentionally unresolved. Do not replace them with invented copy
 4. **Procurement policy pack**
    - Approve controlled versions of the quality, cyber, responsible innovation, export/sanctions, anti-bribery/counter-fraud, counterparty due-diligence, modern-slavery, and supplier-conduct documents.
    - Decide which documents should be public downloads and which should be supplied only during due diligence.
-5. **Interactive operating-system explainer**
-   - Build and approve the animation/interactive experience, including clickable logistics nodes and mission-specific advantage overlays.
-   - Pass its approved URL to `SystemExplainer` in `app/operating-system/page.tsx`; the current static logistics map is the no-server-change fallback.
+5. **Interactive operating-system explainer enhancements**
+   - The native civil/dual-use comparator, animated logistics paths, node explanations, and conventional baseline are now implemented.
+   - Future approved media can add controlled product silhouettes, mission photography, voice-over/video, or richer node overlays without replacing the present static-hosting architecture.
+   - Add numerical comparator evidence only when the assumptions and public evidence basis are approved.
 6. **Board and team page**
    - Deliberately deferred from this release. Add only when biographies, roles, photography, permissions, and disclosure wording are approved.
 7. **Real programme imagery**
    - Replace illustrative website imagery progressively with approved prototype, integration, and test photography as it becomes public-release ready.
    - Replace the current platform wireframes with controlled CAD-derived renders when public geometry is frozen.
-   - Add one strong visual per mission application, with optional interactive hotspots and comparison overlays. The mission data structure and layouts should remain compatible with this expansion.
+   - Add one strong visual for each of the two public mission routes, with optional interactive hotspots. Environmental imagery should sit within the civil route rather than become a third market category.
 8. **Contact workflow**
    - Direct email is the production contact route. Add a form only when a real submission backend, privacy notice, retention rule, and response owner are in place.

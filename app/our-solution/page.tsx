@@ -29,9 +29,9 @@ export default function OurSolutionPage() {
         <SectionWrapper
           eyebrow="Market routes"
           heading="A common architecture with mission-specific assurance."
-          intro="Civil, security, defence, and research customers do not share one procurement or operating model. The core engineering can be reused while the evidence and governance route changes."
+          intro="Civil and dual-use customers do not share one procurement or operating model. The core engineering can be reused while the evidence and governance route changes."
         >
-          <div className="grid gap-4 lg:grid-cols-3">
+          <div className="grid gap-4 lg:grid-cols-2">
             {missionMarkets.map((market) => (
               <BaseCard key={market.title} eyebrow={market.label} title={market.title} detail={market.detail} />
             ))}

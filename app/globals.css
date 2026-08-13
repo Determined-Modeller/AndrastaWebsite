@@ -45,3 +45,24 @@ a {
   outline: 2px solid #a5f3fc;
   outline-offset: 4px;
 }
+
+@keyframes logistics-flow {
+  to {
+    stroke-dashoffset: -34;
+  }
+}
+
+.logistics-flow {
+  stroke-dasharray: 7 10;
+  animation: logistics-flow 2.6s linear infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  .logistics-flow {
+    animation: none;
+  }
+}
