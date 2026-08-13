@@ -23,6 +23,7 @@ export default function TechnologyPage() {
           {technologyThemes.map((theme, index) => (
             <BaseCard
               key={theme.title}
+              titleAs="h2"
               eyebrow={String(index + 1).padStart(2, '0')}
               title={theme.title}
               detail={theme.detail}

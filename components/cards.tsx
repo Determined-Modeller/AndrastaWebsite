@@ -3,6 +3,7 @@ import { ReactNode } from 'react';
 
 type BaseCardProps = {
   title: string;
+  titleAs?: 'h2' | 'h3' | 'h4';
   eyebrow?: string;
   subtitle?: string;
   detail?: string;
@@ -10,13 +11,15 @@ type BaseCardProps = {
   children?: ReactNode;
 };
 
-export function BaseCard({ title, eyebrow, subtitle, detail, className = '', children }: BaseCardProps) {
+export function BaseCard({ title, titleAs = 'h3', eyebrow, subtitle, detail, className = '', children }: BaseCardProps) {
+  const TitleTag = titleAs;
+
   return (
     <article className={`group rounded-2xl border border-slate-700/70 bg-slate-950/55 p-6 shadow-panel transition duration-200 hover:-translate-y-0.5 hover:border-cyan-300/35 hover:bg-slate-900/70 ${className}`}>
       {eyebrow && (
         <p className="mb-4 text-xs font-semibold uppercase tracking-[0.2em] text-cyan-200/85">{eyebrow}</p>
       )}
-      <h3 className="text-lg font-semibold tracking-tight text-white">{title}</h3>
+      <TitleTag className="text-lg font-semibold tracking-tight text-white">{title}</TitleTag>
 
       {subtitle && (
         <p className="mt-2 text-sm font-medium text-cyan-200/90">{subtitle}</p>

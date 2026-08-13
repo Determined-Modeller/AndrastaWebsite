@@ -23,6 +23,7 @@ export default function CaseStudiesPage() {
           {missionScenarios.map((scenario) => (
             <BaseCard
               key={scenario.slug}
+              titleAs="h2"
               eyebrow={scenario.market}
               title={scenario.title}
               subtitle={scenario.framing}

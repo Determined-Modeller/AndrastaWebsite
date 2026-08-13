@@ -22,6 +22,7 @@ export default function ProductLinesPage() {
           {platforms.map((platform) => (
             <BaseCard
               key={platform.slug}
+              titleAs="h2"
               eyebrow={platform.category}
               title={platform.name}
               subtitle={platform.role}

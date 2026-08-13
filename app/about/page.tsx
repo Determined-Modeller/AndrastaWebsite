@@ -20,10 +20,12 @@ export default function AboutPage() {
       >
         <div className="grid gap-4 md:grid-cols-2">
           <BaseCard
+            titleAs="h2"
             title="What we build"
             detail="Development platforms, physical system architecture, mission-support concepts, controlled interfaces, and engineering evidence for civil, security, and defence applications."
           />
           <BaseCard
+            titleAs="h2"
             title="How we work"
             detail="A focused system-authority model: retain control of the platform architecture and integrate specialist capability through explicit partner, supplier, IP, and assurance boundaries."
           />

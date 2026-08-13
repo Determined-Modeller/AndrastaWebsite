@@ -21,7 +21,7 @@ export default function ResponsibilityPage() {
       >
         <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
           {responsibilityPillars.map((pillar) => (
-            <BaseCard key={pillar.title} title={pillar.title} detail={pillar.detail} />
+            <BaseCard key={pillar.title} titleAs="h2" title={pillar.title} detail={pillar.detail} />
           ))}
         </div>
       </SectionWrapper>

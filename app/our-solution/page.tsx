@@ -19,9 +19,9 @@ export default function OurSolutionPage() {
         intro="Andrasta Marine is developing autonomous subsea capability through controlled, partner-led demonstrations and an engineering evidence spine that can support future procurement and assurance."
       >
         <div className="grid gap-4 md:grid-cols-3">
-          <BaseCard title="Mission definition" detail="Agree the operating boundary, payload, environment, decision need, and acceptance evidence before selecting the configuration." />
-          <BaseCard title="System integration" detail="Control interfaces between the physical platform, energy system, payload, autonomy, command-and-control, and logistics." />
-          <BaseCard title="Demonstrate + learn" detail="Test against explicit objectives, retain anomalies and configuration history, and use evidence to set the next development baseline." />
+          <BaseCard titleAs="h2" title="Mission definition" detail="Agree the operating boundary, payload, environment, decision need, and acceptance evidence before selecting the configuration." />
+          <BaseCard titleAs="h2" title="System integration" detail="Control interfaces between the physical platform, energy system, payload, autonomy, command-and-control, and logistics." />
+          <BaseCard titleAs="h2" title="Demonstrate + learn" detail="Test against explicit objectives, retain anomalies and configuration history, and use evidence to set the next development baseline." />
         </div>
       </SectionWrapper>
 
