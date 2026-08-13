@@ -10,6 +10,8 @@ required=(
   "public/andrasound-wireframe.webp"
   "public/andrahold-wireframe.webp"
   "public/andracharge-wireframe.webp"
+  "public/datasheets/andrasta-manta-datasheet.pdf"
+  "public/datasheets/andrasta-andrasound-datasheet.pdf"
 )
 
 missing=0

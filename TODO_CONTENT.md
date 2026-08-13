@@ -3,8 +3,8 @@
 These items are intentionally unresolved. Do not replace them with invented copy, values, badges, or downloads.
 
 1. **Platform datasheets**
-   - Approve public configurations, maturity statements, evidence basis, and release classification for Manta, AndraSound, AndraHold, and AndraCharge.
-   - Add the approved PDF URLs to `platforms[].datasheetUrl` in `data/site.ts`. The UI will enable the existing download controls automatically.
+   - Review and approve the prepared de minimis Manta and AndraSound PDFs before publication.
+   - The AndraHold and AndraCharge download controls are deliberately omitted until useful public configurations are ready.
 2. **ISO 9001 evidence**
    - Maintain the public status as a target until an accredited external certification process is complete.
    - Update the site only after the scope, certificate, certification body, and validity can be verified.

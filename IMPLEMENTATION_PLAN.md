@@ -19,7 +19,7 @@ The release must look credible to offshore operators, primes, supermajors, procu
 
 1. **Home** - immediate dual-use positioning, system thesis, mission markets, platform roadmap, and supplier-readiness signal.
 2. **Technology** - public-safe architecture, low-signature design, modular integration, and evidence-led development.
-3. **Platforms** - the interlocking Manta, AndraSound, AndraHold, and AndraCharge programme architecture with disabled datasheet placeholders.
+3. **Platforms** - the interlocking Manta, AndraSound, AndraHold, and AndraCharge programme architecture, with concise public datasheets released only where a useful controlled configuration is ready.
 4. **Missions** - image-led civil and dual-use value stories, clearly framed as mission cases rather than completed customer deployments.
 5. **Responsibility** - responsible dual-use governance, safety, export/sanctions, anti-bribery and financial-crime controls, modern-slavery/supply-chain principles, and environmental responsibility.
 6. **Company** - focused company model, operating principles, and partner/supplier engagement without team-photo placeholders.
@@ -85,7 +85,7 @@ The former Operating System navigation item is retired. Its useful content is di
 2. Add the Operating System and Responsibility routes.
 3. Rework Home, Technology, Platforms, Missions, Company, and Contact around the new narrative.
 4. Add a native interactive logistics comparator that can be extended with future approved media without server changes.
-5. Add accessible datasheet placeholders backed by nullable URLs so documents can be enabled without redesign.
+5. Add accessible datasheet controls backed by nullable URLs: publish review-ready Manta and AndraSound PDFs, and omit the AndraHold and AndraCharge controls until useful public configurations are ready.
 6. Update navigation, footer, metadata, and content TODOs.
 7. Add and inspect the new public-safe imagery.
 8. Run type, lint, asset, production-build, route, responsive, and visual checks.

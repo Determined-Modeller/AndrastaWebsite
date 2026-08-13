@@ -78,7 +78,8 @@ export const platforms = [
       'Fast-turn modular construction'
     ],
     imageUrl: '/manta-wireframe.webp',
-    datasheetUrl: null as string | null
+    datasheetUrl: '/datasheets/andrasta-manta-datasheet.pdf',
+    showDatasheet: true
   },
   {
     slug: 'andrasound',
@@ -94,7 +95,8 @@ export const platforms = [
       'Defined autonomy and command interfaces'
     ],
     imageUrl: '/andrasound-wireframe.webp',
-    datasheetUrl: null as string | null
+    datasheetUrl: '/datasheets/andrasta-andrasound-datasheet.pdf',
+    showDatasheet: true
   },
   {
     slug: 'andrahold',
@@ -110,7 +112,8 @@ export const platforms = [
       'Extended endurance architecture'
     ],
     imageUrl: '/andrahold-wireframe.webp',
-    datasheetUrl: null as string | null
+    datasheetUrl: null as string | null,
+    showDatasheet: false
   },
   {
     slug: 'andracharge',
@@ -126,7 +129,8 @@ export const platforms = [
       'Reusable mission-cycle support'
     ],
     imageUrl: '/andracharge-wireframe.webp',
-    datasheetUrl: null as string | null
+    datasheetUrl: null as string | null,
+    showDatasheet: false
   }
 ];
 

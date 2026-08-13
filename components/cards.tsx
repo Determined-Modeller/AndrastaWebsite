@@ -59,9 +59,11 @@ export function DatasheetLink({ href, product }: { href: string | null; product:
   return (
     <Link
       href={href}
+      download
+      aria-label={`Download ${product} datasheet PDF`}
       className="inline-flex items-center gap-2 rounded-full border border-cyan-300/40 px-4 py-2 text-sm font-medium text-cyan-100 transition hover:border-cyan-200 hover:text-white"
     >
-      Download datasheet
+      Download datasheet PDF
       <span aria-hidden="true">↗</span>
     </Link>
   );

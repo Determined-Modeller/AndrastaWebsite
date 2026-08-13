@@ -60,9 +60,11 @@ export default function ProductLinesPage() {
                   ))}
                 </ul>
 
-                <div className="mt-auto pt-8">
-                  <DatasheetLink href={platform.datasheetUrl} product={platform.name} />
-                </div>
+                {platform.showDatasheet !== false && (
+                  <div className="mt-auto pt-8">
+                    <DatasheetLink href={platform.datasheetUrl} product={platform.name} />
+                  </div>
+                )}
               </div>
             </article>
           ))}
