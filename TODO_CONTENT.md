@@ -27,3 +27,4 @@ These items are intentionally unresolved. Do not replace them with invented copy
    - The Civil and Dual-use mission routes now have strong illustrative imagery. Replace it progressively with approved programme photography or controlled CAD-derived renders as evidence becomes public-release ready.
 8. **Contact workflow**
    - Direct email is the production contact route. Add a form only when a real submission backend, privacy notice, retention rule, and response owner are in place.
+   - Add a LinkedIn button in the footer or contact area only after the verified company-page URL is supplied.

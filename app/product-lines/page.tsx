@@ -1,5 +1,4 @@
 import Image from 'next/image';
-import Link from 'next/link';
 
 import { DatasheetLink, StatusPill } from '@/components/cards';
 import { PlatformArchitectureMap } from '@/components/platform-architecture-map';
@@ -69,21 +68,6 @@ export default function ProductLinesPage() {
           ))}
         </div>
       </SectionWrapper>
-
-      <div className="border-y border-slate-800/80 bg-slate-950/35">
-        <SectionWrapper
-          eyebrow="Product information"
-          heading="Datasheets will follow each public product configuration."
-          intro="The download positions are in place for product geometry, interfaces, operating envelopes, and configuration-specific performance when the first public datasheets are released."
-        >
-          <Link
-            href="/contact"
-            className="inline-flex rounded-full border border-slate-600 px-6 py-3 text-sm font-semibold text-slate-100 transition hover:border-cyan-200 hover:text-white"
-          >
-            Discuss a platform requirement
-          </Link>
-        </SectionWrapper>
-      </div>
     </>
   );
 }
