@@ -10,7 +10,7 @@ export function CtaBlock() {
           </h2>
 
           <p className="mt-4 max-w-2xl text-sm leading-7 text-slate-300 sm:text-base">
-            Andrasta Marine welcomes focused conversations with operators, primes, payload partners, test facilities, and specialist suppliers working toward controlled demonstrations and future programmes.
+            Andrasta Marine works with operators, primes, payload partners, test facilities, and specialist suppliers to turn mission needs into integrated subsea capability.
           </p>
 
           <div className="mt-7">

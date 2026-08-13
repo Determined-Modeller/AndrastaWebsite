@@ -15,14 +15,14 @@ export function Navbar() {
         className="mx-auto flex min-h-[84px] w-full max-w-7xl items-center justify-between gap-4 px-5 py-4 sm:px-8"
         aria-label="Primary"
       >
-        <Link href="/" className="flex min-w-0 items-center gap-3" aria-label="Andrasta Marine home">
+        <Link href="/" className="relative isolate flex min-w-0 items-center gap-3 before:absolute before:-inset-5 before:-z-10 before:bg-[radial-gradient(ellipse,rgba(103,232,249,0.09),transparent_70%)]" aria-label="Andrasta Marine home">
           <Image
             src={MINI_LOGO_SRC}
             alt=""
             width={72}
             height={72}
             priority
-            className="hidden h-12 w-12 shrink-0 object-contain sm:block"
+            className="hidden h-12 w-12 shrink-0 object-contain invert opacity-80 mix-blend-screen sm:block"
           />
 
           <Image
@@ -31,7 +31,7 @@ export function Navbar() {
             width={620}
             height={160}
             priority
-            className="h-auto w-[175px] sm:w-[280px] lg:w-[305px]"
+            className="h-auto w-[175px] opacity-95 drop-shadow-[0_0_16px_rgba(125,211,252,0.16)] sm:w-[280px] lg:w-[305px]"
           />
         </Link>
 

@@ -1,13 +1,21 @@
 import Link from 'next/link';
 
-import { BaseCard } from '@/components/cards';
 import { SectionWrapper } from '@/components/section-wrapper';
 import { technologyThemes } from '@/data/site';
+
+const technologyBorders = [
+  '',
+  'border-t border-slate-700/70 md:border-l md:border-t-0',
+  'border-t border-slate-700/70 lg:border-l lg:border-t-0',
+  'border-t border-slate-700/70 md:border-l lg:border-l-0',
+  'border-t border-slate-700/70 lg:border-l',
+  'border-t border-slate-700/70 md:border-l lg:border-l'
+];
 
 export const metadata = {
   title: 'Technology',
   description:
-    'Public overview of Andrasta Marine hydrogen-electric endurance, low-signature platform, modular integration, and engineering assurance architecture.'
+    'Andrasta Marine hydrogen-electric endurance, low-signature propulsion, modular payload, replenishment, and scalable manufacturing architecture.'
 };
 
 export default function TechnologyPage() {
@@ -16,48 +24,63 @@ export default function TechnologyPage() {
       <SectionWrapper
         eyebrow="Technology"
         headingAs="h1"
-        heading="An integrated architecture for persistent subsea operations."
-        intro="The development focus is the relationship between energy, vehicle form, thermal management, payload duty cycle, autonomy interfaces, replenishment, and assurance. Public information is intentionally limited to the architecture and validation approach."
+        heading="The technology is the integration."
+        intro="Andrasta combines conformal energy storage, hydrogen-electric power, thermal management, low-signature propulsion, modular payloads, autonomy interfaces, and robotic replenishment around the complete mission cycle."
       >
-        <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
+        <div className="grid overflow-hidden rounded-3xl border border-slate-700/70 bg-slate-950/50 md:grid-cols-2 lg:grid-cols-3">
           {technologyThemes.map((theme, index) => (
-            <BaseCard
+            <article
               key={theme.title}
-              titleAs="h2"
-              eyebrow={String(index + 1).padStart(2, '0')}
-              title={theme.title}
-              detail={theme.detail}
-            />
+              className={`p-6 sm:p-8 ${technologyBorders[index]}`}
+            >
+              <p className="text-xs font-semibold tracking-[0.2em] text-cyan-200/75">{String(index + 1).padStart(2, '0')}</p>
+              <h2 className="mt-5 text-lg font-semibold text-white">{theme.title}</h2>
+              <p className="mt-3 text-sm leading-7 text-slate-300">{theme.detail}</p>
+            </article>
           ))}
         </div>
       </SectionWrapper>
 
       <div className="border-y border-slate-800/80 bg-slate-950/35">
         <SectionWrapper
-          eyebrow="Integration model"
-          heading="Specialist partners. Explicit interfaces. One evidence baseline."
-          intro="Andrasta Marine's role is to control the physical subsea system architecture and integrate specialist capability where it is stronger than building everything in-house."
+          eyebrow="Manufacturing strategy"
+          heading="Build for iteration. Design for repeatable manufacture."
+          intro="The physical architecture is intended to move from fast prototype learning to reusable production methods without freezing the wrong answer too early."
         >
-          <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-4">
-            <BaseCard title="Autonomy + navigation" detail="Defined interfaces for partner algorithms, navigation, remote oversight, and command-and-control within an agreed operating boundary." />
-            <BaseCard title="Sensors + payloads" detail="Mission payload integration with explicit power, data, geometry, thermal, acoustic, and evidence requirements." />
-            <BaseCard title="Marine engineering" detail="Vehicle architecture, packaging, propulsion, materials, handling, and environmental design treated as one physical system." />
-            <BaseCard title="Test + assurance" detail="Controlled requirements, hazards, configurations, procedures, results, anomalies, and acceptance evidence." />
+          <div className="grid gap-10 rounded-3xl border border-slate-700/70 bg-[linear-gradient(120deg,rgba(8,47,73,0.24),rgba(4,7,13,0.9))] p-6 sm:p-9 lg:grid-cols-[1fr_1.15fr] lg:items-center">
+            <div>
+              <p className="text-2xl font-semibold tracking-tight text-white sm:text-3xl">Additive where it earns its place.</p>
+              <p className="mt-4 text-base leading-8 text-slate-300">
+                Printed structures and tooling can shorten design loops, consolidate parts, reduce weight, and support repairable modular construction. Conventional composite and metal processes remain part of the same production system.
+              </p>
+            </div>
+            <div className="divide-y divide-slate-700/70 border-y border-slate-700/70">
+              {[
+                ['Prototype', 'Rapid geometry, controls, energetics, and payload learning.'],
+                ['Scale', 'Common modules and interfaces carried into mission-size vehicles.'],
+                ['Lifecycle', 'Inspection, replacement, refurbishment, and fleet learning designed in.']
+              ].map(([title, detail]) => (
+                <div key={title} className="grid gap-2 py-5 sm:grid-cols-[0.35fr_1fr]">
+                  <h3 className="font-semibold text-cyan-100">{title}</h3>
+                  <p className="text-sm leading-6 text-slate-300">{detail}</p>
+                </div>
+              ))}
+            </div>
           </div>
         </SectionWrapper>
       </div>
 
       <SectionWrapper
-        eyebrow="Publication boundary"
-        heading="Credibility comes from stating what is known, what is being tested, and what remains controlled."
-        intro="Exact endurance, range, depth, hydrogen inventory, acoustic signature, detailed storage construction, and customer-specific configurations are not published here. They will be released through validated datasheets or controlled technical engagement when appropriate."
+        eyebrow="Integration model"
+        heading="Specialist capability, integrated through explicit interfaces."
+        intro="Andrasta controls the physical subsea architecture and works with specialist partners across autonomy, command-and-control, sensing, fabrication, testing, and assurance."
       >
         <div className="flex flex-wrap gap-4">
           <Link
             href="/product-lines"
             className="inline-flex rounded-full bg-cyan-200 px-6 py-3 text-sm font-semibold text-slate-950 transition hover:bg-cyan-100"
           >
-            View platform roadmap
+            View platforms
           </Link>
           <Link
             href="/contact"

@@ -16,7 +16,7 @@ export default function OurSolutionPage() {
         eyebrow="Our approach"
         headingAs="h1"
         heading="Begin with the mission. Control the interfaces. Prove the system."
-        intro="Andrasta Marine is developing autonomous subsea capability through controlled, partner-led demonstrations and an engineering evidence spine that can support future procurement and assurance."
+        intro="Andrasta Marine turns the mission need into an integrated platform, energy, payload, autonomy, and logistics configuration with a clear route to test and delivery."
       >
         <div className="grid gap-4 md:grid-cols-3">
           <BaseCard titleAs="h2" title="Mission definition" detail="Agree the operating boundary, payload, environment, decision need, and acceptance evidence before selecting the configuration." />

@@ -6,6 +6,10 @@ required=(
   "public/AndrastaMinilogo.png"
   "public/hero-dual-use.webp"
   "public/mission-dual-use.webp"
+  "public/manta-wireframe.webp"
+  "public/andrasound-wireframe.webp"
+  "public/andrahold-wireframe.webp"
+  "public/andracharge-wireframe.webp"
 )
 
 missing=0

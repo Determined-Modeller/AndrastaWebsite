@@ -1,75 +1,86 @@
+import Image from 'next/image';
 import Link from 'next/link';
 
-import { BaseCard, DatasheetLink, StatusPill } from '@/components/cards';
+import { DatasheetLink, StatusPill } from '@/components/cards';
 import { SectionWrapper } from '@/components/section-wrapper';
 import { platforms } from '@/data/site';
 
 export const metadata = {
   title: 'Platforms',
-  description: 'Andrasta Marine autonomous subsea platform and mission-support development roadmap.'
+  description: 'Andrasta Marine autonomous subsea platforms and robotic mission-support systems.'
 };
 
 export default function ProductLinesPage() {
   return (
     <>
       <SectionWrapper
-        eyebrow="Platform roadmap"
+        eyebrow="Platform family"
         headingAs="h1"
-        heading="A family built to retire risk in the right order."
-        intro="The roadmap progresses from compact evidence generation to persistent mission integration and, later, larger payload and replenishment concepts. Status labels describe the present development stage; they are not availability or fielded-capability claims."
+        heading="One architecture, scaled around the mission."
+        intro="Manta accelerates physical learning. AndraSound carries the lead persistent mission architecture. AndraHold expands payload and endurance. AndraCharge closes the replenishment loop."
       >
-        <div className="grid gap-5 lg:grid-cols-2">
-          {platforms.map((platform) => (
-            <BaseCard
+        <div className="space-y-7">
+          {platforms.map((platform, index) => (
+            <article
+              id={platform.slug}
               key={platform.slug}
-              titleAs="h2"
-              eyebrow={platform.category}
-              title={platform.name}
-              subtitle={platform.role}
-              detail={platform.summary}
-              className="flex min-h-full flex-col"
+              className="group grid scroll-mt-36 overflow-hidden rounded-3xl border border-slate-700/70 bg-[#07101a]/90 shadow-2xl shadow-cyan-950/10 lg:grid-cols-2"
             >
-              <div className="mt-5">
-                <StatusPill>{platform.status}</StatusPill>
+              <div className={`relative min-h-[280px] sm:min-h-[390px] ${index % 2 === 1 ? 'lg:order-2' : ''}`}>
+                <Image
+                  src={platform.imageUrl}
+                  alt={`${platform.name} indicative technical wireframe`}
+                  fill
+                  sizes="(min-width: 1024px) 50vw, 100vw"
+                  className="object-cover transition duration-500 group-hover:scale-[1.015]"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-slate-950/35 via-transparent to-transparent" />
+                <p className="absolute bottom-4 left-4 text-[9px] font-medium uppercase tracking-[0.16em] text-slate-300/55">
+                  Indicative system render
+                </p>
               </div>
-              <ul className="mt-5 space-y-2 text-sm leading-6 text-slate-300">
-                {platform.highlights.map((highlight) => (
-                  <li key={highlight} className="flex gap-3">
-                    <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-cyan-200" aria-hidden="true" />
-                    <span>{highlight}</span>
-                  </li>
-                ))}
-              </ul>
-              <div className="mt-auto pt-7">
-                <DatasheetLink href={platform.datasheetUrl} product={platform.name} />
+
+              <div className="flex flex-col p-6 sm:p-9 lg:p-10">
+                <div className="flex flex-wrap items-center justify-between gap-3">
+                  <p className="text-xs font-semibold uppercase tracking-[0.2em] text-cyan-200/85">{platform.category}</p>
+                  <StatusPill>{platform.status}</StatusPill>
+                </div>
+
+                <h2 className="mt-7 text-3xl font-semibold tracking-tight text-white sm:text-4xl">{platform.name}</h2>
+                <p className="mt-3 text-sm font-medium text-cyan-100">{platform.role}</p>
+                <p className="mt-5 max-w-xl text-base leading-8 text-slate-300">{platform.summary}</p>
+
+                <ul className="mt-7 grid gap-3 text-sm text-slate-300 sm:grid-cols-3 lg:grid-cols-1 xl:grid-cols-3">
+                  {platform.highlights.map((highlight) => (
+                    <li key={highlight} className="border-l border-cyan-300/35 pl-3 leading-6">
+                      {highlight}
+                    </li>
+                  ))}
+                </ul>
+
+                <div className="mt-auto pt-8">
+                  <DatasheetLink href={platform.datasheetUrl} product={platform.name} />
+                </div>
               </div>
-            </BaseCard>
+            </article>
           ))}
         </div>
       </SectionWrapper>
 
       <div className="border-y border-slate-800/80 bg-slate-950/35">
         <SectionWrapper
-          eyebrow="Datasheet policy"
-          heading="Performance will be published against a controlled configuration."
-          intro="Datasheet slots are already built into the platform architecture. They will be activated when the relevant configuration, test basis, maturity statement, and public-release review are complete."
+          eyebrow="Product information"
+          heading="Datasheets will follow each public product configuration."
+          intro="The download positions are in place for product geometry, interfaces, operating envelopes, and configuration-specific performance when the first public datasheets are released."
         >
-          <div className="grid gap-4 md:grid-cols-3">
-            <BaseCard title="Configuration" detail="A product name alone is not enough. Published values will identify the configuration and assumptions they apply to." />
-            <BaseCard title="Evidence" detail="Claims will be linked to analysis, test, or supplier evidence appropriate to the maturity and intended audience." />
-            <BaseCard title="Release control" detail="Public, commercial, partner-confidential, patent-sensitive, and export-controlled information will remain separated." />
-          </div>
+          <Link
+            href="/contact"
+            className="inline-flex rounded-full border border-slate-600 px-6 py-3 text-sm font-semibold text-slate-100 transition hover:border-cyan-200 hover:text-white"
+          >
+            Discuss a platform requirement
+          </Link>
         </SectionWrapper>
       </div>
-
-      <SectionWrapper heading="Bring a mission, payload, or integration requirement.">
-        <Link
-          href="/contact"
-          className="inline-flex rounded-full bg-cyan-200 px-6 py-3 text-sm font-semibold text-slate-950 transition hover:bg-cyan-100"
-        >
-          Discuss platform fit
-        </Link>
-      </SectionWrapper>
     </>
   );
 }

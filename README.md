@@ -24,7 +24,7 @@ Production website for [andrastamarine.com](https://andrastamarine.com), built w
 
 ## Interactive explainer readiness
 
-`components/system-explainer.tsx` provides a static operating-cycle fallback and an optional iframe path. When an approved interactive explainer exists, pass its URL through the `embedUrl` prop in `app/operating-system/page.tsx`. No hosting or server change is required.
+`components/system-explainer.tsx` provides a static multimodal-logistics map and an optional iframe path. When an approved interactive explainer exists, pass its URL through the `embedUrl` prop in `app/operating-system/page.tsx`. No hosting or server change is required.
 
 ## Local development
 
@@ -51,8 +51,12 @@ The production build exports to `out/` for AWS Amplify.
 - `public/AndrastaMinilogo.png`
 - `public/hero-dual-use.webp`
 - `public/mission-dual-use.webp`
+- `public/manta-wireframe.webp`
+- `public/andrasound-wireframe.webp`
+- `public/andrahold-wireframe.webp`
+- `public/andracharge-wireframe.webp`
 
-The two operational images are illustrative and are labelled accordingly on the public site. Replace them with approved real programme photography when available.
+The operational and platform images are illustrative and are labelled accordingly on the public site. Replace them with approved programme photography and CAD-derived product renders when available.
 
 ## Deployment
 

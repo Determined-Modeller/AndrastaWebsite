@@ -1,7 +1,7 @@
 import Image from 'next/image';
 import Link from 'next/link';
 
-import { BaseCard } from '@/components/cards';
+import { ScalePath } from '@/components/scale-path';
 import { SectionWrapper } from '@/components/section-wrapper';
 import { SystemExplainer } from '@/components/system-explainer';
 import { systemLayers } from '@/data/site';
@@ -18,8 +18,8 @@ export default function OperatingSystemPage() {
       <SectionWrapper
         eyebrow="Operating System"
         headingAs="h1"
-        heading="Vehicle + energy + payload + replenishment + logistics."
-        intro="The commercial product is the repeatable mission system, not only the underwater vehicle. Andrasta Marine is developing the physical platform and the operating loop together so endurance, handling, assurance, and useful data can be improved as one architecture."
+        heading="Persistence is delivered by the complete operating system."
+        intro="Andrasta integrates vehicle, energy, payload, manufacture, replenishment, and deployment logistics into a repeatable mission architecture - extending useful operating windows without designing every mission around a specialist support vessel."
       >
         <div className="relative aspect-[16/8.5] overflow-hidden rounded-3xl border border-slate-700/70 bg-slate-950 shadow-2xl shadow-cyan-950/20">
           <Image
@@ -31,53 +31,52 @@ export default function OperatingSystemPage() {
             className="object-cover"
           />
           <div className="absolute inset-0 bg-gradient-to-t from-slate-950/85 via-transparent to-transparent" />
-          <p className="absolute bottom-5 left-5 max-w-xl text-xs font-semibold uppercase tracking-[0.16em] text-slate-200 sm:bottom-7 sm:left-7">
-            Illustrative mission environment · Development-stage system
+          <p className="absolute bottom-4 left-4 text-[9px] font-medium uppercase tracking-[0.16em] text-slate-300/60 sm:bottom-5 sm:left-5">
+            Indicative system render
           </p>
         </div>
       </SectionWrapper>
 
       <div className="border-y border-slate-800/80 bg-slate-950/35">
         <SectionWrapper
-          eyebrow="The operating bottleneck"
-          heading="Endurance alone does not create persistence."
-          intro="A mission can still fail commercially or operationally when handling, recovery, resupply, weather, support assets, or the evidence chain are treated separately."
-        >
-          <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-4">
-            <BaseCard title="Mobilisation" detail="Deployment method, port access, transport, handling, and support assets shape what can be used and when." />
-            <BaseCard title="Time on task" detail="Energy, hotel load, payload duty cycle, autonomy, and environmental conditions determine useful operating time." />
-            <BaseCard title="Turnaround" detail="Recovery, inspection, energy resupply, payload servicing, and configuration control determine the next mission window." />
-            <BaseCard title="Decision evidence" detail="Mission data, vehicle health, test results, anomalies, and provenance must support both operations and assurance." />
-          </div>
-        </SectionWrapper>
-      </div>
-
-      <SectionWrapper
-        eyebrow="System architecture"
-        heading="Four layers, controlled through one development baseline."
-        intro="Each layer can evolve, but interfaces, assumptions, maturity, and test evidence need to remain explicit."
-      >
-        <div className="grid gap-4 md:grid-cols-2">
-          {systemLayers.map((layer) => (
-            <BaseCard key={layer.index} eyebrow={layer.index} title={layer.title} detail={layer.detail} />
-          ))}
-        </div>
-      </SectionWrapper>
-
-      <div className="border-y border-slate-800/80 bg-slate-950/35">
-        <SectionWrapper
-          eyebrow="Mission cycle"
-          heading="Design the loop, then improve it with evidence."
-          intro="The development programme is structured around a repeatable operating cycle rather than a single demonstration event."
+          eyebrow="Multimodal mission logistics"
+          heading="Move, operate, replenish, and re-task as one loop."
+          intro="The architecture connects shore and port logistics, flexible insertion, persistent vehicle cohorts, recovery of opportunity, and subsea replenishment. This is where endurance becomes operating leverage."
         >
           <SystemExplainer />
         </SectionWrapper>
       </div>
 
       <SectionWrapper
-        eyebrow="Engagement model"
-        heading="A practical entry point for operators, primes, and technology partners."
-        intro="Conversations can begin with a mission need, a subsystem to integrate, a controlled test environment, or a supplier-assurance requirement. Sensitive performance and design information is shared only through the appropriate review and disclosure route."
+        eyebrow="System architecture"
+        heading="Four layers. One controlled interface spine."
+        intro="Each layer can evolve independently while common physical, energy, data, and handling interfaces preserve integration discipline."
+      >
+        <div className="grid divide-y divide-slate-700/70 overflow-hidden rounded-3xl border border-slate-700/70 bg-slate-950/50 md:grid-cols-2 md:divide-x md:divide-y-0 lg:grid-cols-4">
+          {systemLayers.map((layer) => (
+            <div key={layer.index} className="p-6 lg:p-7">
+              <p className="text-xs font-semibold tracking-[0.2em] text-cyan-200/80">{layer.index}</p>
+              <h3 className="mt-5 text-lg font-semibold text-white">{layer.title}</h3>
+              <p className="mt-3 text-sm leading-7 text-slate-400">{layer.detail}</p>
+            </div>
+          ))}
+        </div>
+      </SectionWrapper>
+
+      <div className="border-y border-slate-800/80 bg-slate-950/35">
+        <SectionWrapper
+          eyebrow="Design for manufacture + scale"
+          heading="Build quickly at compact scale. Preserve the architecture as capability grows."
+          intro="Modular construction and additive manufacture are applied where they shorten iteration, reduce tooling or part count, improve weight, or simplify repair. Conventional marine fabrication remains where it provides the better engineering answer."
+        >
+          <ScalePath />
+        </SectionWrapper>
+      </div>
+
+      <SectionWrapper
+        eyebrow="System engagement"
+        heading="Start with the mission, payload, or logistics constraint."
+        intro="Andrasta works with operators, primes, and technology partners to define the operating concept and identify where endurance, replenishment, deployment flexibility, or cohort performance changes the mission case."
       >
         <Link
           href="/contact"

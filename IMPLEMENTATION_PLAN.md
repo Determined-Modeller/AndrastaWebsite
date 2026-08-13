@@ -39,6 +39,15 @@ The release must look credible to offshore operators, primes, supermajors, procu
 - Do not publish brochure renders that contain artefacts, unsupported configurations, draft specifications, or ambiguous deployment claims.
 - Use layout, diagrams, type, and restrained technical motifs for most explanation; imagery should support credibility rather than carry technical claims.
 
+## Direction refinement - 13 August 2026
+
+- Reduce defensive qualification and repeated maturity language across public pages.
+- Keep standards targets accurate but state them once, without prominent non-certification disclaimers.
+- Make Operating System the home of the multimodal logistics thesis and future interactive/video experience.
+- Add design-for-manufacture, selective additive manufacturing, modular scale-up, and lifecycle serviceability to the core technology story.
+- Replace generic platform cards with image-led product panels using public-safe CAD-style wireframes.
+- Present mission applications through mission need, system response, and operating advantage; add dedicated mission imagery in a later visual pass.
+
 ## Implementation sequence
 
 1. Update central site data and public claim boundaries.

@@ -3,7 +3,7 @@ export const siteConfig = {
   domain: 'andrastamarine.com',
   mission: 'Persistent subsea autonomy, built around the mission.',
   heroCopy:
-    'Andrasta Marine is developing replenishable hydrogen-electric autonomous systems for civil, security, and defence missions - integrating vehicle, energy, payload, and logistics into one controlled architecture.',
+    'Replenishable hydrogen-electric autonomous systems for civil, security, and defence missions - integrating vehicle, energy, payload, manufacture, and logistics into one architecture.',
   nav: [
     { href: '/', label: 'Home' },
     { href: '/operating-system', label: 'Operating System' },
@@ -21,53 +21,53 @@ export const systemLayers = [
     index: '01',
     title: 'Vehicle',
     detail:
-      'Low-signature autonomous subsea platforms sized for evidence-led development, payload integration, and demanding maritime operations.'
+      'Low-signature autonomous subsea platforms spanning rapid demonstration, persistent missions, and extended payload operations.'
   },
   {
     index: '02',
     title: 'Energy',
     detail:
-      'Hydrogen-electric and battery-hybrid architectures selected around mission duty cycle, handling constraints, and development maturity.'
+      'Hydrogen-electric and battery-hybrid architectures integrated around mission duty cycle, thermal balance, and handling.'
   },
   {
     index: '03',
     title: 'Payload + autonomy',
     detail:
-      'Modular mission payloads and defined autonomy, navigation, communications, and command-and-control interfaces.'
+      'Modular mission payloads with defined autonomy, navigation, communications, and command-and-control interfaces.'
   },
   {
     index: '04',
     title: 'Replenishment + logistics',
     detail:
-      'Recovery, resupply, handling, transport, and re-tasking designed as part of the system rather than added after the vehicle.'
+      'Transport, deployment, recovery, resupply, servicing, and re-tasking designed into the operating model.'
   }
 ];
 
 export const operatingCycle = [
   {
     step: '01',
-    title: 'Configure',
-    detail: 'Define the mission, operating boundary, payload, evidence need, and assurance route.'
+    title: 'Prepare + fuel',
+    detail: 'Configure the vehicle, payload, energy package, and mission order from shore or port.'
   },
   {
     step: '02',
-    title: 'Deploy',
-    detail: 'Match the platform and logistics package to the port, vessel, or controlled trial environment.'
+    title: 'Insert',
+    detail: 'Use road, port, vessel, or air-delivery concepts to reach the operating area.'
   },
   {
     step: '03',
-    title: 'Operate',
-    detail: 'Execute repeatable survey, inspection, patrol, or observation tasks with remote oversight.'
+    title: 'Operate as a cohort',
+    detail: 'Coordinate sensing, survey, inspection, station-keeping, and payload activity.'
   },
   {
     step: '04',
-    title: 'Replenish',
-    detail: 'Recover, service, resupply, and re-task through a controlled mission-support workflow.'
+    title: 'Replenish + recover',
+    detail: 'Use subsea replenishment and recovery of opportunity to extend the useful operating window.'
   },
   {
     step: '05',
-    title: 'Evidence',
-    detail: 'Capture test, system-health, and mission data for decisions, assurance, and the next configuration.'
+    title: 'Re-task',
+    detail: 'Refresh payloads, software, mission orders, and service needs for the next cycle.'
   }
 ];
 
@@ -94,34 +94,34 @@ export const missionMarkets = [
 
 export const technologyThemes = [
   {
-    title: 'Hydrogen-electric endurance architecture',
+    title: 'Conformal energy architecture',
     detail:
-      'Fuel-cell and battery-hybrid design is developed around the vehicle duty cycle, thermal balance, handling, and test evidence - not a headline range figure.'
+      'Hydrogen and oxidant storage, fuel cells, battery buffering, and phase-change thermal management are integrated around the vehicle form and mission duty cycle.'
   },
   {
-    title: 'Conformal hydride integration',
+    title: 'Low-signature propulsion',
     detail:
-      'Solid-state hydrogen storage is being investigated as an integrated part of the vehicle form and thermal architecture. Detailed construction and performance data remain controlled.'
+      'Direct-drive electric propulsion, a low moving-part count, and system-level acoustic design support quiet operation and maintainability.'
   },
   {
-    title: 'Low-signature platform design',
+    title: 'Robotic replenishment',
     detail:
-      'Propulsion, structure, thermal management, and payload placement are considered together to reduce avoidable acoustic and electrical disturbance.'
+      'AndraCharge connects underwater energy transfer, vehicle servicing, and mission turnaround without routine deck recovery.'
   },
   {
-    title: 'Modular mission interfaces',
+    title: 'Modular payload bays',
     detail:
-      'Payload, navigation, autonomy, communications, and command-and-control interfaces are structured to support partner integration and configuration control.'
+      'Accessible, configurable payload volumes support sensing, inspection, communications, and specialist partner equipment.'
   },
   {
-    title: 'Replenishment by design',
+    title: 'Autonomy + command interfaces',
     detail:
-      'The development programme treats energy resupply, docking, recovery, and re-tasking as system-level engineering problems rather than vehicle afterthoughts.'
+      'Defined power, data, navigation, communications, and command interfaces allow specialist autonomy and C2 capability to integrate cleanly.'
   },
   {
-    title: 'Evidence-led assurance',
+    title: 'Design for manufacture',
     detail:
-      'Requirements, hazards, interfaces, test results, anomalies, and configuration changes are intended to form a traceable engineering evidence spine.'
+      'Additive manufacture is used where it reduces tooling, weight, part count, or iteration time; conventional fabrication remains where it is stronger.'
   }
 ];
 
@@ -129,61 +129,65 @@ export const platforms = [
   {
     slug: 'manta',
     name: 'Manta',
-    category: 'Compact demonstrator',
-    status: 'Prototype programme',
+    category: 'Compact winged demonstrator',
+    status: 'Prototype platform',
     summary:
-      'A compact development vehicle for manoeuvring, energetics, acoustics, autonomy, and payload-integration evidence before scale-up.',
-    role: 'Evidence generation + subsystem integration',
+      'A compact, field-portable vehicle for rapid build-test-iterate cycles, subsystem proving, and payload trials.',
+    role: 'Rapid development + payload integration',
     highlights: [
-      'Controlled water-test pathway',
-      'Battery-first demonstrator configuration',
-      'Designed to retire integration risk early'
+      'Approximately 1.8 m winged form',
+      'Twin wing-tip electric propulsion',
+      'Fast-turn modular construction'
     ],
+    imageUrl: '/manta-wireframe.webp',
     datasheetUrl: null as string | null
   },
   {
     slug: 'andrasound',
     name: 'AndraSound',
     category: 'Persistent mission platform',
-    status: 'Full-scale integration programme',
+    status: 'Lead system programme',
     summary:
-      'A mid-size autonomous subsea platform being developed around mission endurance, low-signature operation, modular payloads, and practical offshore logistics.',
-    role: 'Primary near-term system integration path',
+      'The lead persistent mission platform, combining hydrogen-electric endurance, low-signature propulsion, modular payloads, and practical deployment logistics.',
+    role: 'Persistent survey + maritime awareness',
     highlights: [
       'Mission-configurable payload architecture',
-      'Hydrogen-electric integration pathway',
-      'Partner-led autonomy and command interfaces'
+      'Hydrogen-electric hybrid architecture',
+      'Defined autonomy and command interfaces'
     ],
+    imageUrl: '/andrasound-wireframe.webp',
     datasheetUrl: null as string | null
   },
   {
     slug: 'andrahold',
     name: 'AndraHold',
     category: 'Extended payload platform',
-    status: 'Concept definition',
+    status: 'Platform architecture',
     summary:
-      'A future larger system concept for missions where payload volume, endurance, and multi-role configuration drive the operating model.',
-    role: 'Future extended-range + payload envelope',
+      'A larger endurance and payload architecture for distributed sensing, subsea logistics, and long-duration field presence.',
+    role: 'Extended payload + persistent presence',
     highlights: [
       'Expanded modular payload volume',
-      'Longer-duration mission architecture',
-      'Development gated by smaller-platform evidence'
+      'Long-duration energy architecture',
+      'Subsea logistics and node support'
     ],
+    imageUrl: '/andrahold-wireframe.webp',
     datasheetUrl: null as string | null
   },
   {
     slug: 'andracharge',
     name: 'AndraCharge',
-    category: 'Mission-support subsystem',
-    status: 'Development programme',
+    category: 'Robotic mission-support system',
+    status: 'Replenishment programme',
     summary:
-      'A replenishment and mission-support concept intended to connect energy logistics, servicing, and vehicle turnaround in a controlled operating workflow.',
-    role: 'Replenishment + logistics integration',
+      'A portable robotic replenishment system connecting staged subsea energy transfer, servicing, and rapid vehicle re-tasking.',
+    role: 'Subsea replenishment + mission turnaround',
     highlights: [
-      'Designed around practical handling',
-      'Controlled energy-transfer pathway',
-      'Supports reusable mission cycles'
+      'Portable subsea service robot',
+      'Controlled multi-service interface',
+      'Reusable mission-cycle support'
     ],
+    imageUrl: '/andracharge-wireframe.webp',
     datasheetUrl: null as string | null
   }
 ];
@@ -191,105 +195,103 @@ export const platforms = [
 export const missionScenarios = [
   {
     slug: 'offshore-infrastructure-assurance',
+    imageUrl: null as string | null,
+    imageAlt: 'Andrasta autonomous subsea system observing offshore infrastructure',
     market: 'Civil offshore',
     title: 'Offshore infrastructure assurance',
     framing: 'Repeatable observation around subsea assets and energy infrastructure',
     challenge:
-      'Operators need reliable evidence around cables, pipelines, foundations, and adjacent seabed without treating every question as a major vessel campaign.',
+      'Cables, pipelines, foundations, and adjacent seabed need repeatable observation between major vessel campaigns.',
     approach:
-      'Configure a low-disturbance platform and payload around a controlled inspection, survey, or change-detection task, with repeatable routes and evidence capture.',
+      'Mission-configured sensing, repeatable routes, and persistent vehicle presence support inspection and change detection.',
     value:
-      'Better continuity between campaigns, faster anomaly follow-up, and a practical route to targeted autonomous support.'
+      'Faster anomaly follow-up and better continuity between campaigns.'
   },
   {
     slug: 'environmental-survey',
+    imageUrl: null as string | null,
+    imageAlt: 'Andrasta autonomous subsea system conducting an environmental survey',
     market: 'Civil + research',
     title: 'Persistent environmental survey',
     framing: 'Longer-window observations for decommissioning, monitoring, and science',
     challenge:
-      'Short campaign snapshots can miss temporal variation and increase mobilisation cost when the decision requires repeated environmental evidence.',
+      'Short campaign snapshots can miss temporal variation when decisions require repeated environmental evidence.',
     approach:
-      'Use configurable sensor payloads and repeatable mission logic for baseline, works-phase, and post-works observation over useful time windows.',
+      'Configurable sensors and repeatable mission logic sustain baseline, works-phase, and post-works observation.',
     value:
-      'More consistent datasets, reduced reliance on continuous support-vessel presence, and clearer evidence for operational decisions.'
+      'More consistent datasets with less dependence on continuous support-vessel presence.'
   },
   {
     slug: 'maritime-awareness',
+    imageUrl: null as string | null,
+    imageAlt: 'Andrasta autonomous subsea system operating around critical maritime infrastructure',
     market: 'Security + defence',
     title: 'Maritime awareness + seabed security',
     framing: 'Persistent sensing around critical maritime areas and infrastructure',
     challenge:
-      'Wide areas, long timelines, and constrained support assets make persistent underwater awareness operationally difficult and expensive.',
+      'Wide areas, long timelines, and constrained support assets make persistent underwater awareness difficult.',
     approach:
-      'Integrate mission-appropriate sensing, autonomy, and command interfaces into a controlled platform and logistics architecture for trials and partner-led operations.',
+      'Combine mission sensing, autonomy, command interfaces, and replenishable platform logistics in one operating architecture.',
     value:
-      'Longer observation windows, configurable payload integration, and an evidence-led path from demonstration to an assured operational concept.'
+      'Longer observation windows and flexible cohort deployment around critical areas.'
   },
   {
     slug: 'technology-demonstration',
+    imageUrl: null as string | null,
+    imageAlt: 'Andrasta development platform integrating a partner payload',
     market: 'Primes + partners',
     title: 'Payload + autonomy demonstration',
     framing: 'A controlled subsea route for integration evidence',
     challenge:
-      'New sensors, autonomy components, and mission software need credible marine integration evidence before they can enter a customer programme.',
+      'Sensors, autonomy components, and mission software need credible marine integration before customer adoption.',
     approach:
-      'Define interfaces, hazards, test objectives, acceptance evidence, and disclosure boundaries before integrating the partner subsystem into a development platform.',
+      'Use defined interfaces and a configurable development platform to integrate and demonstrate partner subsystems.',
     value:
-      'A clearer integration baseline, reusable evidence, and reduced uncertainty for procurement, programme, and technical stakeholders.'
+      'A reusable integration baseline and clearer route into customer programmes.'
   }
 ];
 
 export const responsibilityPillars = [
   {
-    title: 'Responsible dual-use innovation',
+    title: 'Responsible use',
     detail:
-      'The governance framework is being designed around lawful end use, human accountability, defined operating boundaries, proportionate customer and partner review, and escalation where a use case creates ethical or security concern.'
+      'Lawful end use, defined operating boundaries, accountable human decision-making, and clear escalation for ethical or security concerns.'
   },
   {
-    title: 'Safety + engineering assurance',
+    title: 'Secure delivery',
     detail:
-      'Requirements, hazards, design decisions, configuration, testing, anomalies, and corrective actions are intended to be controlled and traceable through the development lifecycle.'
+      'Information and cyber security, export-control and sanctions review, controlled technology transfer, and proportionate customer due diligence.'
   },
   {
-    title: 'Export controls + sanctions',
+    title: 'Business integrity + supply chain',
     detail:
-      'Technology, software, hardware, destinations, counterparties, and end uses will be assessed for applicable UK export-control and sanctions requirements before controlled transfers or commitments.'
+      'Anti-bribery, conflicts, counter-fraud, AML risk, modern-slavery risk, supplier conduct, and proportionate counterparty checks.'
   },
   {
-    title: 'Business integrity + financial crime',
+    title: 'Engineering + lifecycle',
     detail:
-      'The policy set in development covers anti-bribery, conflicts, gifts and hospitality, counter-fraud, sanctions, transparent payment routes, and risk-based counterparty due diligence.'
-  },
-  {
-    title: 'Modern slavery + supplier conduct',
-    detail:
-      'Supplier expectations are being built around fair work, no forced or trafficked labour, proportionate supply-chain risk review, escalation, and remediation rather than a paper-only statement.'
-  },
-  {
-    title: 'Environmental responsibility',
-    detail:
-      'Design decisions will consider energy, material use, maintainability, reuse, support-vessel demand, operational disturbance, and end-of-life evidence without making unvalidated emissions claims.'
+      'Controlled requirements, hazards, configuration, testing and corrective action, alongside maintainability, reuse, operational disturbance, and end-of-life planning.'
   }
 ];
 
 export const supplierReadiness = [
   {
     standard: 'ISO 9001',
-    status: 'Targeting certification before 2027',
+    status: 'Certification targeted before 2027',
     detail:
-      'A proportionate quality management system is being implemented to support controlled requirements, document and configuration management, supplier assurance, non-conformance, corrective action, and test evidence.'
+      'Quality, document and configuration control, supplier assurance, non-conformance, corrective action, and test evidence.'
   },
   {
     standard: 'DEF STAN 05-138 Issue 4',
-    status: 'Supplier-control readiness targeted before 2027',
+    status: 'CSMv4 readiness targeted before 2027',
     detail:
-      'Andrasta Marine is preparing for the MOD Cyber Security Model v4 supplier controls. Applicable compliance is contract-specific and will be assessed against the customer-assigned Cyber Risk Profile and supplier-assurance process.'
+      'Cyber security controls aligned to MOD Cyber Security Model v4 supplier expectations and customer-assigned Cyber Risk Profiles.'
   },
   {
     standard: 'Procurement evidence pack',
-    status: 'Core policy suite in development',
+    status: 'Approved-supplier evidence in progress',
     detail:
-      'The roadmap covers quality and configuration, information security, responsible innovation, export and sanctions, anti-bribery and counter-fraud, counterparty due diligence, modern slavery, and supplier conduct.'
+      'Core policies, registers, supplier controls, due-diligence evidence, improvement planning, and customer-specific responses.'
   }
 ];
 
@@ -305,9 +307,9 @@ export const companyPrinciples = [
       'Integrate specialist autonomy, command-and-control, sensing, fabrication, test, and assurance capability through explicit technical and commercial boundaries.'
   },
   {
-    title: 'Prove before claiming',
+    title: 'Build knowledge through evidence',
     detail:
-      'Use controlled demonstrations and test evidence to retire risk. Public performance and maturity claims follow validation, not presentation timelines.'
+      'Use test data, configuration history, and mission feedback to improve the platform family and compound learning across the programme.'
   }
 ];
 

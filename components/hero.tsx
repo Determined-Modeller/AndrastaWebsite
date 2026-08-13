@@ -63,8 +63,8 @@ export function Hero() {
         </div>
       </div>
 
-      <p className="absolute bottom-6 right-5 z-10 hidden text-[10px] font-semibold uppercase tracking-[0.2em] text-slate-300/80 sm:block sm:right-8">
-        Development programme · Product imagery illustrative
+      <p className="absolute bottom-5 right-5 z-10 hidden text-[8px] font-medium uppercase tracking-[0.16em] text-slate-300/45 sm:block sm:right-8">
+        Indicative system render
       </p>
     </section>
   );
