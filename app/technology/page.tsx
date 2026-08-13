@@ -1,5 +1,6 @@
 import Link from 'next/link';
 
+import { ArchitectureSelectionDiagram } from '@/components/architecture-selection-diagram';
 import { EnergyRoleDiagram } from '@/components/energy-role-diagram';
 import { SectionWrapper } from '@/components/section-wrapper';
 import { technologyThemes } from '@/data/site';
@@ -16,7 +17,7 @@ const technologyBorders = [
 export const metadata = {
   title: 'Technology',
   description:
-    'Andrasta Marine hydrogen-electric endurance, low-signature propulsion, modular payload, replenishment, and scalable manufacturing architecture.'
+    'Andrasta Marine hybrid multiphysics architecture for hydrogen-electric endurance, low-signature propulsion, modular payloads, replenishment, and scalable manufacture.'
 };
 
 export default function TechnologyPage() {
@@ -26,12 +27,22 @@ export default function TechnologyPage() {
         eyebrow="Technology"
         headingAs="h1"
         heading="The technology is the integration."
-        intro="Andrasta combines conformal energy storage, hybrid power, thermal management, low-signature propulsion, modular payloads, autonomy interfaces, and robotic replenishment around the complete mission cycle."
+        intro="Extreme endurance is a coupled thermophysics, signature, lifecycle, safety, and cost problem. Andrasta optimises the complete architecture around the mission rather than maximising one component metric."
       >
-        <EnergyRoleDiagram />
+        <ArchitectureSelectionDiagram />
       </SectionWrapper>
 
       <div className="border-y border-slate-800/80 bg-slate-950/35">
+        <SectionWrapper
+          eyebrow="Hybrid duty cycle"
+          heading="Persistence and peak performance are different jobs."
+          intro="Once the system architecture is selected, hydrogen-electric power and the battery buffer can each be sized for the part of the duty cycle they perform best."
+        >
+          <EnergyRoleDiagram />
+        </SectionWrapper>
+      </div>
+
+      <div className="border-b border-slate-800/80 bg-slate-950/15">
         <SectionWrapper
           eyebrow="Integrated building blocks"
           heading="One controlled architecture, not a collection of subsystems."
@@ -52,7 +63,7 @@ export default function TechnologyPage() {
         </SectionWrapper>
       </div>
 
-      <div className="border-b border-slate-800/80 bg-slate-950/15">
+      <div className="border-b border-slate-800/80 bg-slate-950/25">
         <SectionWrapper
           eyebrow="Manufacturing strategy"
           heading="Build for iteration. Design for repeatable manufacture."

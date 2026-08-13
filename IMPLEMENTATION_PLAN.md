@@ -65,6 +65,8 @@ The release must look credible to offshore operators, primes, supermajors, procu
 - Expand the dual-use route around distributed sustainment, vehicle-to-vehicle support, and a hybrid energy split in which hydrogen-electric power carries persistence while a managed battery buffer supplies peak loads.
 - Add a dedicated energy-role diagram to the Technology page so battery performance and shared thermal management are explained without overloading the logistics comparator.
 - Describe AndraCharge publicly as a portable distributed-sustainment system. Do not publish deployment medium, interface geometry, transfer conditions, control logic, or other enabling implementation detail without a specific release review.
+- Precede the energy-role diagram with an extreme-endurance architecture-selection diagram. Show why battery-only endurance, mid-scale liquid hydrogen, ultra-high-pressure hydrogen, and combustion/bulk-liquid AIP can become dominated by thermal, acoustic, containment, safety, compliance, logistics, or lifecycle burdens at the target scale.
+- Present the Andrasta thesis as a hybrid multiphysics optimisation across endurance, thermal balance, signature, survivability, lifecycle/recovery, serviceability, safety/compliance, and unit cost, with adversarial design and affordable distributed deployment considered from concept stage.
 
 ## Implementation sequence
 
