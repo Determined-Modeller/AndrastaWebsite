@@ -18,7 +18,7 @@ export default function AboutPage() {
         heading="A UK subsea systems company built to own the architecture."
         intro="Andrasta Marine integrates autonomous vehicles, hydrogen-electric energy, payloads, robotic replenishment, manufacturing, and mission logistics for persistent maritime operations."
       >
-        <div className="grid gap-4 md:grid-cols-2">
+        <div className="grid gap-4 md:grid-cols-3">
           <BaseCard
             titleAs="h2"
             title="What we build"
@@ -29,6 +29,37 @@ export default function AboutPage() {
             title="How we work"
             detail="A focused system-authority model: retain control of the platform architecture and integrate specialist capability through explicit partner, supplier, IP, and assurance boundaries."
           />
+          <BaseCard
+            titleAs="h2"
+            title="How we scale"
+            detail="Capital-disciplined development from an Edinburgh engineering centre, with production centralised against validated fleet demand to capture repeat-manufacture economies of scale."
+          />
+        </div>
+
+        <div className="mt-12 grid gap-9 border-y border-slate-700/70 py-10 lg:grid-cols-[0.34fr_1fr] lg:gap-14">
+          <div>
+            <p className="text-xs font-semibold uppercase tracking-[0.22em] text-cyan-200">Founder + technical lead</p>
+            <h2 className="mt-4 text-2xl font-semibold tracking-tight text-white">Rhodri Hawkins</h2>
+            <p className="mt-2 text-sm font-medium text-cyan-100">Chartered Chemical Engineer · CEng MIChemE</p>
+            <p className="mt-4 max-w-sm text-sm leading-7 text-slate-400">
+              More than five years&apos; experience in high-consequence system design and technical decision-making across regulated hydrogen and multi-energy projects.
+            </p>
+          </div>
+
+          <blockquote className="border-l border-cyan-300/35 pl-6 sm:pl-8">
+            <p className="text-lg leading-8 text-slate-200">
+              I founded Andrasta Marine on the belief that extreme endurance and adversarial operation demand a different design starting point. Energy, logistics, replenishment, geometry, acoustic behaviour, payload, manufacture, and lifecycle must be treated as one coupled system problem—not assembled by adding hydrogen or more batteries to an otherwise conventional craft.
+            </p>
+            <p className="mt-5 text-base leading-8 text-slate-300">
+              Across the mission profiles studied and simulated, hydrogen has justified its integration only where it creates additional system-level value. Andrasta combines replenishment, nature-informed geometry, and multiphysics design with protected IP and retained engineering know-how to pursue greater endurance and, where the architecture allows, simpler supporting systems. Each platform is configured for model-based iteration, manufacture, long service life, and reuse.
+            </p>
+            <p className="mt-5 text-base leading-8 text-slate-300">
+              After more than a year of design iteration, simulation, and component testing, our first system is in physical development. We are now preparing the systems for independent validation and opening discussions with development partners, licensees, distributors, and test operators.
+            </p>
+            <p className="mt-5 text-base leading-8 text-slate-300">
+              The platforms are designed as flexible hydrogen-electric hybrids from the outset, supporting quiet, efficient propulsion and emerging payload demands without surrendering robustness, practical logistics, or a credible route to fleet-scale unit cost.
+            </p>
+          </blockquote>
         </div>
       </SectionWrapper>
 
@@ -46,14 +77,26 @@ export default function AboutPage() {
       </div>
 
       <SectionWrapper
-        eyebrow="Current priorities"
-        heading="From rapid physical iteration to persistent system delivery."
-        intro="The programme advances Manta development, AndraSound mission-scale integration, partner capability, and supplier qualification in parallel."
+        eyebrow="Programme status"
+        heading="Development maturity, stated directly."
+        intro="The platform family advances through staged physical development, pre-integration design, and independent evidence rather than unsupported performance claims."
       >
         <div className="grid gap-4 md:grid-cols-3">
-          <BaseCard title="Build + test" detail="Advance energetics, manoeuvring, acoustic performance, payload integration, maintainability, and scalable construction." />
-          <BaseCard title="Integrate + demonstrate" detail="Combine autonomy, sensing, command-and-control, facilities, marine operations, and customer-relevant mission cases." />
-          <BaseCard title="Assure + qualify" detail="Progress the quality, cyber, responsible-business, supply-chain, and procurement controls expected by serious customers." />
+          <BaseCard
+            eyebrow="Physical development"
+            title="Manta"
+            detail="The first prototype was completed in Q2 2026, with first water trials planned for Q4 2026."
+          />
+          <BaseCard
+            eyebrow="RD&D ongoing"
+            title="AndraSound + AndraHold"
+            detail="Platform architecture and pre-integration design are defined while research, design, and development continue."
+          />
+          <BaseCard
+            eyebrow="Validation pathway"
+            title="AndraCharge"
+            detail="The robotic replenishment system is planned to undergo independent testing as its controlled development programme advances."
+          />
         </div>
         <div className="mt-8 flex flex-wrap gap-4">
           <Link

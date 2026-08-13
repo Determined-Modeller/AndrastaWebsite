@@ -68,7 +68,7 @@ export const platforms = [
     slug: 'manta',
     name: 'Manta',
     category: 'Compact winged demonstrator',
-    status: 'Prototype platform',
+    status: 'Physical development',
     summary:
       'A compact, field-portable vehicle for rapid physical development, subsystem proving, and payload trials.',
     role: 'Rapid development + payload integration',
@@ -84,9 +84,9 @@ export const platforms = [
     slug: 'andrasound',
     name: 'AndraSound',
     category: 'Persistent mission platform',
-    status: 'Lead system programme',
+    status: 'Pre-integration design',
     summary:
-      'The lead persistent mission platform, combining hydrogen-electric endurance, low-signature propulsion, modular payloads, and practical deployment logistics.',
+      'The lead persistent mission platform, with platform architecture and pre-integration design defined while research, design, and development continue.',
     role: 'Persistent survey + maritime awareness',
     highlights: [
       'Mission-configurable payload architecture',
@@ -100,9 +100,9 @@ export const platforms = [
     slug: 'andrahold',
     name: 'AndraHold',
     category: 'Large flooded-payload platform',
-    status: 'Platform architecture',
+    status: 'Pre-integration design',
     summary:
-      'A larger endurance architecture built around a substantial flooded mission bay for distributed sensing, subsea logistics, and special-purpose payloads.',
+      'A larger endurance architecture with platform architecture and pre-integration design defined around a substantial flooded mission bay.',
     role: 'Extended payload + persistent presence',
     highlights: [
       'Large flooded payload bay',
@@ -116,7 +116,7 @@ export const platforms = [
     slug: 'andracharge',
     name: 'AndraCharge',
     category: 'Robotic mission-support system',
-    status: 'Replenishment programme',
+    status: 'Independent testing planned',
     summary:
       'A portable robotic replenishment system connecting distributed fuelling, servicing, and rapid vehicle re-tasking.',
     role: 'Distributed sustainment + mission turnaround',
@@ -195,6 +195,6 @@ export const companyPrinciples = [
 export const contactDetails = {
   company: 'Andrasta Marine',
   domain: 'andrastamarine.com',
-  location: 'United Kingdom',
+  location: 'Edinburgh, Scotland',
   email: 'info@andrastamarine.com'
 };
