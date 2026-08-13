@@ -132,7 +132,7 @@ export const platforms = [
     category: 'Compact winged demonstrator',
     status: 'Prototype platform',
     summary:
-      'A compact, field-portable vehicle for rapid build-test-iterate cycles, subsystem proving, and payload trials.',
+      'A compact, field-portable vehicle for rapid physical development, subsystem proving, and payload trials.',
     role: 'Rapid development + payload integration',
     highlights: [
       'Approximately 1.8 m winged form',
