@@ -14,13 +14,13 @@ export function SectionWrapper({ id, eyebrow, heading, headingAs = 'h2', intro, 
   const HeadingTag = headingAs;
 
   return (
-    <section id={id} className={`mx-auto w-full max-w-7xl px-5 py-16 sm:px-8 sm:py-20 ${className}`}>
+    <section id={id} className={`section-shell mx-auto w-full max-w-7xl px-5 py-16 sm:px-8 sm:py-20 ${className}`}>
       {(eyebrow || heading || intro) && (
-        <header className="mb-10 max-w-4xl">
+        <header className="section-heading mb-10 max-w-4xl">
           {eyebrow && (
-            <p className="mb-4 text-xs font-semibold uppercase tracking-[0.24em] text-cyan-200">{eyebrow}</p>
+            <p className="section-eyebrow mb-4 text-xs font-semibold uppercase tracking-[0.24em] text-cyan-200">{eyebrow}</p>
           )}
-          {heading && <HeadingTag className="text-3xl font-semibold tracking-tight text-white sm:text-4xl">{heading}</HeadingTag>}
+          {heading && <HeadingTag className="max-w-[22ch] text-balance text-3xl font-semibold tracking-[-0.025em] text-white sm:text-4xl">{heading}</HeadingTag>}
           {intro && <p className="mt-4 max-w-3xl text-base leading-8 text-slate-300 sm:text-lg">{intro}</p>}
         </header>
       )}

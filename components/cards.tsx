@@ -15,7 +15,8 @@ export function BaseCard({ title, titleAs = 'h3', eyebrow, subtitle, detail, cla
   const TitleTag = titleAs;
 
   return (
-    <article className={`group rounded-2xl border border-slate-700/70 bg-slate-950/55 p-6 shadow-panel transition duration-200 hover:-translate-y-0.5 hover:border-cyan-300/35 hover:bg-slate-900/70 ${className}`}>
+    <article className={`surface-card group relative overflow-hidden rounded-2xl border border-slate-700/70 bg-slate-950/55 p-6 shadow-panel transition duration-300 hover:-translate-y-0.5 hover:border-cyan-300/35 hover:bg-slate-900/70 ${className}`}>
+      <span className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-cyan-200/30 to-transparent opacity-0 transition duration-300 group-hover:opacity-100" aria-hidden="true" />
       {eyebrow && (
         <p className="mb-4 text-xs font-semibold uppercase tracking-[0.2em] text-cyan-200/85">{eyebrow}</p>
       )}
@@ -61,7 +62,7 @@ export function DatasheetLink({ href, product }: { href: string | null; product:
       href={href}
       download
       aria-label={`Download ${product} datasheet PDF`}
-      className="inline-flex items-center gap-2 rounded-full border border-cyan-300/40 px-4 py-2 text-sm font-medium text-cyan-100 transition hover:border-cyan-200 hover:text-white"
+      className="action-link inline-flex items-center gap-2 rounded-full border border-cyan-300/40 px-4 py-2 text-sm font-medium text-cyan-100 transition hover:border-cyan-200 hover:text-white"
     >
       Download datasheet PDF
       <span aria-hidden="true">↗</span>

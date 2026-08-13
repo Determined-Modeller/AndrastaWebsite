@@ -46,19 +46,27 @@ export default function AboutPage() {
             </p>
           </div>
 
-          <blockquote className="border-l border-cyan-300/35 pl-6 sm:pl-8">
-            <p className="text-lg leading-8 text-slate-200">
-              I founded Andrasta Marine on the belief that extreme endurance and adversarial operation demand a different design starting point. Energy, logistics, replenishment, geometry, acoustic behaviour, payload, manufacture, and lifecycle must be treated as one coupled system problem—not assembled by adding hydrogen or more batteries to an otherwise conventional craft.
-            </p>
-            <p className="mt-5 text-base leading-8 text-slate-300">
-              Across the mission profiles studied and simulated, hydrogen has justified its integration only where it creates additional system-level value. Andrasta combines replenishment, nature-informed geometry, and multiphysics design with protected IP and retained engineering know-how to pursue greater endurance and, where the architecture allows, simpler supporting systems. Each platform is configured for model-based iteration, manufacture, long service life, and reuse.
-            </p>
-            <p className="mt-5 text-base leading-8 text-slate-300">
-              After more than a year of design iteration, simulation, and component testing, our first system is in physical development. We are now preparing the systems for independent validation and opening discussions with development partners, licensees, distributors, and test operators.
-            </p>
-            <p className="mt-5 text-base leading-8 text-slate-300">
-              The platforms are designed as flexible hydrogen-electric hybrids from the outset, supporting quiet, efficient propulsion and emerging payload demands without surrendering robustness, practical logistics, or a credible route to fleet-scale unit cost.
-            </p>
+          <blockquote className="founder-quote relative border-l border-cyan-300/35 pl-8 sm:pl-10">
+            <span aria-hidden="true" className="founder-quote-mark founder-quote-mark-open">“</span>
+            <div className="relative z-10">
+              <p className="text-lg leading-8 text-slate-200">
+                I founded Andrasta Marine on the belief that extreme endurance and adversarial operation in an uncrewed context demand a different design starting point. Energy, logistics, replenishment, geometry, acoustic behaviour, payload, manufacture, and lifecycle must be treated as one coupled system problem - not assembled by adding hydrogen or more batteries to an existing development platform.
+              </p>
+              <p className="mt-5 text-base leading-8 text-slate-300">
+                Across the mission profiles studied and simulated, hydrogen has justified its integration only where it creates additional system-level value. Andrasta Marine&apos;s systems combine replenishment, biomimicry, and geometric multiphysics design with protected IP and retained engineering know-how to pursue greater endurance and, where the architecture allows, simpler supporting systems. Each platform is configured for model-based iteration, manufacture, long service life, and reuse.
+              </p>
+              <p className="mt-5 text-base leading-8 text-slate-300">
+                After more than a year of design iteration, simulation, and component testing, our first system is in physical development. We are now preparing the systems for independent validation and opening discussions with development partners, licensees, distributors, and test operators.
+              </p>
+              <p className="mt-5 text-base leading-8 text-slate-300">
+                The platforms are designed as endurant flexible hydrogen-electric hybrids from the outset, supporting quiet, efficient propulsion and emerging payload demands without surrendering robustness, practical logistics, or a credible route to fleet-scale unit cost.
+              </p>
+              <footer className="mt-7 flex items-center gap-3 border-t border-slate-700/60 pt-5 text-xs font-semibold uppercase tracking-[0.16em] text-cyan-100/80">
+                <span className="h-px w-8 bg-cyan-300/60" aria-hidden="true" />
+                Founder statement
+              </footer>
+            </div>
+            <span aria-hidden="true" className="founder-quote-mark founder-quote-mark-close">”</span>
           </blockquote>
         </div>
       </SectionWrapper>
