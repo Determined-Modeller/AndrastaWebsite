@@ -10,8 +10,8 @@ const demandStates = [
     level: 'w-[58%]'
   },
   {
-    title: 'Manoeuvre + payload burst',
-    detail: 'Short-duration high-power demand.',
+    title: 'Manoeuvre + appliance burst',
+    detail: 'High-power propulsion, sensing and mission appliances.',
     level: 'w-full'
   }
 ];
@@ -27,18 +27,18 @@ export function EnergyRoleDiagram() {
           <div className="mt-7 space-y-3">
             <article className="rounded-2xl border border-cyan-300/30 bg-cyan-950/15 p-5">
               <div className="flex items-center justify-between gap-4">
-                <h4 className="font-semibold text-white">Hydrogen-electric endurance</h4>
+                <h4 className="font-semibold text-white">Hydride-based hydrogen-electric endurance</h4>
                 <span className="h-2.5 w-2.5 rounded-full bg-cyan-300 shadow-[0_0_18px_rgba(103,232,249,0.7)]" aria-hidden="true" />
               </div>
-              <p className="mt-2 text-sm leading-6 text-slate-400">Carries persistent hotel, transit, loiter and mission demand across the operating window.</p>
+              <p className="mt-2 text-sm leading-6 text-slate-400">Conformal low-pressure hydride hydrogen storage carries persistent hotel, transit, loiter and mission demand through electrochemical conversion.</p>
             </article>
 
             <article className="rounded-2xl border border-blue-300/25 bg-blue-950/15 p-5">
               <div className="flex items-center justify-between gap-4">
-                <h4 className="font-semibold text-white">Battery performance buffer</h4>
+                <h4 className="font-semibold text-white">Configurable battery power domain</h4>
                 <span className="h-2.5 w-2.5 rounded-full bg-blue-300 shadow-[0_0_18px_rgba(147,197,253,0.55)]" aria-hidden="true" />
               </div>
-              <p className="mt-2 text-sm leading-6 text-slate-400">Supplies peak propulsion, sensing and payload power without carrying the complete endurance requirement.</p>
+              <p className="mt-2 text-sm leading-6 text-slate-400">Configured for peak propulsion, sensing and demanding appliance loads without carrying the complete endurance requirement.</p>
             </article>
 
             <div className="rounded-2xl border border-slate-600/70 bg-slate-950/65 px-5 py-4">
@@ -76,7 +76,7 @@ export function EnergyRoleDiagram() {
 
           <div className="mt-8 border-t border-slate-700/70 pt-6">
             <p className="text-sm font-medium leading-7 text-cyan-100">
-              The battery is sized for performance and transient response; the complete vehicle is designed for persistence, service, and recovery.
+              Separating energy from peak power creates electrical headroom for demanding mission appliances that are difficult to accommodate within a compact, cost-controlled endurance vehicle.
             </p>
           </div>
         </div>

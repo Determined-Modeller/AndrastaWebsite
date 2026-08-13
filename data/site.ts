@@ -33,9 +33,9 @@ export const missionMarkets = [
 
 export const technologyThemes = [
   {
-    title: 'Conformal energy architecture',
+    title: 'Conformal hydride energy architecture',
     detail:
-      'Hydrogen-electric endurance carries persistent demand while a temperature-managed battery buffer is reserved for peak propulsion, sensing, and payload loads.'
+      'Low-pressure hydride hydrogen storage and electrochemical conversion carry persistent demand while a temperature-managed battery power domain is reserved for peak propulsion, sensing, and demanding appliance loads.'
   },
   {
     title: 'Low-signature propulsion',
@@ -50,7 +50,7 @@ export const technologyThemes = [
   {
     title: 'Modular payload bays',
     detail:
-      'Accessible, configurable payload volumes support sensing, inspection, communications, and specialist partner equipment.'
+      'Accessible, configurable payload volumes with defined power, data, and thermal interfaces support sensing, inspection, communications, and demanding specialist appliances.'
   },
   {
     title: 'Autonomy + command interfaces',
@@ -91,7 +91,7 @@ export const platforms = [
     role: 'Persistent survey + maritime awareness',
     highlights: [
       'Mission-configurable payload architecture',
-      'Hydrogen-electric hybrid architecture',
+      'Conformal hydride hybrid architecture',
       'Defined autonomy and command interfaces'
     ],
     imageUrl: '/andrasound-wireframe.webp',

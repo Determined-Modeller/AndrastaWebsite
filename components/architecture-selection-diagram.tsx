@@ -81,7 +81,7 @@ export function ArchitectureSelectionDiagram() {
           </div>
           <h3 className="mt-5 text-2xl font-semibold tracking-tight text-white">Hybrid multiphysics architecture</h3>
           <p className="mt-4 text-sm leading-7 text-slate-300">
-            Mission-appropriate low-pressure hydrogen storage, electrochemical conversion, battery peak-power buffering, and shared thermal management are sized together around the vehicle and duty cycle.
+            Conformal low-pressure hydride hydrogen storage, electrochemical conversion, battery peak-power buffering, and shared thermal management are sized together around the vehicle and duty cycle.
           </p>
 
           <div className="mt-6 space-y-3 border-t border-cyan-300/20 pt-5 text-sm text-slate-300">

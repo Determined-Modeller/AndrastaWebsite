@@ -67,6 +67,8 @@ The release must look credible to offshore operators, primes, supermajors, procu
 - Describe AndraCharge publicly as a portable distributed-sustainment system. Do not publish deployment medium, interface geometry, transfer conditions, control logic, or other enabling implementation detail without a specific release review.
 - Precede the energy-role diagram with an extreme-endurance architecture-selection diagram. Show why battery-only endurance, mid-scale liquid hydrogen, ultra-high-pressure hydrogen, and combustion/bulk-liquid AIP can become dominated by thermal, acoustic, containment, safety, compliance, logistics, or lifecycle burdens at the target scale.
 - Present the Andrasta thesis as a hybrid multiphysics optimisation across endurance, thermal balance, signature, survivability, lifecycle/recovery, serviceability, safety/compliance, and unit cost, with adversarial design and affordable distributed deployment considered from concept stage.
+- Keep the interactive mission comparator in one prominent location on the homepage, preceded by a short explanation of why persistence must be compared at operating-system rather than vehicle level. Do not repeat the full comparator on the Operating System page.
+- Name conformal low-pressure hydride storage where it clarifies the hybrid architecture, and explain that separating endurance energy from battery peak power creates electrical headroom for demanding mission appliances without publishing the enabling electrical configuration.
 
 ## Implementation sequence
 

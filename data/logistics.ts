@@ -242,7 +242,7 @@ export const logisticsScenarios: Record<LogisticsScenarioKey, LogisticsScenario>
             id: 'dual-andrasta-cohort',
             label: 'Vehicle cohort',
             kicker: 'Hybrid performance',
-            detail: 'Hydrogen-electric endurance supports persistence while a managed battery buffer is reserved for peak propulsion, sensor and payload demand.',
+            detail: 'Low-pressure hydride hydrogen storage supports persistent demand while a managed battery power domain is reserved for peak propulsion, sensing and demanding appliance loads.',
             x: 36,
             y: 42,
             icon: 'vehicle'
@@ -295,7 +295,7 @@ export const logisticsScenarios: Record<LogisticsScenarioKey, LogisticsScenario>
       {
         label: 'Energy role',
         conventional: 'Battery sized for mission duration',
-        andrasta: 'Hydrogen endurance + battery peaks'
+        andrasta: 'Hydride H₂ endurance + battery peaks'
       },
       {
         label: 'Sustainment',

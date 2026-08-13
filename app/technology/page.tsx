@@ -36,7 +36,7 @@ export default function TechnologyPage() {
         <SectionWrapper
           eyebrow="Hybrid duty cycle"
           heading="Persistence and peak performance are different jobs."
-          intro="Once the system architecture is selected, hydrogen-electric power and the battery buffer can each be sized for the part of the duty cycle they perform best."
+          intro="Once the system architecture is selected, hydride-based hydrogen-electric endurance and the battery power domain can each be sized for the part of the duty cycle they perform best."
         >
           <EnergyRoleDiagram />
         </SectionWrapper>

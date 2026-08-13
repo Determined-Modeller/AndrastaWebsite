@@ -1,7 +1,6 @@
 import Image from 'next/image';
 import Link from 'next/link';
 
-import { LogisticsComparator } from '@/components/logistics-comparator';
 import { ScalePath } from '@/components/scale-path';
 import { SectionWrapper } from '@/components/section-wrapper';
 
@@ -18,7 +17,7 @@ export default function OperatingSystemPage() {
         eyebrow="Operating System"
         headingAs="h1"
         heading="Persistence changes the mission when the logistics change with it."
-        intro="Andrasta connects autonomous vehicles, replenishable energy and flexible deployment into one operating architecture."
+        intro="Andrasta connects autonomous vehicles, conformal hydride hydrogen storage, replenishment and flexible deployment into one operating architecture."
       >
         <div className="relative aspect-[16/8.5] overflow-hidden rounded-3xl border border-slate-700/70 bg-slate-950 shadow-2xl shadow-cyan-950/20">
           <Image
@@ -36,17 +35,7 @@ export default function OperatingSystemPage() {
         </div>
       </SectionWrapper>
 
-      <div className="border-y border-slate-800/80 bg-slate-950/35">
-        <SectionWrapper
-          eyebrow="Mission logistics comparator"
-          heading="See what changes when endurance becomes replenishable."
-          intro="Choose a mission, then select the nodes to compare the operating model."
-        >
-          <LogisticsComparator />
-        </SectionWrapper>
-      </div>
-
-      <div className="border-b border-slate-800/80 bg-slate-950/20">
+      <div className="border-y border-slate-800/80 bg-slate-950/20">
         <SectionWrapper
           eyebrow="Design for manufacture + scale"
           heading="Scale the platform without redesigning the operating system."
