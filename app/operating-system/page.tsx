@@ -17,6 +17,7 @@ export default function OperatingSystemPage() {
     <>
       <SectionWrapper
         eyebrow="Operating System"
+        headingAs="h1"
         heading="Vehicle + energy + payload + replenishment + logistics."
         intro="The commercial product is the repeatable mission system, not only the underwater vehicle. Andrasta Marine is developing the physical platform and the operating loop together so endurance, handling, assurance, and useful data can be improved as one architecture."
       >

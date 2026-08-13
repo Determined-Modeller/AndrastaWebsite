@@ -14,6 +14,7 @@ export default function AboutPage() {
     <>
       <SectionWrapper
         eyebrow="Company"
+        headingAs="h1"
         heading="A UK subsea systems company built around engineering evidence."
         intro="Andrasta Marine is developing persistent autonomous subsea systems and the energy, payload, replenishment, logistics, and assurance architecture required to operate them credibly."
       >

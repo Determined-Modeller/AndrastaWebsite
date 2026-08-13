@@ -15,6 +15,7 @@ export default function CaseStudiesPage() {
     <>
       <SectionWrapper
         eyebrow="Mission applications"
+        headingAs="h1"
         heading="Persistent systems should be judged against a real operating need."
         intro="These application frames guide partner discussions and demonstration planning. They are not presented as completed customer case studies, contracted deployments, or claims of fielded capability."
       >

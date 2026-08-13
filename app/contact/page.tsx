@@ -12,6 +12,7 @@ export default function ContactPage() {
     <>
       <SectionWrapper
         eyebrow="Contact"
+        headingAs="h1"
         heading="Start with the mission, interface, or evidence you need."
         intro="For customer, prime-contractor, payload, test, supplier, investment, or compliance discussions, contact Andrasta Marine directly."
       >

@@ -15,6 +15,7 @@ export default function ResponsibilityPage() {
     <>
       <SectionWrapper
         eyebrow="Responsibility + governance"
+        headingAs="h1"
         heading="Responsible innovation is part of the engineering system."
         intro="Autonomous subsea technology is inherently dual-use. Andrasta Marine is building a proportionate governance framework around lawful end use, safety, security, export control, business integrity, supply-chain responsibility, and evidence-based environmental claims."
       >

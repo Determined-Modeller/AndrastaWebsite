@@ -14,6 +14,7 @@ export default function OurSolutionPage() {
     <>
       <SectionWrapper
         eyebrow="Our approach"
+        headingAs="h1"
         heading="Begin with the mission. Control the interfaces. Prove the system."
         intro="Andrasta Marine is developing autonomous subsea capability through controlled, partner-led demonstrations and an engineering evidence spine that can support future procurement and assurance."
       >

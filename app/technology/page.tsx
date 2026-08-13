@@ -15,6 +15,7 @@ export default function TechnologyPage() {
     <>
       <SectionWrapper
         eyebrow="Technology"
+        headingAs="h1"
         heading="An integrated architecture for persistent subsea operations."
         intro="The development focus is the relationship between energy, vehicle form, thermal management, payload duty cycle, autonomy interfaces, replenishment, and assurance. Public information is intentionally limited to the architecture and validation approach."
       >

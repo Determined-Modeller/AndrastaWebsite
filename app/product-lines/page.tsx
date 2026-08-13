@@ -14,6 +14,7 @@ export default function ProductLinesPage() {
     <>
       <SectionWrapper
         eyebrow="Platform roadmap"
+        headingAs="h1"
         heading="A family built to retire risk in the right order."
         intro="The roadmap progresses from compact evidence generation to persistent mission integration and, later, larger payload and replenishment concepts. Status labels describe the present development stage; they are not availability or fielded-capability claims."
       >
