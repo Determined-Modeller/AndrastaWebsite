@@ -16,8 +16,8 @@ export default function HomePage() {
       <SectionWrapper
         id="mission-operating-model"
         eyebrow="Mission operating model"
-        heading="A longer-running vehicle is not yet a persistent system."
-        intro="Useful persistence appears when tasking, energy, servicing and recovery are designed around the same real-world decision window."
+        heading="Endurance becomes persistence when the logistics change with it."
+        intro="A vehicle must remain taskable, fuelled and serviceable for the full decision window. Andrasta designs the vehicle and its support model as one system."
       >
         <div className="mb-7 grid gap-4 rounded-2xl border border-cyan-300/20 bg-cyan-950/10 px-5 py-5 sm:grid-cols-[0.42fr_1fr] sm:px-6">
           <p className="text-[10px] font-semibold uppercase tracking-[0.2em] text-cyan-200">Why compare the operating model?</p>
@@ -26,19 +26,46 @@ export default function HomePage() {
           </p>
         </div>
         <LogisticsComparator />
+        <div className="mt-8 flex flex-wrap gap-x-7 gap-y-3">
+          <Link
+            href="/case-studies"
+            className="inline-flex items-center gap-2 text-sm font-semibold text-cyan-100 transition hover:text-white"
+          >
+            See the mission value stories <span aria-hidden="true">→</span>
+          </Link>
+          <Link
+            href="/technology"
+            className="inline-flex items-center gap-2 text-sm font-semibold text-slate-400 transition hover:text-white"
+          >
+            Understand the energy architecture <span aria-hidden="true">→</span>
+          </Link>
+        </div>
+
         <Link
-          href="/case-studies"
-          className="mt-8 inline-flex items-center gap-2 text-sm font-semibold text-cyan-100 transition hover:text-white"
+          href="/mission-2028"
+          className="group relative mt-12 grid overflow-hidden rounded-3xl border border-cyan-300/25 bg-[radial-gradient(circle_at_82%_50%,rgba(34,211,238,0.17),transparent_26%),linear-gradient(120deg,rgba(4,7,13,0.98),rgba(5,30,43,0.82))] p-7 transition hover:border-cyan-200/50 sm:p-9 lg:grid-cols-[1fr_auto] lg:items-end lg:gap-12"
         >
-          See the mission value stories <span aria-hidden="true">→</span>
+          <div className="relative z-10">
+            <p className="text-[10px] font-semibold uppercase tracking-[0.24em] text-cyan-200">Mission 2028 · High Arctic</p>
+            <h3 className="mt-4 max-w-2xl text-2xl font-semibold tracking-tight text-white sm:text-3xl">
+              A planned Arctic under-ice transit before 2029.
+            </h3>
+            <p className="mt-4 max-w-2xl text-sm leading-7 text-slate-300">
+              A clear public objective for Andrasta&apos;s cold-water endurance thesis, and a defining proof point for a system designed around persistence from the outset.
+            </p>
+          </div>
+          <div className="relative z-10 mt-7 flex items-end justify-between gap-6 lg:mt-0 lg:block lg:text-right">
+            <span className="text-5xl font-semibold tracking-[-0.06em] text-white/15 sm:text-7xl">2028</span>
+            <span className="ml-5 inline-flex h-10 w-10 items-center justify-center rounded-full border border-cyan-200/35 text-cyan-100 transition group-hover:border-cyan-100 group-hover:bg-cyan-100 group-hover:text-slate-950" aria-hidden="true">→</span>
+          </div>
         </Link>
       </SectionWrapper>
 
       <div className="border-y border-slate-800/80 bg-slate-950/35">
         <SectionWrapper
           eyebrow="Dual-use by design"
-          heading="One core architecture. Different mission and assurance routes."
-          intro="The short-term market strategy is focused on civil and dual-use programmes. Each route has its own operating boundaries, evidence needs, and procurement expectations."
+          heading="One core architecture, configured for civil and dual-use missions."
+          intro="The vehicle and energy architecture remain common. Payloads, operating boundaries, evidence and procurement routes change with the mission."
         >
           <div className="grid gap-4 lg:grid-cols-2">
             {missionMarkets.map((market) => (
@@ -56,8 +83,8 @@ export default function HomePage() {
 
       <SectionWrapper
         eyebrow="Near-term development"
-        heading="Fast physical learning. Mission-scale integration."
-        intro="Manta drives rapid iteration; AndraSound carries the lead persistent operating architecture. Both sit within the same modular development path."
+        heading="Prototype quickly. Carry the learning into mission-scale systems."
+        intro="Manta closes physical and integration risk quickly. AndraSound carries the lead persistent architecture into an operationally useful platform."
       >
         <div className="grid gap-5 lg:grid-cols-2">
           {platforms.slice(0, 2).map((platform) => (
@@ -97,8 +124,8 @@ export default function HomePage() {
       <div className="border-y border-slate-800/80 bg-[linear-gradient(90deg,rgba(8,47,73,0.22),rgba(15,23,42,0.18))]">
         <SectionWrapper
           eyebrow="Supplier readiness"
-          heading="Building for serious procurement from the outset."
-          intro="Quality, cyber, governance, and supplier controls are progressing alongside the platform programme."
+          heading="Built for customer qualification as well as technical performance."
+          intro="Quality, cyber, governance and supplier controls are developing alongside the vehicles, so procurement evidence does not become a late programme constraint."
         >
           <div className="grid divide-y divide-slate-700/70 overflow-hidden rounded-3xl border border-slate-700/70 bg-slate-950/50 lg:grid-cols-3 lg:divide-x lg:divide-y-0">
             {supplierReadiness.map((item) => (
@@ -109,10 +136,10 @@ export default function HomePage() {
             ))}
           </div>
           <Link
-            href="/responsibility"
+            href="/about#responsibility"
             className="mt-8 inline-flex items-center gap-2 text-sm font-semibold text-cyan-100 transition hover:text-white"
           >
-            Review responsibility and readiness <span aria-hidden="true">→</span>
+            Review governance and supplier readiness <span aria-hidden="true">→</span>
           </Link>
         </SectionWrapper>
       </div>

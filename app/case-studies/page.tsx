@@ -17,8 +17,8 @@ export default function CaseStudiesPage() {
       <SectionWrapper
         eyebrow="Mission value stories"
         headingAs="h1"
-        heading="Start with the decision that has to be made."
-        intro="Endurance has value only when it changes what an operator can know, carry or decide. These mission cases show how the complete architecture changes a tangible operating constraint."
+        heading="Start with the decision, not the vehicle."
+        intro="Endurance matters when it improves what an operator can know, carry or decide. These cases show how the operating system changes a practical constraint."
       >
         <MissionStorySelector />
       </SectionWrapper>
@@ -26,8 +26,8 @@ export default function CaseStudiesPage() {
       <div className="border-y border-slate-800/80 bg-slate-950/35">
         <SectionWrapper
           eyebrow="Mission design"
-          heading="Bring the decision window, payload and operating constraint."
-          intro="The useful configuration follows from the evidence need, mission duration, payload power, service interval and logistics available."
+          heading="Design the system around the decision window."
+          intro="The useful configuration follows from the evidence required, time on task, payload power, service interval and available logistics."
         >
           <div className="flex flex-wrap gap-3">
             <Link

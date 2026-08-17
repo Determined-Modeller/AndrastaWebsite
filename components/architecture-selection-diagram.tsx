@@ -42,10 +42,10 @@ export function ArchitectureSelectionDiagram() {
       <div className="border-b border-slate-700/70 px-6 py-7 sm:px-8">
         <p className="text-[10px] font-semibold uppercase tracking-[0.24em] text-cyan-200">Extreme-endurance design space</p>
         <h2 className="mt-3 max-w-4xl text-2xl font-semibold tracking-tight text-white sm:text-3xl">
-          The architecture is selected by coupled physics, not one energy-density figure.
+          Choose the architecture against the whole mission, not one energy metric.
         </h2>
         <p className="mt-3 max-w-4xl text-sm leading-7 text-slate-300 sm:text-base">
-          At mid-size and extreme endurance, thermal behaviour, signature, handling, safety, compliance, serviceability, survivability, and cost reshape the useful design space.
+          At extreme endurance, heat, signature, handling, safety, serviceability, survivability and cost can matter as much as the energy stored onboard.
         </p>
       </div>
 
@@ -79,15 +79,15 @@ export function ArchitectureSelectionDiagram() {
             <p className="text-[10px] font-semibold uppercase tracking-[0.22em] text-cyan-200">Andrasta design space</p>
             <span className="h-2.5 w-2.5 rounded-full bg-cyan-300 shadow-[0_0_18px_rgba(103,232,249,0.65)]" aria-hidden="true" />
           </div>
-          <h3 className="mt-5 text-2xl font-semibold tracking-tight text-white">Hybrid multiphysics architecture</h3>
+          <h3 className="mt-5 text-2xl font-semibold tracking-tight text-white">Integrated hydrogen-electric architecture</h3>
           <p className="mt-4 text-sm leading-7 text-slate-300">
-            Conformal low-pressure hydride hydrogen storage, electrochemical conversion, battery peak-power buffering, and shared thermal management are sized together around the vehicle and duty cycle.
+            Conformal low-pressure hydride hydrogen storage, electrochemical conversion, battery peak-power buffering and shared thermal management are sized together around the vehicle and duty cycle.
           </p>
 
           <div className="mt-6 space-y-3 border-t border-cyan-300/20 pt-5 text-sm text-slate-300">
             <p className="border-l border-cyan-300/40 pl-3">No single subsystem is allowed to optimise at the expense of the whole vehicle.</p>
-            <p className="border-l border-cyan-300/40 pl-3">Cost, manufacturability, service, and adversarial design enter at concept stage.</p>
-            <p className="border-l border-cyan-300/40 pl-3">The result is intended to scale into distributed systems, not only exquisite platforms.</p>
+            <p className="border-l border-cyan-300/40 pl-3">Cost, manufacture, service and adversarial operation enter at concept stage.</p>
+            <p className="border-l border-cyan-300/40 pl-3">The result is intended to scale into affordable distributed systems, not only high-cost specialist vehicles.</p>
           </div>
         </article>
       </div>

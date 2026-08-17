@@ -43,7 +43,7 @@ export function Footer() {
       <div className="border-t border-slate-800/80">
         <div className="mx-auto flex w-full max-w-7xl flex-col gap-2 px-5 py-5 text-xs text-slate-500 sm:flex-row sm:items-center sm:justify-between sm:px-8">
           <p>© {new Date().getFullYear()} Andrasta Marine · Registered in Scotland No. SC887793</p>
-          <p>Engineering centre of excellence · Edinburgh, Scotland</p>
+          <p>Engineering Centre of Excellence · Edinburgh, Scotland</p>
         </div>
       </div>
     </footer>

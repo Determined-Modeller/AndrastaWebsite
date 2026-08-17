@@ -22,12 +22,12 @@ export function EnergyRoleDiagram() {
       <div className="grid lg:grid-cols-[0.82fr_1.18fr]">
         <div className="border-b border-slate-700/70 p-6 sm:p-8 lg:border-b-0 lg:border-r">
           <p className="text-[10px] font-semibold uppercase tracking-[0.22em] text-cyan-200">Hybrid energy architecture</p>
-          <h3 className="mt-4 text-2xl font-semibold tracking-tight text-white">Use each energy source where it performs best.</h3>
+          <h3 className="mt-4 text-2xl font-semibold tracking-tight text-white">Separate the endurance load from the peak-power load.</h3>
 
           <div className="mt-7 space-y-3">
             <article className="rounded-2xl border border-cyan-300/30 bg-cyan-950/15 p-5">
               <div className="flex items-center justify-between gap-4">
-                <h4 className="font-semibold text-white">Hydride-based hydrogen-electric endurance</h4>
+                <h4 className="font-semibold text-white">Hydride hydrogen for endurance</h4>
                 <span className="h-2.5 w-2.5 rounded-full bg-cyan-300 shadow-[0_0_18px_rgba(103,232,249,0.7)]" aria-hidden="true" />
               </div>
               <p className="mt-2 text-sm leading-6 text-slate-400">Conformal low-pressure hydride hydrogen storage carries persistent hotel, transit, loiter and mission demand through electrochemical conversion.</p>
@@ -35,7 +35,7 @@ export function EnergyRoleDiagram() {
 
             <article className="rounded-2xl border border-blue-300/25 bg-blue-950/15 p-5">
               <div className="flex items-center justify-between gap-4">
-                <h4 className="font-semibold text-white">Configurable battery power domain</h4>
+                <h4 className="font-semibold text-white">Batteries for peak power</h4>
                 <span className="h-2.5 w-2.5 rounded-full bg-blue-300 shadow-[0_0_18px_rgba(147,197,253,0.55)]" aria-hidden="true" />
               </div>
               <p className="mt-2 text-sm leading-6 text-slate-400">Configured for peak propulsion, sensing and demanding appliance loads without carrying the complete endurance requirement.</p>
@@ -52,7 +52,7 @@ export function EnergyRoleDiagram() {
           <div className="flex items-end justify-between gap-4 border-b border-slate-700/70 pb-5">
             <div>
               <p className="text-[10px] font-semibold uppercase tracking-[0.22em] text-slate-500">Mission demand</p>
-              <h4 className="mt-2 text-lg font-semibold text-white">Power follows the duty cycle.</h4>
+              <h4 className="mt-2 text-lg font-semibold text-white">Power demand changes through the mission.</h4>
             </div>
             <p className="text-[9px] font-medium uppercase tracking-[0.16em] text-slate-600">Low → peak</p>
           </div>

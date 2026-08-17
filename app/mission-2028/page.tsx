@@ -36,7 +36,7 @@ export default function Mission2028Page() {
             <div>
               <p className="mb-5 text-sm font-medium uppercase tracking-[0.24em] text-cyan-100/75">Cold. Quiet. Persistent.</p>
               <h1 className="max-w-[16ch] text-balance text-4xl font-semibold leading-[1.05] tracking-[-0.04em] text-white sm:text-6xl lg:text-7xl">
-                A planned under-ice transit. A public test of a different design starting point.
+                A planned under-ice transit. A defining proof point for cold-water endurance.
               </h1>
               <p className="mt-7 max-w-2xl text-base leading-8 text-slate-300 sm:text-lg">
                 Before 2029, Andrasta Marine intends to take a hydrogen-electric autonomous system beneath Arctic ice as the defining demonstration of its cold-water endurance thesis.
@@ -52,21 +52,21 @@ export default function Mission2028Page() {
 
       <SectionWrapper
         eyebrow="Why the High Arctic"
-        heading="The environment removes the easy answers."
-        intro="Cold water exposes weaknesses in stored energy, thermal management, supporting systems, reliability, and mission logistics. It is therefore the clearest place to demonstrate whether the complete architecture has been designed for endurance rather than assembled around a favourable component specification."
+        heading="Where weak system choices become impossible to hide."
+        intro="Cold water exposes weaknesses in stored energy, heat management, supporting systems, reliability and mission logistics. It is the clearest place to show whether the complete architecture was designed for endurance."
       >
         <div className="grid gap-4 md:grid-cols-3">
           <BaseCard title="A hard proof point" detail="A single, intelligible objective that makes cold-water system performance visible beyond the engineering community." />
           <BaseCard title="A growing operating frontier" detail="Arctic activity and distance sailed are increasing while infrastructure, intervention, and environmental constraints remain severe." />
-          <BaseCard title="A Scottish design lineage" detail="A programme grounded in Shetland operating reality and developed through Andrasta Marine’s Edinburgh engineering centre." />
+          <BaseCard title="A Scottish design lineage" detail="A programme grounded in Shetland operating reality and developed through Andrasta Marine’s Engineering Centre of Excellence in Edinburgh." />
         </div>
       </SectionWrapper>
 
       <div className="border-y border-slate-800/80 bg-slate-950/35">
         <SectionWrapper
           eyebrow="What Mission 2028 stands for"
-          heading="Evidence at the edge of the operating envelope."
-          intro="The public proposition is not a release of the vehicle design. It is a commitment to submit the architecture to a mission that customers, partners, and investors can understand."
+          heading="A simple objective with a difficult engineering truth behind it."
+          intro="Mission 2028 is not a release of the vehicle design. It is a commitment to test the architecture against an objective that customers, partners and investors can understand."
         >
           <div className="grid overflow-hidden rounded-3xl border border-slate-700/70 bg-slate-950/45 lg:grid-cols-3">
             {[
@@ -89,8 +89,8 @@ export default function Mission2028Page() {
 
       <SectionWrapper
         eyebrow="Mission partnerships"
-        heading="The right proof point attracts the right collaborators."
-        intro="Andrasta Marine welcomes appropriate discussions with cold-region operators, research and environmental organisations, test and assurance bodies, payload specialists, and strategic partners able to strengthen a credible High Arctic demonstration."
+        heading="Prove it with the right partners."
+        intro="Andrasta Marine welcomes appropriate discussions with cold-region operators, research and environmental organisations, test and assurance bodies, payload specialists and strategic partners able to strengthen a credible High Arctic demonstration."
       >
         <div className="flex flex-wrap gap-4">
           <Link href="/contact" className="inline-flex rounded-full bg-cyan-200 px-6 py-3 text-sm font-semibold text-slate-950 transition hover:bg-cyan-100">

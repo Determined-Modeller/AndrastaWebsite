@@ -25,10 +25,10 @@ export function PlatformArchitectureMap() {
       <div className="border-b border-slate-700/70 px-6 py-7 sm:px-8">
         <p className="text-[10px] font-semibold uppercase tracking-[0.22em] text-cyan-200">Programme architecture</p>
         <h2 className="mt-3 max-w-4xl text-2xl font-semibold tracking-tight text-white sm:text-3xl">
-          The roadmap is a set of interlocking system jobs, not a line of replacement vehicles.
+          Each system closes a different part of the development and operating loop.
         </h2>
         <p className="mt-3 max-w-4xl text-sm leading-7 text-slate-300 sm:text-base">
-          Fast physical learning, mission-scale integration, capability expansion and distributed sustainment develop against one controlled interface spine.
+          Manta accelerates physical learning. AndraSound and AndraHold carry it into mission-scale platforms. AndraCharge changes how compatible vehicles are sustained.
         </p>
       </div>
 
@@ -45,7 +45,7 @@ export function PlatformArchitectureMap() {
 
         <article className="relative rounded-2xl border border-cyan-300/30 bg-cyan-950/15 p-6 shadow-[0_0_30px_rgba(34,211,238,0.06)]">
           <p className="text-[9px] font-semibold uppercase tracking-[0.2em] text-cyan-200">Common architecture</p>
-          <h3 className="mt-4 text-xl font-semibold text-white">Carry learning forward through explicit interfaces.</h3>
+          <h3 className="mt-4 text-xl font-semibold text-white">Carry learning forward through common interfaces.</h3>
           <div className="mt-5 flex flex-wrap gap-2">
             {sharedInterfaces.map((item) => (
               <span key={item} className="rounded-full border border-cyan-300/20 bg-slate-950/55 px-3 py-1.5 text-xs text-slate-200">

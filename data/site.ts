@@ -3,13 +3,13 @@ export const siteConfig = {
   domain: 'andrastamarine.com',
   mission: 'Persistent subsea autonomy, built around the mission.',
   heroCopy:
-    'Replenishable hydrogen-electric autonomous systems for civil, security, and defence missions - integrating vehicle, energy, payload, manufacture, and logistics into one architecture.',
+    'Hydrogen-electric autonomous systems designed to remain useful across real decision windows, with vehicle, payload, replenishment and logistics developed as one architecture.',
   nav: [
     { href: '/', label: 'Home' },
     { href: '/technology', label: 'Technology' },
     { href: '/product-lines', label: 'Platforms' },
     { href: '/case-studies', label: 'Missions' },
-    { href: '/responsibility', label: 'Responsibility' },
+    { href: '/mission-2028', label: 'Mission 2028' },
     { href: '/about', label: 'Company' },
     { href: '/investors', label: 'Investors' },
     { href: '/contact', label: 'Contact' }
@@ -139,7 +139,7 @@ export const responsibilityPillars = [
   {
     title: 'Responsible use',
     detail:
-      'Lawful end use, defined operating boundaries, accountable human decision-making, and clear escalation for ethical or security concerns.'
+      'Lawful end use, defined operating boundaries, accountable human decisions, and clear escalation for ethical or security concerns.'
   },
   {
     title: 'Secure delivery',
@@ -200,6 +200,6 @@ export const companyPrinciples = [
 export const contactDetails = {
   company: 'Andrasta Marine',
   domain: 'andrastamarine.com',
-  location: 'Edinburgh, Scotland',
+  location: 'Engineering Centre of Excellence · Edinburgh, Scotland',
   email: 'info@andrastamarine.com'
 };

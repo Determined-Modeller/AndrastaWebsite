@@ -82,9 +82,9 @@ export const missionStories: MissionStory[] = [
     id: 'dual-use',
     tabLabel: 'Dual-use',
     market: 'Dual-use · Configurable mission capability',
-    title: 'Capability without making every vehicle exquisite.',
+    title: 'Capability without turning every vehicle into an expensive special case.',
     framing:
-      'The useful platform is capable, robust, affordable, interoperable and adaptable. It must accept large payload volume and demanding electrical appliances without allowing one subsystem to consume the vehicle’s endurance, signature or cost envelope.',
+      'A useful platform must be capable, robust, affordable, interoperable and adaptable. It must accept large payloads and demanding electrical loads without sacrificing endurance, quietness or unit cost.',
     imageUrl: '/mission-dual-use.webp',
     imageAlt: 'Large autonomous subsea vehicle operating around critical maritime infrastructure',
     imagePosition: 'object-[58%_center]',
@@ -94,15 +94,15 @@ export const missionStories: MissionStory[] = [
       detail: 'A large flooded payload bay, explicit interfaces and a power architecture designed around payload diversity preserve useful configuration freedom.'
     },
     decision: {
-      question: 'How much capability can the platform carry without losing the system advantage?',
+      question: 'How much capability can the platform carry without losing endurance, quietness or affordability?',
       detail:
-        'In a monolithic battery vehicle, endurance storage, peak power, payload volume, thermal conditioning and acoustic treatment compete inside the same hull. Improving one can quietly degrade several others.'
+        'In a battery-only vehicle, endurance storage, peak power, payload volume, thermal conditioning and acoustic treatment compete inside the same hull. Improving one can quietly degrade several others.'
     },
     barrier:
-      'Special-purpose payloads can impose large transient loads, reject difficult heat and demand clear acoustic conditions. Treating those requirements as late additions drives auxiliary machinery, pressure-hull volume, integration risk and cost.',
+      'Special-purpose payloads can impose large transient loads, reject difficult heat and require quiet operating conditions. Adding them late drives auxiliary machinery, pressure-hull volume, integration risk and cost.',
     response: [
       {
-        title: 'Open mission volume',
+        title: 'Protect the payload volume',
         detail: 'AndraHold is organised around a large flooded payload bay so mission equipment is not automatically forced into the pressure-hull design problem.'
       },
       {
@@ -117,6 +117,6 @@ export const missionStories: MissionStory[] = [
     value:
       'The same architecture can support a wider payload and power design space while retaining the fleet-level virtues that matter: low signature, robustness, interoperability, serviceability and an affordable unit cost.',
     principle:
-      'What if hybrid reduced complexity where complexity hurts most? Not by claiming hydrogen is simpler than batteries in isolation, but by using integrated thermal and acoustic design to reduce reliance on high-performance vacuum acoustic damping or pumped-fluid systems where their noise, failure modes and cost are least acceptable.'
+      'Hybrid does not make hydrogen simpler than batteries in isolation. Its value is in the complete design: shared thermal and acoustic systems can reduce dependence on complex damping or pumped-fluid equipment where noise, failure modes and cost hurt most.'
   }
 ];

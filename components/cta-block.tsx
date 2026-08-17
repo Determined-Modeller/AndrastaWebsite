@@ -6,7 +6,7 @@ export function CtaBlock() {
       <div className="cta-panel relative overflow-hidden rounded-[2rem] border border-cyan-300/20 bg-[radial-gradient(circle_at_top_right,rgba(34,211,238,0.18),rgba(15,22,36,0.95)_42%,rgba(4,7,13,1)_100%)] p-8 shadow-2xl shadow-cyan-950/20 sm:p-10">
         <div className="max-w-3xl">
           <h2 className="text-3xl font-semibold tracking-tight text-white">
-            Start with the mission, interfaces, and evidence required.
+            Bring the mission. Define the evidence. Build the right system.
           </h2>
 
           <p className="mt-4 max-w-2xl text-sm leading-7 text-slate-300 sm:text-base">

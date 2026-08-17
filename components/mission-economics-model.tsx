@@ -65,18 +65,18 @@ export function MissionEconomicsModel() {
     <div className="overflow-hidden rounded-3xl border border-cyan-300/20 bg-[#06101a] shadow-2xl shadow-cyan-950/20">
       <div className="grid lg:grid-cols-[0.88fr_1.12fr]">
         <div className="border-b border-slate-700/70 p-6 sm:p-8 lg:border-b-0 lg:border-r">
-          <p className="text-xs font-semibold uppercase tracking-[0.2em] text-cyan-200">Illustrative inputs</p>
+          <p className="text-xs font-semibold uppercase tracking-[0.2em] text-cyan-200">Change the assumptions</p>
           <div className="mt-6">
             <RangeControl label="Fleet size" value={fleetSize} min={1} max={20} step={1} display={`${fleetSize} vehicles`} onChange={setFleetSize} />
-            <RangeControl label="Recovery cycles per vehicle-year" value={recoveries} min={1} max={18} step={1} display={`${recoveries}`} onChange={setRecoveries} />
-            <RangeControl label="Support-vessel days per event" value={vesselDays} min={0.5} max={5} step={0.5} display={`${vesselDays.toFixed(1)} days`} onChange={setVesselDays} />
+            <RangeControl label="Recoveries per vehicle each year" value={recoveries} min={1} max={18} step={1} display={`${recoveries}`} onChange={setRecoveries} />
+            <RangeControl label="Vessel days for each recovery" value={vesselDays} min={0.5} max={5} step={0.5} display={`${vesselDays.toFixed(1)} days`} onChange={setVesselDays} />
             <RangeControl label="Support-vessel day rate" value={dayRate} min={5000} max={100000} step={5000} display={currency.format(dayRate)} onChange={setDayRate} />
-            <RangeControl label="Recovery events displaced" value={eventsDisplaced} min={10} max={90} step={10} display={`${eventsDisplaced}%`} onChange={setEventsDisplaced} />
+            <RangeControl label="Recoveries avoided through in-field support" value={eventsDisplaced} min={10} max={90} step={10} display={`${eventsDisplaced}%`} onChange={setEventsDisplaced} />
           </div>
         </div>
 
         <div className="bg-[radial-gradient(circle_at_top_right,rgba(34,211,238,0.12),transparent_48%)] p-6 sm:p-8">
-          <p className="text-xs font-semibold uppercase tracking-[0.2em] text-cyan-200">Support-chain exposure</p>
+          <p className="text-xs font-semibold uppercase tracking-[0.2em] text-cyan-200">What repeated recovery can cost</p>
           <div className="mt-7 grid gap-4 sm:grid-cols-2">
             <div className="rounded-2xl border border-slate-700/70 bg-slate-950/45 p-5">
               <p className="text-xs uppercase tracking-[0.14em] text-slate-500">Annual recovery events</p>
@@ -87,7 +87,7 @@ export function MissionEconomicsModel() {
               <p className="mt-3 text-3xl font-semibold tabular-nums text-white">{outputs.supportDays.toFixed(1)}</p>
             </div>
             <div className="rounded-2xl border border-cyan-300/25 bg-cyan-950/20 p-5 sm:col-span-2">
-              <p className="text-xs uppercase tracking-[0.14em] text-cyan-100/70">Gross annual support burden potentially displaced</p>
+              <p className="text-xs uppercase tracking-[0.14em] text-cyan-100/70">Potentially avoidable annual support cost</p>
               <p className="mt-3 text-4xl font-semibold tabular-nums tracking-tight text-cyan-50 sm:text-5xl">{currency.format(outputs.grossBurdenDisplaced)}</p>
               <p className="mt-3 text-sm text-slate-400">
                 {outputs.supportDaysDisplaced.toFixed(1)} vessel days · {currency.format(outputs.burdenPerVehicle)} per vehicle-year
@@ -95,7 +95,7 @@ export function MissionEconomicsModel() {
             </div>
           </div>
           <p className="mt-6 text-xs leading-6 text-slate-500">
-            This sensitivity exposes the cost pool affected by distributed sustainment. It is not a savings forecast: replenishment nodes, residual intervention, vehicle capital, energy, maintenance, utilisation, and mission assurance must be included in a programme-specific comparison.
+            This model shows the support cost affected by in-field replenishment. A programme comparison must also include support nodes, remaining intervention, vehicle cost, energy, maintenance, utilisation and mission assurance.
           </p>
         </div>
       </div>

@@ -18,7 +18,7 @@ const technologyBorders = [
 export const metadata = createPageMetadata({
   title: 'Technology',
   description:
-    'Andrasta Marine hybrid multiphysics architecture for hydrogen-electric endurance, low-signature propulsion, modular payloads, replenishment, and scalable manufacture.',
+    'How Andrasta Marine combines hydride hydrogen storage, batteries, thermal management, low-signature propulsion, payloads and replenishment for persistent subsea operations.',
   path: '/technology/'
 });
 
@@ -28,8 +28,8 @@ export default function TechnologyPage() {
       <SectionWrapper
         eyebrow="Technology"
         headingAs="h1"
-        heading="The technology is the integration."
-        intro="Extreme endurance is a coupled thermophysics, signature, lifecycle, safety, and cost problem. Andrasta optimises the complete architecture around the mission rather than maximising one component metric."
+        heading="Extreme endurance is a whole-system design problem."
+        intro="Energy choice cannot be separated from heat, acoustic signature, payload, servicing, safety or cost. Andrasta designs those constraints together around the mission."
       >
         <ArchitectureSelectionDiagram />
       </SectionWrapper>
@@ -37,8 +37,8 @@ export default function TechnologyPage() {
       <div className="border-y border-slate-800/80 bg-slate-950/35">
         <SectionWrapper
           eyebrow="Hybrid duty cycle"
-          heading="Persistence and peak performance are different jobs."
-          intro="Once the system architecture is selected, hydride-based hydrogen-electric endurance and the battery power domain can each be sized for the part of the duty cycle they perform best."
+          heading="Hydrogen carries endurance. Batteries deliver peak power."
+          intro="Low-pressure hydride hydrogen storage supports persistent demand, while a temperature-managed battery system is configured for propulsion peaks, sensing and high-power payloads."
         >
           <EnergyRoleDiagram />
         </SectionWrapper>
@@ -47,8 +47,8 @@ export default function TechnologyPage() {
       <div className="border-b border-slate-800/80 bg-slate-950/15">
         <SectionWrapper
           eyebrow="Integrated building blocks"
-          heading="One controlled architecture, not a collection of subsystems."
-          intro="Physical, energy, payload and command interfaces are developed together so capability can scale without multiplying integration risk."
+          heading="Capability depends on controlled interfaces."
+          intro="Vehicle, energy, payload and command interfaces are developed together so new capability can be added without redesigning the whole platform."
         >
           <div className="grid overflow-hidden rounded-3xl border border-slate-700/70 bg-slate-950/50 md:grid-cols-2 lg:grid-cols-3">
             {technologyThemes.map((theme, index) => (
@@ -68,8 +68,8 @@ export default function TechnologyPage() {
       <div className="border-b border-slate-800/80 bg-slate-950/25">
         <SectionWrapper
           eyebrow="Manufacturing strategy"
-          heading="Build for iteration. Design for repeatable manufacture."
-          intro="The physical architecture is intended to move from fast prototype learning to reusable production methods without freezing the wrong answer too early."
+          heading="Prototype quickly without designing out repeat manufacture."
+          intro="Early builds are used to close physical risk quickly, while common interfaces and production methods carry the useful learning into repeatable systems."
         >
           <div className="grid gap-10 rounded-3xl border border-slate-700/70 bg-[linear-gradient(120deg,rgba(8,47,73,0.24),rgba(4,7,13,0.9))] p-6 sm:p-9 lg:grid-cols-[1fr_1.15fr] lg:items-center">
             <div>
@@ -96,8 +96,8 @@ export default function TechnologyPage() {
 
       <SectionWrapper
         eyebrow="Integration model"
-        heading="Specialist capability, integrated through explicit interfaces."
-        intro="Andrasta controls the physical subsea architecture and works with specialist partners across autonomy, command-and-control, sensing, fabrication, testing, and assurance."
+        heading="Own the platform. Integrate specialist capability where it is stronger."
+        intro="Andrasta controls the physical subsea architecture and defines the interfaces used by specialist partners in autonomy, command-and-control, sensing, fabrication, testing and assurance."
       >
         <div className="flex flex-wrap gap-4">
           <Link

@@ -15,8 +15,8 @@ export default function ContactPage() {
       <SectionWrapper
         eyebrow="Contact"
         headingAs="h1"
-        heading="Start with the mission, interface, or evidence you need."
-        intro="Current priorities include Manta demonstration and testing, AndraSound development partnerships, payload integration, independent validation, and appropriate future distribution routes."
+        heading="Bring the mission, operating constraint or evidence requirement."
+        intro="Current priorities are Manta testing, AndraSound development partnerships, payload integration, independent validation and future distribution routes."
       >
         <div className="grid gap-6 lg:grid-cols-[1.1fr_0.9fr]">
           <div className="rounded-3xl border border-cyan-300/20 bg-[radial-gradient(circle_at_top_left,rgba(34,211,238,0.14),rgba(4,7,13,0.96)_52%)] p-7 shadow-2xl shadow-cyan-950/20 sm:p-9">
@@ -43,7 +43,7 @@ export default function ContactPage() {
           </div>
 
           <aside className="rounded-3xl border border-slate-700/70 bg-slate-950/55 p-7 sm:p-9">
-            <h2 className="text-xl font-semibold text-white">Appropriate disclosure from the first exchange</h2>
+            <h2 className="text-xl font-semibold text-white">Agree the disclosure route before the technical detail.</h2>
             <p className="mt-4 text-sm leading-7 text-slate-300">
               Please do not send classified, export-controlled, customer-confidential, patent-sensitive, or other restricted technical information without first agreeing the correct channel and disclosure basis.
             </p>
@@ -55,7 +55,7 @@ export default function ContactPage() {
       </SectionWrapper>
 
       <div className="border-y border-slate-800/80 bg-slate-950/35">
-        <SectionWrapper eyebrow="Enquiry routes" heading="Focused conversations are welcome.">
+        <SectionWrapper eyebrow="Enquiry routes" heading="Where current conversations are focused.">
           <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-4">
             <BaseCard title="Customers + operators" detail="Mission need, operating constraint, demonstration objective, data requirement, or future procurement route." />
             <BaseCard title="Primes + integrators" detail="Platform, payload, autonomy, command-and-control, work-package, evidence, or supplier-assurance interfaces." />

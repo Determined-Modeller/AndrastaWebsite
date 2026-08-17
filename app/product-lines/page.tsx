@@ -18,8 +18,8 @@ export default function ProductLinesPage() {
       <SectionWrapper
         eyebrow="Platform family"
         headingAs="h1"
-        heading="One architecture, scaled around the mission."
-        intro="Each programme has a distinct job. Together they reduce development risk, carry common interfaces into mission-scale vehicles and close the distributed sustainment loop."
+        heading="A platform family that carries learning forward."
+        intro="Each system closes a different part of the development and operating loop, while common interfaces carry evidence and validated modules into larger platforms."
       >
         <PlatformArchitectureMap />
 

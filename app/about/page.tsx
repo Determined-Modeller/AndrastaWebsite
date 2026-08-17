@@ -1,8 +1,8 @@
 import Link from 'next/link';
 
-import { BaseCard } from '@/components/cards';
+import { BaseCard, StatusPill } from '@/components/cards';
 import { SectionWrapper } from '@/components/section-wrapper';
-import { companyPrinciples } from '@/data/site';
+import { companyPrinciples, responsibilityPillars, supplierReadiness } from '@/data/site';
 import { createPageMetadata } from '@/lib/page-metadata';
 
 export const metadata = createPageMetadata({
@@ -17,14 +17,15 @@ export default function AboutPage() {
       <SectionWrapper
         eyebrow="Company"
         headingAs="h1"
-        heading="A UK subsea systems company built to own the architecture."
-        intro="Andrasta Marine integrates autonomous vehicles, hydrogen-electric energy, payloads, robotic replenishment, manufacturing, and mission logistics for persistent maritime operations."
+        heading="A Scottish subsea systems company built for difficult water and disciplined scale."
+        intro="Andrasta Marine controls the architecture connecting autonomous vehicles, hydrogen-electric energy, payloads, replenishment, manufacture and mission logistics."
       >
         <nav aria-label="Company page sections" className="mb-10 flex flex-wrap gap-3 text-xs font-semibold uppercase tracking-[0.16em] text-slate-300">
           {[
             ['Origins', '#origins'],
             ['How we work', '#how-we-work'],
             ['Founder', '#founder'],
+            ['Governance', '#responsibility'],
             ['Careers', '#careers']
           ].map(([label, href]) => (
             <Link
@@ -66,7 +67,7 @@ export default function AboutPage() {
               ['Shetland', 'North Atlantic operating context'],
               ['Water sector', 'Infrastructure + lifecycle grounding'],
               ['Chartered at 26', 'Youngest awarded by IChemE'],
-              ['Edinburgh', 'Engineering centre of excellence']
+              ['Edinburgh', 'Engineering Centre of Excellence']
             ].map(([title, detail], index) => (
               <div
                 key={title}
@@ -171,7 +172,7 @@ export default function AboutPage() {
       <div className="border-y border-slate-800/80 bg-slate-950/35">
         <SectionWrapper
           eyebrow="Operating principles"
-          heading="Credibility is designed into the programme."
+          heading="Technical ambition is carried by disciplined delivery."
         >
           <div className="grid gap-4 md:grid-cols-3">
             {companyPrinciples.map((principle) => (
@@ -181,10 +182,56 @@ export default function AboutPage() {
         </SectionWrapper>
       </div>
 
+      <div id="responsibility" className="scroll-mt-36 border-b border-slate-800/80 bg-slate-950/20">
+        <SectionWrapper
+          eyebrow="Governance + supplier readiness"
+          heading="Governance and customer qualification develop with the platform."
+          intro="Responsible use, security, quality and supplier controls are being built alongside the engineering programme, not added after a customer asks for them."
+        >
+          <div className="grid gap-6 lg:grid-cols-[0.95fr_1.05fr]">
+            <div className="grid overflow-hidden rounded-3xl border border-slate-700/70 bg-slate-950/45 sm:grid-cols-2">
+              {responsibilityPillars.map((pillar, index) => (
+                <article
+                  key={pillar.title}
+                  className={`p-6 ${index % 2 === 1 ? 'sm:border-l sm:border-slate-700/70' : ''} ${index > 1 ? 'border-t border-slate-700/70' : index === 1 ? 'border-t border-slate-700/70 sm:border-t-0' : ''}`}
+                >
+                  <h3 className="font-semibold text-white">{pillar.title}</h3>
+                  <p className="mt-3 text-sm leading-7 text-slate-400">{pillar.detail}</p>
+                </article>
+              ))}
+            </div>
+
+            <div className="overflow-hidden rounded-3xl border border-cyan-300/20 bg-[linear-gradient(145deg,rgba(8,47,73,0.22),rgba(4,7,13,0.92))]">
+              <div className="border-b border-slate-700/70 px-6 py-5 sm:px-7">
+                <p className="text-xs font-semibold uppercase tracking-[0.2em] text-cyan-200">Qualification pathway</p>
+              </div>
+              {supplierReadiness.map((item, index) => (
+                <article key={item.standard} className={`p-6 sm:p-7 ${index > 0 ? 'border-t border-slate-700/70' : ''}`}>
+                  <div className="flex flex-wrap items-center justify-between gap-3">
+                    <h3 className="font-semibold text-white">{item.standard}</h3>
+                    <StatusPill>{item.status}</StatusPill>
+                  </div>
+                  <p className="mt-4 text-sm leading-7 text-slate-400">{item.detail}</p>
+                </article>
+              ))}
+            </div>
+          </div>
+
+          <div className="mt-7 flex flex-wrap items-center justify-between gap-5 rounded-2xl border border-slate-700/70 bg-slate-950/45 px-6 py-5">
+            <p className="max-w-3xl text-sm leading-7 text-slate-300">
+              Customer and partner discussions can address the applicable quality, cyber, export, supply-chain, business-integrity and responsible-use requirements directly.
+            </p>
+            <Link href="/contact" className="inline-flex shrink-0 rounded-full border border-cyan-300/40 px-5 py-2.5 text-sm font-semibold text-cyan-100 transition hover:border-cyan-200 hover:text-white">
+              Discuss assurance
+            </Link>
+          </div>
+        </SectionWrapper>
+      </div>
+
       <SectionWrapper
         eyebrow="Programme status"
-        heading="Development maturity, stated directly."
-        intro="The platform family advances through staged physical development, pre-integration design, and independent evidence rather than unsupported performance claims."
+        heading="What is built, what is defined, and what comes next."
+        intro="The platform family advances through physical development, pre-integration design and independent evidence."
       >
         <div className="grid gap-4 md:grid-cols-3">
           <BaseCard
@@ -205,10 +252,10 @@ export default function AboutPage() {
         </div>
         <div className="mt-8 flex flex-wrap gap-4">
           <Link
-            href="/responsibility"
+            href="/mission-2028"
             className="inline-flex rounded-full bg-cyan-200 px-6 py-3 text-sm font-semibold text-slate-950 transition hover:bg-cyan-100"
           >
-            Review responsibility + readiness
+            Explore Mission 2028
           </Link>
           <Link
             href="/contact"
@@ -222,8 +269,8 @@ export default function AboutPage() {
       <div id="careers" className="scroll-mt-36 border-t border-slate-800/80 bg-slate-950/35">
         <SectionWrapper
           eyebrow="Careers"
-          heading="Build difficult systems with a disciplined team."
-          intro="Andrasta Marine expects to grow selectively across marine engineering, autonomy, energy systems, manufacturing, test, and assurance as programmes mature."
+          heading="The team grows as the programme earns it."
+          intro="Andrasta Marine expects to recruit selectively across marine engineering, autonomy, energy systems, manufacturing, test and assurance as customer programmes mature."
         >
           <div className="grid gap-6 rounded-3xl border border-slate-700/70 bg-[linear-gradient(120deg,rgba(8,47,73,0.2),rgba(4,7,13,0.92))] p-7 sm:p-9 lg:grid-cols-[1fr_auto] lg:items-center">
             <div>
