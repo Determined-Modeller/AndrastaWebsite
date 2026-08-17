@@ -18,8 +18,8 @@ export default function ProductLinesPage() {
       <SectionWrapper
         eyebrow="Platform family"
         headingAs="h1"
-        heading="A platform family that carries learning forward."
-        intro="Each system closes a different part of the development and operating loop, while common interfaces carry evidence and validated modules into larger platforms."
+        heading="One Platform Family. Four Distinct Roles."
+        intro="Manta accelerates learning, common interfaces carry it forward, and distributed sustainment supports the family in service."
       >
         <PlatformArchitectureMap />
 
