@@ -20,7 +20,66 @@ export default function AboutPage() {
         heading="A UK subsea systems company built to own the architecture."
         intro="Andrasta Marine integrates autonomous vehicles, hydrogen-electric energy, payloads, robotic replenishment, manufacturing, and mission logistics for persistent maritime operations."
       >
-        <div className="grid gap-4 md:grid-cols-3">
+        <nav aria-label="Company page sections" className="mb-10 flex flex-wrap gap-3 text-xs font-semibold uppercase tracking-[0.16em] text-slate-300">
+          {[
+            ['Origins', '#origins'],
+            ['How we work', '#how-we-work'],
+            ['Founder', '#founder'],
+            ['Careers', '#careers']
+          ].map(([label, href]) => (
+            <Link
+              key={href}
+              href={href}
+              className="rounded-full border border-slate-700/80 px-4 py-2 transition hover:border-cyan-300/50 hover:text-white"
+            >
+              {label}
+            </Link>
+          ))}
+        </nav>
+
+        <section id="origins" className="scroll-mt-36 overflow-hidden rounded-3xl border border-cyan-300/20 bg-[linear-gradient(125deg,rgba(8,47,73,0.3),rgba(4,7,13,0.94)_58%)]">
+          <div className="grid gap-9 p-7 sm:p-9 lg:grid-cols-[0.72fr_1.28fr] lg:gap-14 lg:p-11">
+            <div>
+              <p className="text-xs font-semibold uppercase tracking-[0.22em] text-cyan-200">Origins</p>
+              <h2 className="mt-4 max-w-md text-3xl font-semibold tracking-tight text-white sm:text-4xl">
+                Built from the North Atlantic outward.
+              </h2>
+              <p className="mt-5 max-w-sm text-sm leading-7 text-cyan-50/75">
+                Ruggedness is not a finishing specification. It is a consequence of understanding where a system must remain useful.
+              </p>
+            </div>
+
+            <div className="space-y-5 text-sm leading-7 text-slate-300 sm:text-base sm:leading-8">
+              <p>
+                Founder and Technical Lead Rhodri Hawkins grew up in Shetland, where severe weather, cold water, remoteness, and long support chains turn maintainability and practical usefulness into immediate engineering concerns. Offshore work still carries substantial vessel, fuel, weather, cost, and environmental overhead where available technology forces repeated intervention. That experience shaped Andrasta&apos;s focus on robust systems that reduce avoidable offshore activity rather than merely perform well in controlled conditions.
+              </p>
+              <p>
+                Before moving into hydrogen systems, Rhodri worked as an engineer in the water sector, developing an early grounding in regulated infrastructure, environmental responsibility, and long-life assets. He subsequently spent more than five years making high-consequence technical decisions across regulated hydrogen and multi-energy projects.
+              </p>
+              <p>
+                In 2025, aged 26, he became the youngest person ever awarded Chartered Chemical Engineer status by IChemE, a record that remains unbroken. Andrasta Marine brings that career path together: North Atlantic operating reality, disciplined process engineering, and a whole-system approach to energy, logistics, payload, manufacture, and lifecycle.
+              </p>
+            </div>
+          </div>
+          <div className="grid border-t border-slate-700/70 sm:grid-cols-2 lg:grid-cols-4">
+            {[
+              ['Shetland', 'North Atlantic operating context'],
+              ['Water sector', 'Infrastructure + lifecycle grounding'],
+              ['Chartered at 26', 'Youngest awarded by IChemE'],
+              ['Edinburgh', 'Engineering centre of excellence']
+            ].map(([title, detail], index) => (
+              <div
+                key={title}
+                className={`p-6 ${index === 1 ? 'border-t border-slate-700/70 sm:border-l sm:border-t-0' : ''} ${index === 2 ? 'border-t border-slate-700/70 lg:border-l lg:border-t-0' : ''} ${index === 3 ? 'border-t border-slate-700/70 sm:border-l lg:border-t-0' : ''}`}
+              >
+                <p className="text-sm font-semibold text-white">{title}</p>
+                <p className="mt-2 text-xs leading-5 text-slate-500">{detail}</p>
+              </div>
+            ))}
+          </div>
+        </section>
+
+        <div id="how-we-work" className="mt-8 scroll-mt-36 grid gap-4 md:grid-cols-3">
           <BaseCard
             titleAs="h2"
             title="What we build"
@@ -74,7 +133,7 @@ export default function AboutPage() {
           </div>
         </section>
 
-        <div className="mt-12 grid gap-9 border-y border-slate-700/70 py-10 lg:grid-cols-[0.34fr_1fr] lg:gap-14">
+        <div id="founder" className="mt-12 scroll-mt-36 grid gap-9 border-y border-slate-700/70 py-10 lg:grid-cols-[0.34fr_1fr] lg:gap-14">
           <div>
             <p className="text-xs font-semibold uppercase tracking-[0.22em] text-cyan-200">Founder + technical lead</p>
             <h2 className="mt-4 text-2xl font-semibold tracking-tight text-white">Rhodri Hawkins</h2>
@@ -159,6 +218,29 @@ export default function AboutPage() {
           </Link>
         </div>
       </SectionWrapper>
+
+      <div id="careers" className="scroll-mt-36 border-t border-slate-800/80 bg-slate-950/35">
+        <SectionWrapper
+          eyebrow="Careers"
+          heading="Build difficult systems with a disciplined team."
+          intro="Andrasta Marine expects to grow selectively across marine engineering, autonomy, energy systems, manufacturing, test, and assurance as programmes mature."
+        >
+          <div className="grid gap-6 rounded-3xl border border-slate-700/70 bg-[linear-gradient(120deg,rgba(8,47,73,0.2),rgba(4,7,13,0.92))] p-7 sm:p-9 lg:grid-cols-[1fr_auto] lg:items-center">
+            <div>
+              <h3 className="text-xl font-semibold text-white">No open roles are listed at present.</h3>
+              <p className="mt-3 max-w-3xl text-sm leading-7 text-slate-300">
+                Future opportunities will be published here as testing, customer programmes, and production demand justify them. Specialist partners and suppliers can still introduce relevant capability through the contact route.
+              </p>
+            </div>
+            <Link
+              href="/contact"
+              className="inline-flex justify-center rounded-full border border-cyan-300/40 px-6 py-3 text-sm font-semibold text-cyan-100 transition hover:border-cyan-200 hover:text-white"
+            >
+              Introduce capability
+            </Link>
+          </div>
+        </SectionWrapper>
+      </div>
     </>
   );
 }

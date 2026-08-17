@@ -11,6 +11,7 @@ export const siteConfig = {
     { href: '/case-studies', label: 'Missions' },
     { href: '/responsibility', label: 'Responsibility' },
     { href: '/about', label: 'Company' },
+    { href: '/investors', label: 'Investors' },
     { href: '/contact', label: 'Contact' }
   ]
 };
