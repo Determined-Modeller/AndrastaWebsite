@@ -55,10 +55,10 @@ export default function ContactPage() {
       </SectionWrapper>
 
       <div className="border-y border-slate-800/80 bg-slate-950/35">
-        <SectionWrapper eyebrow="Enquiry routes" heading="Where current conversations are focused.">
+        <SectionWrapper eyebrow="Enquiry routes" heading="Who we work with.">
           <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-4">
             <BaseCard title="Customers + operators" detail="Mission need, operating constraint, demonstration objective, data requirement, or future procurement route." />
-            <BaseCard title="Primes + integrators" detail="Platform, payload, autonomy, command-and-control, work-package, evidence, or supplier-assurance interfaces." />
+            <BaseCard title="Prime contractors + system integrators" detail="Platform, payload, autonomy, command-and-control, work-package, evidence, or supplier-assurance interfaces." />
             <BaseCard title="Test + technology partners" detail="Facilities, propulsion, hydrogen, hydrides, sensing, navigation, marine operations, certification, or trials." />
             <BaseCard title="Suppliers + compliance" detail="Manufacturing, specialist engineering, procurement onboarding, quality, cyber, export, or responsible-business review." />
           </div>

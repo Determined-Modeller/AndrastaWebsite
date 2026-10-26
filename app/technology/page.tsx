@@ -73,16 +73,15 @@ export default function TechnologyPage() {
         >
           <div className="grid gap-10 rounded-3xl border border-slate-700/70 bg-[linear-gradient(120deg,rgba(8,47,73,0.24),rgba(4,7,13,0.9))] p-6 sm:p-9 lg:grid-cols-[1fr_1.15fr] lg:items-center">
             <div>
-              <p className="text-2xl font-semibold tracking-tight text-white sm:text-3xl">Additive where it earns its place.</p>
-              <p className="mt-4 text-base leading-8 text-slate-300">
+              <p className="text-base leading-8 text-slate-300">
                 Printed structures and tooling can shorten design loops, consolidate parts, reduce weight, and support repairable modular construction. Conventional composite and metal processes remain part of the same production system.
               </p>
             </div>
             <div className="divide-y divide-slate-700/70 border-y border-slate-700/70">
               {[
-                ['Prototype', 'Rapid geometry, controls, energetics, and payload learning.'],
+                ['Prototype', 'Rapid iteration of vehicle geometry, controls, energy systems and payload integration.'],
                 ['Scale', 'Common modules and interfaces carried into mission-size vehicles.'],
-                ['Lifecycle', 'Inspection, replacement, refurbishment, and fleet learning designed in.']
+                ['Lifecycle', 'Designed for inspection, component replacement and refurbishment, with improvements informed by fleet experience.']
               ].map(([title, detail]) => (
                 <div key={title} className="grid gap-2 py-5 sm:grid-cols-[0.35fr_1fr]">
                   <h3 className="font-semibold text-cyan-100">{title}</h3>

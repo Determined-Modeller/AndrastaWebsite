@@ -1,5 +1,21 @@
 # Andrasta Marine dual-use website implementation plan
 
+## Website feedback refinement — 26 October 2026
+
+Apply the founder-approved copy refinements from Malcolm's website review:
+
+- Round displayed vessel-day totals upward, retain fractional inputs in the cost calculation, and state the display convention in a short note.
+- Clarify the potential savings label and replace the dense full-comparison panel with concise context and a contact link.
+- Retain one brief scale-up statement on Investors; remove repeated asset-light and capacity strategy elsewhere.
+- Rename the platform diagram to “Shared platform interfaces”.
+- Add consideration of integration with state-of-the-art sector equipment to AndraSound descriptions, without claiming completed integration.
+- Use “Enquiry routes” / “Who we work with” and expand the prime-contractor category.
+- Clarify vehicle-geometry iteration and lifecycle wording; remove the redundant additive-manufacturing tagline.
+- Explain the Edinburgh engineering base using the founder-supplied disciplines and activities.
+- Validate the production build, TypeScript and asset checks before submitting a draft PR.
+
+Hierarchy remains a proposal for consideration: the shared section component currently gives h1 and h2 the same 30px/36px scale. A small option is h1 at 36px/48px while retaining h2 at 30px/36px and card titles at 18px–24px. Do not apply this typography change in the copy-edit PR.
+
 ## Objective
 
 Reposition the public website around Andrasta Marine's near-term dual-use strategy: persistent autonomous subsea systems for civil, security, and defence missions, presented as a complete operating architecture rather than an isolated vehicle.
