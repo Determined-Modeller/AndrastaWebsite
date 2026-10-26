@@ -197,6 +197,7 @@ export function LogisticsComparator() {
             <p className="text-[10px] font-semibold uppercase tracking-[0.24em] text-cyan-200">Interactive mission comparator</p>
             <h3 className="mt-3 text-2xl font-semibold tracking-tight text-white sm:text-3xl">{scenario.title}</h3>
             <p className="mt-3 text-sm leading-6 text-slate-300 sm:text-base">{scenario.intro}</p>
+            <p className="mt-3 text-sm leading-6 text-slate-400">Mission planning must define when data is needed and whether it is retrieved on recovery or transmitted during deployment. Data access and re-tasking depend on the selected communications configuration.</p>
           </div>
 
           <div className="inline-flex w-full rounded-full border border-slate-700/80 bg-slate-950/80 p-1 lg:w-auto" role="group" aria-label="Mission scenario">

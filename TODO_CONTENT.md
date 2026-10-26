@@ -4,6 +4,8 @@ These items are intentionally unresolved. Do not replace them with invented copy
 
 **26 October 2026 — typography option for founder consideration:** distinguish shared page titles (h1) from section headings (h2) with a 36px/48px page-title scale; the current component uses 30px/36px for both. The copy refinement deliberately leaves this option unapplied.
 
+**26 October 2026 — public content boundary:** physical evidence remains offline. Use approved high-level milestones only; do not add prototype photographs, test records or evidence-download offers. Confirm qualification programme dates before restoring public deadlines. Confirm mission-specific data delivery arrangements before publishing communications capability claims.
+
 1. **Platform datasheets**
    - Review and approve the prepared de minimis Manta and AndraSound PDFs before publication.
    - The AndraHold and AndraCharge download controls are deliberately omitted until useful public configurations are ready.

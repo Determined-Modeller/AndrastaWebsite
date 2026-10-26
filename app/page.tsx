@@ -22,7 +22,7 @@ export default function HomePage() {
         <div className="mb-7 grid gap-4 rounded-2xl border border-cyan-300/20 bg-cyan-950/10 px-5 py-5 sm:grid-cols-[0.42fr_1fr] sm:px-6">
           <p className="text-[10px] font-semibold uppercase tracking-[0.2em] text-cyan-200">Why compare the operating model?</p>
           <p className="text-sm leading-7 text-slate-300">
-            Conventional campaigns repeatedly reunite the vehicle and its support chain. Andrasta separates those dependencies so vehicles can follow waypoints, remain on task and use distributed sustainment until the information is actionable or the mission and service state calls for recovery.
+            In vessel-supported campaigns, recovery and turnaround can repeatedly reunite the vehicle and its support chain. Andrasta separates those dependencies so vehicles can follow waypoints, remain on task and use distributed sustainment until the information is actionable or the mission and service state calls for recovery.
           </p>
         </div>
         <LogisticsComparator />

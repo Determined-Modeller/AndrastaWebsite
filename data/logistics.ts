@@ -38,10 +38,10 @@ export const logisticsScenarios: Record<LogisticsScenarioKey, LogisticsScenario>
     label: 'Civil operations',
     title: 'Offshore infrastructure + environmental assurance',
     intro:
-      'Compare a periodic vessel-led campaign with waypoint-led systems designed to remain useful across real operational decision windows.',
+      'Compare an illustrative vessel-supported campaign with Andrasta’s intended operating model. Support needs vary with vehicle, mission and communications configuration.',
     models: {
       conventional: {
-        label: 'Conventional campaign',
+        label: 'Illustrative vessel-supported campaign',
         strapline: 'Vehicle, crew and support vessel move as one package.',
         primaryNodeId: 'civil-conventional-vessel',
         routes: ['M 16 73 C 23 62 29 52 36 46 S 57 39 72 36 S 64 66 49 76 C 35 83 23 80 16 73'],
@@ -125,7 +125,7 @@ export const logisticsScenarios: Record<LogisticsScenarioKey, LogisticsScenario>
             id: 'civil-andrasta-corridor',
             label: 'Decision window',
             kicker: 'Actionable continuity',
-            detail: 'Designed to stay on task across real multi-day and multi-week decision windows - long enough to turn observation into actionable information.',
+            detail: 'Designed to observe across multi-day and multi-week decision windows. The selected communications configuration determines when observations become available to the operator.',
             x: 79,
             y: 42,
             icon: 'asset'
@@ -159,13 +159,13 @@ export const logisticsScenarios: Record<LogisticsScenarioKey, LogisticsScenario>
       },
       {
         label: 'Mission state',
-        conventional: 'Recover to re-task',
+        conventional: 'Tasking within campaign windows',
         andrasta: 'Waypoint, loiter or hibernate'
       },
       {
         label: 'Lifecycle',
-        conventional: 'Energy cycle sets recovery',
-        andrasta: 'Service interval sets recovery'
+        conventional: 'Recovery for energy + service',
+        andrasta: 'Recovery guided by service + condition'
       }
     ]
   },
@@ -173,10 +173,10 @@ export const logisticsScenarios: Record<LogisticsScenarioKey, LogisticsScenario>
     label: 'Dual-use operations',
     title: 'Persistent maritime awareness + seabed security',
     intro:
-      'Compare a support-asset-led deployment with a distributed system able to sustain, reposition and re-task an autonomous cohort.',
+      'Compare an illustrative support-asset deployment with Andrasta’s intended distributed model. Existing autonomous systems use a range of support and communications arrangements.',
     models: {
       conventional: {
-        label: 'Conventional deployment',
+        label: 'Illustrative support-asset deployment',
         strapline: 'Coverage follows the availability and operating pattern of a high-value support asset.',
         primaryNodeId: 'dual-conventional-support',
         routes: ['M 16 73 C 24 60 30 49 38 43 S 58 34 73 31 S 65 65 49 76 C 35 82 23 80 16 73'],
