@@ -2,6 +2,8 @@
 
 These items are intentionally unresolved. Do not replace them with invented copy, values, badges, or downloads.
 
+**26 October 2026 — typography option for founder consideration:** distinguish shared page titles (h1) from section headings (h2) with a 36px/48px page-title scale; the current component uses 30px/36px for both. The copy refinement deliberately leaves this option unapplied.
+
 1. **Platform datasheets**
    - Review and approve the prepared de minimis Manta and AndraSound PDFs before publication.
    - The AndraHold and AndraCharge download controls are deliberately omitted until useful public configurations are ready.

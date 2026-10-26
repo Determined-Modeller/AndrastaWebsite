@@ -3,6 +3,7 @@ import Link from 'next/link';
 import { BaseCard } from '@/components/cards';
 import { MissionEconomicsModel } from '@/components/mission-economics-model';
 import { SectionWrapper } from '@/components/section-wrapper';
+import { andraSoundIntegrationFocus } from '@/data/site';
 import { createPageMetadata } from '@/lib/page-metadata';
 
 export const metadata = createPageMetadata({
@@ -23,11 +24,12 @@ export default function InvestorsPage() {
       >
         <MissionEconomicsModel />
 
-        <div className="mt-6 rounded-2xl border border-slate-700/70 bg-slate-950/45 px-5 py-5 sm:px-6">
-          <p className="text-sm leading-7 text-slate-300">
-            <span className="font-semibold text-white">The full comparison:</span> vehicle and support equipment + mobilisation + vessel and crew + energy + maintenance + expected loss, divided by the days delivering the required data.
-          </p>
-        </div>
+        <p className="mt-6 max-w-3xl text-sm leading-7 text-slate-300">
+          A full comparison includes vehicle and replenishment costs, remaining vessel support, energy, maintenance and mission utilisation.{' '}
+          <Link href="/contact" className="font-semibold text-cyan-100 underline decoration-cyan-300/40 underline-offset-4 transition hover:text-white">
+            Discuss your operating model
+          </Link>.
+        </p>
 
         <div className="mt-8 grid gap-4 md:grid-cols-3">
           <BaseCard title="Stay deployed longer" detail="In-field replenishment can move recovery away from every energy cycle, reducing expensive interruptions where the mission and service interval allow it." />
@@ -79,13 +81,12 @@ export default function InvestorsPage() {
 
       <SectionWrapper
         eyebrow="Current position"
-        heading="What is built now, and how the company scales."
-        intro="Manta closes physical risk quickly. Validated interfaces and evidence then carry into the mission-scale platform family, with production capacity added against committed demand."
+        heading="Current platform development."
+        intro="Manta closes physical risk quickly. Validated interfaces and evidence then carry into the mission-scale platform family."
       >
-        <div className="grid gap-4 md:grid-cols-3">
+        <div className="grid gap-4 md:grid-cols-2">
           <BaseCard eyebrow="Physical development" title="Manta" detail="First prototype completed in Q2 2026, with first water trials planned for Q4 2026." />
-          <BaseCard eyebrow="Pre-integration design" title="AndraSound" detail="The lead persistent mission architecture is defined, with research, design and development continuing." />
-          <BaseCard eyebrow="Scale-up model" title="Fleet demand triggers capacity" detail="Dedicated production follows committed demand, qualified suppliers and a configuration stable enough to justify repeat tooling." />
+          <BaseCard eyebrow="Pre-integration design" title="AndraSound" detail={`The lead persistent mission architecture is defined. ${andraSoundIntegrationFocus}`} />
         </div>
         <div className="mt-8 flex flex-wrap gap-4">
           <Link href="/about" className="inline-flex rounded-full border border-slate-600 px-6 py-3 text-sm font-semibold text-slate-100 transition hover:border-cyan-200 hover:text-white">

@@ -19,7 +19,7 @@ export function PlatformArchitectureMap() {
   return (
     <figure className="overflow-hidden rounded-3xl border border-slate-700/70 bg-[radial-gradient(circle_at_52%_24%,rgba(14,116,144,0.17),rgba(4,7,13,0.97)_52%)] shadow-2xl shadow-cyan-950/15">
       <div className="flex flex-wrap items-center justify-between gap-3 border-b border-slate-700/70 px-6 py-5 sm:px-8">
-        <p className="text-[10px] font-semibold uppercase tracking-[0.22em] text-cyan-200">Programme Architecture</p>
+        <p className="text-[10px] font-semibold uppercase tracking-[0.22em] text-cyan-200">Shared platform interfaces</p>
         <p className="max-w-sm text-sm leading-6 text-slate-400">Shared interfaces carry learning and validated modules between platforms.</p>
       </div>
 

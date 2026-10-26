@@ -2,7 +2,7 @@ import Link from 'next/link';
 
 import { BaseCard, StatusPill } from '@/components/cards';
 import { SectionWrapper } from '@/components/section-wrapper';
-import { companyPrinciples, responsibilityPillars, supplierReadiness } from '@/data/site';
+import { andraSoundIntegrationFocus, companyPrinciples, edinburghEngineeringBase, responsibilityPillars, supplierReadiness } from '@/data/site';
 import { createPageMetadata } from '@/lib/page-metadata';
 
 export const metadata = createPageMetadata({
@@ -93,8 +93,8 @@ export default function AboutPage() {
           />
           <BaseCard
             titleAs="h2"
-            title="Capital discipline"
-            detail="Remain asset-light through early development, adding dedicated production capacity only when customer commitments justify repeat manufacture."
+            title="Engineering in Edinburgh"
+            detail={edinburghEngineeringBase}
           />
         </div>
 
@@ -111,7 +111,7 @@ export default function AboutPage() {
                 Scale is designed into the architecture rather than deferred to production. Manta closes physical, integration, and manufacturing risk quickly; AndraSound establishes the repeatable mission platform; and common energy, power, payload, autonomy, handling, and service interfaces carry validated modules and evidence between programmes.
               </p>
               <p>
-                Andrasta remains asset-light through development, integrating specialist capability where partners are stronger. Production will be centralised when committed fleet demand supports repeat tooling, qualified suppliers, and dedicated capacity. Customer-specific capability is concentrated in configurable payload, software, and mission-system layers, limiting the need to redesign the underlying vehicle for each application.
+                Customer-specific capability is concentrated in configurable payload, software, and mission-system layers, limiting the need to redesign the underlying vehicle for each application.
               </p>
             </div>
           </div>
@@ -120,7 +120,7 @@ export default function AboutPage() {
               ['01', 'Close physical risk', 'Rapid build-test learning'],
               ['02', 'Carry evidence forward', 'Common modules + interfaces'],
               ['03', 'Configure capability', 'Payload + mission layers'],
-              ['04', 'Repeat manufacture', 'Capacity against fleet demand']
+              ['04', 'Repeat manufacture', 'Common production methods']
             ].map(([index, title, detail], itemIndex) => (
               <div
                 key={title}
@@ -242,7 +242,7 @@ export default function AboutPage() {
           <BaseCard
             eyebrow="RD&D ongoing"
             title="AndraSound + AndraHold"
-            detail="Platform architecture and pre-integration design are defined while research, design, and development continue."
+            detail={`Platform architecture and pre-integration design are defined while research, design, and development continue. ${andraSoundIntegrationFocus}`}
           />
           <BaseCard
             eyebrow="Validation pathway"

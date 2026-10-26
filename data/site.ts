@@ -64,6 +64,12 @@ export const technologyThemes = [
   }
 ];
 
+export const andraSoundIntegrationFocus =
+  'AndraSound development considers integration with state-of-the-art equipment within the sector.';
+
+export const edinburghEngineeringBase =
+  'Naval, firmware and software engineering experts collaborate at our Engineering Centre of Excellence in Edinburgh, progressing research and design alongside practical integration optimisations.';
+
 export const platforms = [
   {
     slug: 'manta',
@@ -88,7 +94,7 @@ export const platforms = [
     category: 'Persistent mission platform',
     status: 'Pre-integration design',
     summary:
-      'The lead persistent mission platform, with platform architecture and pre-integration design defined while research, design, and development continue.',
+      `The lead persistent mission platform, with platform architecture and pre-integration design defined. ${andraSoundIntegrationFocus}`,
     role: 'Persistent survey + maritime awareness',
     highlights: [
       'Mission-configurable payload architecture',

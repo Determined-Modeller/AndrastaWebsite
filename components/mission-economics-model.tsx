@@ -84,18 +84,18 @@ export function MissionEconomicsModel() {
             </div>
             <div className="rounded-2xl border border-slate-700/70 bg-slate-950/45 p-5">
               <p className="text-xs uppercase tracking-[0.14em] text-slate-500">Support-vessel days</p>
-              <p className="mt-3 text-3xl font-semibold tabular-nums text-white">{outputs.supportDays.toFixed(1)}</p>
+              <p className="mt-3 text-3xl font-semibold tabular-nums text-white">{Math.ceil(outputs.supportDays)}</p>
             </div>
             <div className="rounded-2xl border border-cyan-300/25 bg-cyan-950/20 p-5 sm:col-span-2">
-              <p className="text-xs uppercase tracking-[0.14em] text-cyan-100/70">Potentially avoidable annual support cost</p>
+              <p className="text-xs uppercase tracking-[0.14em] text-cyan-100/70">Potential annual support-vessel savings</p>
               <p className="mt-3 text-4xl font-semibold tabular-nums tracking-tight text-cyan-50 sm:text-5xl">{currency.format(outputs.grossBurdenDisplaced)}</p>
               <p className="mt-3 text-sm text-slate-400">
-                {outputs.supportDaysDisplaced.toFixed(1)} vessel days · {currency.format(outputs.burdenPerVehicle)} per vehicle-year
+                {Math.ceil(outputs.supportDaysDisplaced)} vessel days avoided · {currency.format(outputs.burdenPerVehicle)} per vehicle-year
               </p>
             </div>
           </div>
           <p className="mt-6 text-xs leading-6 text-slate-500">
-            This model shows the support cost affected by in-field replenishment. A programme comparison must also include support nodes, remaining intervention, vehicle cost, energy, maintenance, utilisation and mission assurance.
+            Illustrative vessel-cost savings based on your inputs, with vessel-days displayed rounded up. Cost estimates retain the selected fractional days.
           </p>
         </div>
       </div>
