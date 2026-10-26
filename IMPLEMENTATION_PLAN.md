@@ -1,5 +1,15 @@
 # Andrasta Marine dual-use website implementation plan
 
+## Sector-review refinements — 26 October 2026
+
+- Bring the already-public Manta milestone onto shared platform cards; publish no physical evidence, photographs or test records.
+- Label both comparator baselines illustrative, qualify recovery/tasking assumptions, and explain configuration-dependent data access.
+- Distinguish replenishment from inspection, reliability and service limits.
+- Specify AndraSound integration categories without claiming proven compatibility.
+- Qualify technology trade-offs by mission and duty cycle; shorten the founder statement.
+- Retain certification/readiness objectives without unconfirmed deadlines or achievement claims.
+- Preserve layout and calculator logic; validate build, assets and live routes after deployment.
+
 ## Website feedback refinement — 26 October 2026
 
 Apply the founder-approved copy refinements from Malcolm's website review:

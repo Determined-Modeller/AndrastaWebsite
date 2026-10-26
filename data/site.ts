@@ -45,7 +45,7 @@ export const technologyThemes = [
   {
     title: 'Robotic replenishment',
     detail:
-      'AndraCharge connects portable fuel and service nodes, compatible vehicles, and mission turnaround without dependence on a single fixed recovery point.'
+      'AndraCharge is designed to connect portable fuel and service nodes with compatible vehicles. Replenishment is intended to extend deployment within inspection, reliability and service limits; it does not replace maintenance.'
   },
   {
     title: 'Modular payload bays',
@@ -65,7 +65,7 @@ export const technologyThemes = [
 ];
 
 export const andraSoundIntegrationFocus =
-  'AndraSound development considers integration with state-of-the-art equipment within the sector.';
+  'AndraSound development considers integration with state-of-the-art sensing, navigation and communications equipment within the sector. Compatibility is assessed for each mission configuration.';
 
 export const edinburghEngineeringBase =
   'Naval, firmware and software engineering experts collaborate at our Engineering Centre of Excellence in Edinburgh, progressing research and design alongside practical integration optimisations.';
@@ -77,7 +77,7 @@ export const platforms = [
     category: 'Compact winged demonstrator',
     status: 'Physical development',
     summary:
-      'A compact, field-portable vehicle for rapid physical development, subsystem proving, and payload trials.',
+      'A compact, field-portable vehicle for rapid physical development, subsystem proving, and payload trials. First prototype completed Q2 2026; first water trials planned for Q4 2026.',
     role: 'Rapid development + payload integration',
     highlights: [
       'Approximately 1.8 m winged form',
@@ -167,15 +167,15 @@ export const responsibilityPillars = [
 export const supplierReadiness = [
   {
     standard: 'ISO 9001',
-    status: 'Certification targeted before 2027',
+    status: 'Certification target — preparation in progress',
     detail:
       'Quality, document and configuration control, supplier assurance, non-conformance, corrective action, and test evidence.'
   },
   {
     standard: 'DEF STAN 05-138 Issue 4',
-    status: 'CSMv4 readiness targeted before 2027',
+    status: 'CSMv4 readiness in development',
     detail:
-      'Cyber security controls aligned to MOD Cyber Security Model v4 supplier expectations and customer-assigned Cyber Risk Profiles.'
+      'Developing cyber security controls against MOD Cyber Security Model v4 supplier expectations and customer-assigned Cyber Risk Profiles; readiness work does not imply certification or blanket compliance.'
   },
   {
     standard: 'Procurement evidence pack',

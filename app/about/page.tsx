@@ -58,7 +58,7 @@ export default function AboutPage() {
                 Before moving into hydrogen systems, Rhodri worked as an engineer in the water sector, developing an early grounding in regulated infrastructure, environmental responsibility, and long-life assets. He subsequently spent more than five years making high-consequence technical decisions across regulated hydrogen and multi-energy projects.
               </p>
               <p>
-                In 2025, aged 26, he became the youngest person ever awarded Chartered Chemical Engineer status by IChemE, a record that remains unbroken. Andrasta Marine brings that career path together: North Atlantic operating reality, disciplined process engineering, and a whole-system approach to energy, logistics, payload, manufacture, and lifecycle.
+                In 2025, aged 26, he became the youngest person ever awarded Chartered Chemical Engineer status by IChemE. Andrasta Marine brings that career path together: North Atlantic operating reality, disciplined process engineering, and a whole-system approach to energy, logistics, payload, manufacture, and lifecycle.
               </p>
             </div>
           </div>
@@ -148,16 +148,10 @@ export default function AboutPage() {
             <span aria-hidden="true" className="founder-quote-mark founder-quote-mark-open">“</span>
             <div className="relative z-10">
               <p className="text-lg leading-8 text-slate-200">
-                I founded Andrasta Marine on the belief that extreme endurance and adversarial operation in an uncrewed context demand a different design starting point. Energy, logistics, replenishment, geometry, acoustic behaviour, payload, manufacture, and lifecycle must be treated as one coupled system problem - not assembled by adding hydrogen or more batteries to an existing development platform.
+                I founded Andrasta Marine to develop persistent subsea systems around the complete mission: energy, payload, logistics and service life. Across the mission profiles studied and simulated, hydrogen has justified its integration where it creates additional system-level value.
               </p>
               <p className="mt-5 text-base leading-8 text-slate-300">
-                Across the mission profiles studied and simulated, hydrogen has justified its integration only where it creates additional system-level value. Andrasta Marine&apos;s systems combine replenishment, biomimicry, and geometric multiphysics design with protected IP and retained engineering know-how to pursue greater endurance and, where the architecture allows, simpler supporting systems. Each platform is configured for model-based iteration, manufacture, long service life, and reuse.
-              </p>
-              <p className="mt-5 text-base leading-8 text-slate-300">
-                After more than a year of design iteration, simulation, and component testing, our first system is in physical development. We are now preparing the systems for independent validation and opening discussions with development partners, licensees, distributors, and test operators.
-              </p>
-              <p className="mt-5 text-base leading-8 text-slate-300">
-                The platforms are designed as endurant flexible hydrogen-electric hybrids from the outset, supporting quiet, efficient propulsion and emerging payload demands without surrendering robustness, practical logistics, or a credible route to fleet-scale unit cost.
+                Following design iteration, simulation and component testing, Manta is in physical development. We are preparing for independent validation and opening discussions with development partners, licensees, distributors and test operators.
               </p>
               <footer className="mt-7 flex items-center gap-3 border-t border-slate-700/60 pt-5 text-xs font-semibold uppercase tracking-[0.16em] text-cyan-100/80">
                 <span className="h-px w-8 bg-cyan-300/60" aria-hidden="true" />

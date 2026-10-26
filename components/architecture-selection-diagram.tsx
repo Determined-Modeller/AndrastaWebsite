@@ -15,13 +15,13 @@ const architecturePressures = [
     title: 'Ultra-high-pressure hydrogen',
     strength: 'Avoids cryogenic fuel storage.',
     pressure:
-      'Containment mass, high-pressure hardware, safety demonstration, compliance work, handling, and cost compound at endurance scale.'
+      'Containment mass, high-pressure hardware, safety demonstration, handling and cost can become significant as endurance requirements increase.'
   },
   {
     title: 'Combustion + bulk-liquid AIP',
     strength: 'Mature fuel logistics and established machinery.',
     pressure:
-      'Noise, thermal and reaction management, mechanical complexity, maintenance, and survivability conflict with future low-signature persistence.'
+      'Noise, thermal and reaction management, maintenance and survivability require mission-specific trade-offs where low-signature persistence is a priority.'
   }
 ];
 
@@ -45,7 +45,7 @@ export function ArchitectureSelectionDiagram() {
           Choose the architecture against the whole mission, not one energy metric.
         </h2>
         <p className="mt-3 max-w-4xl text-sm leading-7 text-slate-300 sm:text-base">
-          At extreme endurance, heat, signature, handling, safety, serviceability, survivability and cost can matter as much as the energy stored onboard.
+          At extreme endurance, heat, signature, handling, safety, serviceability, survivability and cost can matter as much as the energy stored onboard. Relative advantages depend on vehicle scale, duty cycle and available support.
         </p>
       </div>
 
